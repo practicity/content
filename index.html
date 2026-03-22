@@ -2,19 +2,6 @@
 layout: default
 ---
 
-
-## Our Catalog
-
-<ul>
-  {% for item in site.items %}
-    <li>
-      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-
-
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
