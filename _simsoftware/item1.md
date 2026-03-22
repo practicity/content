@@ -13,43 +13,36 @@ license: "MIT License"
 last_survey: "March 15, 2024"
 ---
 
-## Description
 {{ page.description }}
 
----
+### 📊 Quick Facts
 
-### 📊 Datasheet
-| | |
+| Property | Details |
 |:--- |:--- |
 | **Type** | {{ page.type }} |
 | **Category** | {{ page.category }} |
-| **Complexity** | {{ page.complexity }} |
-| **Community Activity** | {{ page.activity }} |
-| **License** | {{ page.license }} |
+| **Complexity** | <span style="color: #f1c40f;">{{ page.complexity }}</span> |
+| **Activity** | <span style="color: #3498db;">{{ page.activity }}</span> |
+| **License** | `{{ page.license }}` |
 | **Last Survey** | {{ page.last_survey }} |
 
 ---
 
 ### 🖼️ Screenshots
-<div style="display: flex; justify-content: space-between; gap: 10px;">
-  <img src="https://via.placeholder.com/400x250" alt="Screenshot 1" style="width:32%; border-radius: 8px; border: 1px solid #ddd;">
-  <img src="https://via.placeholder.com/400x250" alt="Screenshot 2" style="width:32%; border-radius: 8px; border: 1px solid #ddd;">
-  <img src="https://via.placeholder.com/400x250" alt="Screenshot 3" style="width:32%; border-radius: 8px; border: 1px solid #ddd;">
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+  <img src="https://picsum.photos/400/250?random=1" style="border-radius: 8px; border: 1px solid #eee; width: 100%;">
+  <img src="https://picsum.photos/400/250?random=2" style="border-radius: 8px; border: 1px solid #eee; width: 100%;">
+  <img src="https://picsum.photos/400/250?random=3" style="border-radius: 8px; border: 1px solid #eee; width: 100%;">
 </div>
 
 ---
 
-### 🔗 Links
-*   **Official Website:** [Visit Site]({{ page.website }})
-*   **Source Code:** [GitHub Repository]({{ page.github }})
+### 🔗 Resources
+*   🌐 **Official Website:** [Visit Site]({{ page.website }})
+*   💻 **Source Code:** [GitHub Repository]({{ page.github }})
 
 ---
 
 ### 🏷️ Tags
-{% for tag in page.tags %}
-`#{{ tag }}` 
-{% endfor %}
-
-
-
-
+{% for tag in page.tags %}<span style="background-color: #f0f0f0; padding: 4px 10px; border-radius: 20px; font-size: 0.8em; margin-right: 5px;">#{{ tag }}</span>{% endfor %}
