@@ -45,4 +45,8 @@ last_survey: "March 15, 2024"
 ---
 
 ### 🏷️ Tags
-{% for tag in page.tags %}<span style="background-color: #f0f0f0; padding: 4px 10px; border-radius: 20px; font-size: 0.8em; margin-right: 5px;">#{{ tag }}</span>{% endfor %}
+{% for tag in page.tags %}
+<a href="{{ site.baseurl }}/tags#{{ tag | slugize }}" style="background-color: #f0f0f0; padding: 4px 10px; border-radius: 20px; font-size: 0.8em; margin-right: 5px; text-decoration: none; color: #333;">
+  #{{ tag }}
+</a>
+{% endfor %}
