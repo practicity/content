@@ -2,4 +2,24 @@
 layout: default
 ---
 
-{% include tag-browser.html %}
+<h1>All Tags</h1>
+
+{% assign all_items = site.posts | concat: site.simsoftware %}
+
+{% assign all_tags = all_items | flat_map: 'tags' | uniq | sort %}
+
+<div class="tag-cloud">
+  {% for tag in all_tags %}
+    {% assign count = 0 %}
+    {% for item in all_items %}
+      {% if item.tags contains tag %}
+        {% assign count = count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+
+    <a class="tag-pill" href="{{ '/tags/' | append: tag | slugify | relative_url }}">
+      #{{ tag }} <span class="tag-count">{{ count }}</span>
+    </a>
+  {% endfor %}
+</div>
+

@@ -1,6 +1,6 @@
 ---
 layout: tags
-title: "Browse by Tag"
+title: "All Tags"
 permalink: /tags/
 custom_css: tags
 ---

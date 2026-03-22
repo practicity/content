@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<h1># {{ page.tag }}</h1>
+
+<a href="{{ '/tags/' | relative_url }}" style="font-size: 0.9em; color: #888;">← All Tags</a>
+
+<hr>
+
+{% assign all_items = site.posts | concat: site.simsoftware %}
+
+{% for item in all_items %}
+  {% if item.tags contains page.tag %}
+
+    {% if item.collection == "simsoftware" %}
+      {% assign item_type = "simsoftware" %}
+      {% assign type_label = "🎮 SimSoftware" %}
+    {% else %}
+      {% assign item_type = "post" %}
+      {% assign type_label = "📝 Post" %}
+    {% endif %}
+
+    <div class="item-card">
+      <div>
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        <small>{{ item.description | truncate: 120 }}</small>
+      </div>
+      <span class="item-type type-{{ item_type }}">{{ type_label }}</span>
+    </div>
+
+  {% endif %}
+{% endfor %}
