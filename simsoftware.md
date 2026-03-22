@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Catalog
-permalink: /catalog/
+title: Sim Software (open source)
+permalink: /simsoftware/
 ---
 
 <div class="items-list">
