@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Project Title"
+title: "JAAMSIM"
 description: "A comprehensive simulation designed to teach situational leadership in high-pressure environments. This long-form text explains the core pedagogical goals and the experiential learning outcomes expected from the session."
-type: "Interactive Workshop"
-category: "Leadership"
-complexity: "★★★★☆"
-activity: "★★★☆☆"
-tags: [Simulation, Training, Soft Skills]
+type: "Simulation Software"
+category: "Industry"
+complexity: "★★★☆☆"
+activity: "★★★★☆"
+tags: [Simulation, Training, Discreet Manufacturing, Jaamsim, Java]
 website: "https://practi.city"
 github: "https://github.com/practicity"
-license: "MIT License"
-last_survey: "March 15, 2024"
+license: "Apache 2.0"
+last_survey: "March 15, 2026"
 ---
 
 {{ page.description }}
@@ -22,7 +22,7 @@ last_survey: "March 15, 2024"
 | **Category** | {{ page.category }} |
 | **Complexity** | <span style="color: #f1c40f;">{{ page.complexity }}</span> |
 | **Activity** | <span style="color: #3498db;">{{ page.activity }}</span> |
-| **License** | `{{ page.license }}` |
+| **License** | {{ page.license }} |
 | **Last Survey** | {{ page.last_survey }} |
 
 ---
