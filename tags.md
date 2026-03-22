@@ -22,7 +22,7 @@ permalink: /tags/
 {% for item in tag_words %}
   <h2 id="{{ item | slugize }}" style="border-bottom: 2px solid #eee; padding-top: 50px;">#{{ item }}</h2>
   <ul style="list-style: none; padding-left: 0;">
-    {% for post in site.tags[item] %}
+    {% for simsoftware in site.tags[item] %}
       <li style="margin-bottom: 15px;">
         <a href="{{ post.url | relative_url }}" style="font-size: 1.2em; font-weight: bold; text-decoration: none;">{{ post.title }}</a>
         <br>
