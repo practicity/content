@@ -25,7 +25,9 @@ collections:
   simsoftware:
     output: true
 
-
+tags:
+  output: true
+  permalink: /tags/:name/
 
 
 # Includes an icon in the footer for each username you enter
