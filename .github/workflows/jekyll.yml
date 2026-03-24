@@ -2,7 +2,7 @@ name: Build and Deploy Jekyll
 
 on:
   push:
-    branches: ["main"]  # adjust to your branch
+    branches: ["master"]  # adjust to your branch
 
 permissions:
   contents: read
