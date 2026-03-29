@@ -11,7 +11,7 @@ website: "https://freefem.org/"
 github: "https://github.com/FreeFem/FreeFem-sources"
 license: "LGPL"
 last_survey: "March 24, 2026"
-screenshot1: ""
+screenshot1: "https://freefem.org/img/symbol_FreeFEM_97x97.png"
 screenshot2: ""
 screenshot3: ""
 ---

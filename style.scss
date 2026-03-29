@@ -288,6 +288,11 @@ footer {
 @import "highlights";
 @import "svg-icons";
 
+.item {
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
 
 // for items
 .item-grid {
@@ -324,7 +329,7 @@ footer {
 }
 
 .item-content p {
-  margin: 0;
+  margin: 10;
 }
 
 .tag {

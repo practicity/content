@@ -6,7 +6,7 @@ type: "Simulation Software"
 category: "Marine Simulation"
 complexity: "★★★☆☆"
 activity: "★★★☆☆"
-tags: [Simulation, Marine, Ship Handling, Radar, Navigation, Training]
+tags: [Simulation, Maritime, Ship Handling, Radar, Navigation, Training]
 website: "https://www.bridgecommand.co.uk/"
 github: "https://github.com/bridgecommand/bc"
 license: "GPL 2.0"

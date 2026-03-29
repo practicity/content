@@ -11,7 +11,7 @@ website: "https://www.flightgear.org/"
 github: "https://sourceforge.net/projects/flightgear/"
 license: "GPL 2.0"
 last_survey: "March 24, 2026"
-screenshot1: "https://www.flightgear.org/wp-content/uploads/fgfs-screen.jpg"
+screenshot1: "https://www.flightgear.org/_astro/fgfs-screen-070.CYA75v3C.jpg"
 screenshot2: ""
 screenshot3: ""
 ---
