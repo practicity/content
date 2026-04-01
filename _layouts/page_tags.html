@@ -1,0 +1,35 @@
+---
+layout: default
+title: All Tags
+---
+
+<h1>All Tags</h1>
+
+{% assign all_items = site.posts.docs %}
+{% for collection in site.collections %}
+  {% unless collection.label == 'posts' %}
+    {% assign all_items = all_items | concat: collection.docs %}
+  {% endunless %}
+{% endfor %}
+
+{% assign all_tags = "" | split: "" %}
+{% for item in all_items %}
+  {% for tag in item.tags %}
+    {% assign all_tags = all_tags | push: tag %}
+  {% endfor %}
+{% endfor %}
+{% assign all_tags = all_tags | uniq | sort %}
+
+<div class="tag-cloud">
+  {% for tag in all_tags %}
+    {% assign count = 0 %}
+    {% for item in all_items %}
+      {% if item.tags contains tag %}
+        {% assign count = count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    <a class="tag-pill" href="{{ '/tags/' | append: tag | slugify | relative_url }}">
+      #{{ tag }} <span class="tag-count">{{ count }}</span>
+    </a>
+  {% endfor %}
+</div>

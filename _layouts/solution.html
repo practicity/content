@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<p>{{ page.description }}</p>
+<hr>
+<h3>📊 Quick Facts</h3>
+<table>
+  <tr><td><strong>Type</strong></td><td>{{ page.type }}</td></tr>
+  <tr><td><strong>Category</strong></td><td>{{ page.category }}</td></tr>
+  <tr><td><strong>Complexity</strong></td><td><span style="color:#f1c40f;">{{ page.complexity }}</span></td></tr>
+  <tr><td><strong>Activity</strong></td><td><span style="color:#3498db;">{{ page.activity }}</span></td></tr>
+  <tr><td><strong>License</strong></td><td>{{ page.license }}</td></tr>
+  <tr><td><strong>Last Survey</strong></td><td>{{ page.last_survey }}</td></tr>
+</table>
+
+{% if page.screenshot1 or page.screenshot2 or page.screenshot3 %}
+<hr>
+<h3>🖼️ Screenshots</h3>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+  {% if page.screenshot1 %}
+    <img src="{{ page.screenshot1 }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
+  {% endif %}
+  {% if page.screenshot2 %}
+    <img src="{{ page.screenshot2 }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
+  {% endif %}
+  {% if page.screenshot3 %}
+    <img src="{{ page.screenshot3 }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
+  {% endif %}
+</div>
+{% endif %}
+
+
+<h3>🔗 Resources</h3>
+<ul>
+  <li>🌐 <strong>Official Website:</strong> <a href="{{ page.website }}">Visit Site</a></li>
+  <li>💻 <strong>Source Code:</strong> <a href="{{ page.github }}">GitHub Repository</a></li>
+</ul>
+
+<hr>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+  {% for tag in page.tags %}
+    <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/"
+       style="background-color:#f0f0f0; padding:4px 10px; border-radius:20px; font-size:0.8em; text-decoration:none; color:#333;">
+      {{ tag }}
+    </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="items-list">
+  {% for item in site.solutions %}
+    <article class="item">
+      <div class="item-grid">
+
+        <div class="item-image">
+          {% if item.screenshot1 %}
+            <a href="{{ item.url | relative_url }}">
+              <img src="{{ item.screenshot1 }}" alt="{{ item.title }}">
+            </a>
+          {% endif %}
+        </div>
+
+    <div class="item-content">
+      <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+      <p>{{ item.description }}</p>
+      {% if item.tags %}
+        <div class="item-tags">
+        {% for tag in item.tags %}
+          <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+

@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<p>{{ page.description }}</p>
+
+<hr>
+<h3>📊 Quick Facts</h3>
+
+<table>
+  <tr><td><strong>Type</strong></td><td>{{ page.type }}</td></tr>
+  <tr><td><strong>Author</strong></td><td>{{ page.author }}</td></tr>
+  <tr><td><strong>Published</strong></td><td>{{ page.created_on }}</td></tr>
+</table>
+
+<hr>
+<h3>📝 Abstract</h3>
+<p>{{ page.Abstract }}</p>
+
+{% if page.screenshot1 or page.screenshot2 %}
+<hr>
+<h3>🖼️ Screenshots</h3>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+  {% if page.screenshot1 %}
+    <img src="{{ page.screenshot1 }}" 
+         alt="Screenshot 1" 
+         style="border-radius:8px; border:1px solid #eee; width:100%;">
+  {% endif %}
+  {% if page.screenshot2 %}
+    <img src="{{ page.screenshot2 }}" 
+         alt="Screenshot 2" 
+         style="border-radius:8px; border:1px solid #eee; width:100%;">
+  {% endif %}
+</div>
+{% endif %}
+
+<hr>
+<h3>🔗 Resources</h3>
+<ul>
+  {% if page.original %}
+    <li>🌐 <strong>Original Source:</strong> 
+      <a href="{{ page.original }}" target="_blank" rel="noopener">Visit Source</a>
+    </li>
+  {% endif %}
+</ul>
+
+<hr>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+  {% for tag in page.tags %}
+    <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/"
+       style="background-color:#f0f0f0; padding:4px 10px; border-radius:20px; font-size:0.8em; text-decoration:none; color:#333;">
+      {{ tag }}
+    </a>
+  {% endfor %}
+</div>
