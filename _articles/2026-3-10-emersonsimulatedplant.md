@@ -10,4 +10,5 @@ author: "Alexandre GAIN"
 screenshot1: "https://i.ytimg.com/vi/2l9W-B65ty0/hqdefault.jpg"
 screenshot2: ""
 Abstract: "This video shows micro learning sequences experienced by the Emerson Process students. The resources used are the real equipments found in such plants."
+tags: ["Corporate-Training", "Experiential-Learning", "Manufacturing", "Simulation", "Workforce-Development"]
 ---
