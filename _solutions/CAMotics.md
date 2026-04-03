@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://user-images.githubusercontent.com/29616141/72183362-dc5ccb00-33fe-11ea-9728-899e40a2c7c9.jpg"
 screenshot2: ""
 screenshot3: ""
+tags: ["CNC", "CAD/CAM", "Manufacturing", "Simulation", "Visualization"]
 ---
