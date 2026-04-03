@@ -14,4 +14,5 @@ last_survey: "March 29, 2026"
 screenshot1: ""
 screenshot2: ""
 screenshot3: ""
+tags: ["C++", "Communication", "Networking", "Simulation"]
 ---

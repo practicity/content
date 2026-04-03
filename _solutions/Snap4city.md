@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxT8cZxKQ17x0cck7rFzgb6FSL-IMZmjKOWw&s"
 screenshot2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlIhZQWu2hHhTnz-N7d0FjmPHVjn3tVxfUoA&s"
 screenshot3: "https://www.fiware.org/wp-content/uploads/ImpactStories_Snap4City_Fig-2.png"
+tags: ["IoT", "Big-Data", "Data-Analytics", "Simulation", "Urban-Planning"]
 ---

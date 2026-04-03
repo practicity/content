@@ -15,4 +15,5 @@ screenshot1: "https://www.bridgecommand.co.uk/data/_uploaded/image/ASD%20Tug.png
 screenshot2: ""
 screenshot3: ""
 tags: ["Active-Learning", "Corporate-Training", "Experiential-Learning", "Simulation", "Teamwork"]
+tags: ["Active-Learning", "Corporate-Training", "Experiential-Learning", "Game-Based", "Simulation"]
 ---

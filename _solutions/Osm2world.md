@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://osm2world.org/img/logo.png"
 screenshot2: "http://osm2world.org/examples/0.2.0/thumbs/Passau_from_Inn_2012-09-13_highres-pov.png"
 screenshot3: "https://osm2world.org/examples/webgl/Akropolis.png"
+tags: ["3D-Modeling", "Digital-Twin", "GIS", "Simulation", "Urban-Planning"]
 ---

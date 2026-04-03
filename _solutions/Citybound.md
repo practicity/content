@@ -15,4 +15,5 @@ screenshot1: "https://uploads-ssl.webflow.com/58ef666b690e1f31ad12a43a/5c978bb47
 screenshot2: ""
 screenshot3: ""
 tags: ["Digital-Twin", "Game-Based", "Simulation", "Urban-Planning", "Visualization"]
+tags: ["Game-Based", "Simulation", "Urban-Planning", "Digital-Twin", "Visualization"]
 ---

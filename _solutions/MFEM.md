@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://mfem.org/img/logo-300@2x.png"
 screenshot2: "https://mfem.org/img/gallery/workshop25/cascadia.png"
 screenshot3: "https://mfem.org/img/gallery/workshop25/RFA-ElectricField.png"
+tags: ["C++", "FEM", "Physics", "Simulation"]
 ---

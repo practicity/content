@@ -15,4 +15,5 @@ screenshot1: "https://team.inria.fr/maelstrom/files/2022/03/fenics_banner.png"
 screenshot2: "https://miro.medium.com/v2/resize:fit:1358/format:webp/0*r5T6d6Aios-evued.jpg"
 screenshot3: "https://www.featool.com/images/featool-multiphysics-simulation-toolbox.png"
 tags: ["FEM", "Fluid-Dynamics", "Mathematics", "Physics", "Simulation"]
+tags: ["FEM", "Fluid-Dynamics", "Mathematics", "Physics", "Simulation"]
 ---

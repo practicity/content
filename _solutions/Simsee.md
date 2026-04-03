@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://simsee.org/logosimseesinmarco_02.jpg"
 screenshot2: "https://simsee.org/db-fotos/Fotos_secciones/nid_12/fig5.jpg"
 screenshot3: "https://simsee.org/db-fotos/Fotos_secciones/nid_12/fig1.jpg"
+tags: ["Energy", "Simulation", "Economics", "Data-Analytics", "Decision-Making"]
 ---

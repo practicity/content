@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://docs.helics.org/en/main/doxygen/helics-logo-long-primary-black.svg"
 screenshot2: ""
 screenshot3: ""
+tags: ["Communication", "Digital-Twin", "Energy", "Networking", "Simulation"]
 ---

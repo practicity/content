@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://cyberbotics.com/assets/images/webots.png"
 screenshot2: "https://raw.githubusercontent.com/cyberbotics/webots/released/docs/automobile/images/sumo_traffic_light.thumbnail.jpg"
 screenshot3: "https://raw.githubusercontent.com/cyberbotics/webots/released/docs/automobile/images/highway.thumbnail.jpg"
+tags: ["3D-Modeling", "C++", "Java", "Python", "Robotics"]
 ---

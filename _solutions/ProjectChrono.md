@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://avatars.githubusercontent.com/u/5186827?s=200&v=4"
 screenshot2: "https://projectchrono.org/assets/Images/2millionrover.jpg"
 screenshot3: "https://projectchrono.org/assets/Images/TrackImage.jpg"
+tags: ["Physics", "Robotics", "Simulation", "Fluid-Dynamics", "Digital-Twin"]
 ---

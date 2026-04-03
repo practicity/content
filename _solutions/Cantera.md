@@ -15,4 +15,5 @@ screenshot1: "https://cantera.org/_static/cantera-logo.png"
 screenshot2: ""
 screenshot3: ""
 tags: ["C++", "Chemistry", "Python", "Simulation", "Thermodynamics"]
+tags: ["Chemistry", "C++", "Energy", "Python", "Thermodynamics"]
 ---

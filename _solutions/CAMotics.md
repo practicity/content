@@ -15,4 +15,5 @@ screenshot1: "https://user-images.githubusercontent.com/29616141/72183362-dc5ccb
 screenshot2: ""
 screenshot3: ""
 tags: ["CNC", "CAD/CAM", "Manufacturing", "Simulation", "Visualization"]
+tags: ["CAD/CAM", "CNC", "Manufacturing", "Simulation", "Visualization"]
 ---

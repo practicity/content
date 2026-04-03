@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://equinor.github.io/neqsimhome/figures/neqsimlogocircleflat.PNG"
 screenshot2: "https://i.ytimg.com/vi/1YDbia44vMA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB7lFTH81PIcy1rdmps8AYCT3FGXw"
 screenshot3: "https://solbraa.folk.ntnu.no/neqsim/screeshot_files/image002.jpg"
+tags: ["Energy", "Fluid-Dynamics", "Java", "Simulation", "Thermodynamics"]
 ---

@@ -15,4 +15,5 @@ screenshot1: "http://www.chilipeppr.com/img/chilipeppr_logo.png"
 screenshot2: ""
 screenshot3: ""
 tags: ["CAD/CAM", "CNC", "Manufacturing", "Simulation", "Visualization"]
+tags: ["CAD/CAM", "CNC", "Manufacturing", "Simulation", "Visualization"]
 ---

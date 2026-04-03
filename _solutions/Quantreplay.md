@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://github.com/Quod-Financial/quantreplay/raw/main/images/image01_dark.png"
 screenshot2: "https://github.com/Quod-Financial/quantreplay/raw/main/images/image02_dark.png"
 screenshot3: ""
+tags: ["AI", "Data-Analytics", "Decision-Making", "Economics", "Simulation"]
 ---

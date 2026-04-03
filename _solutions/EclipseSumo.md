@@ -15,4 +15,5 @@ screenshot1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ_s1GnyqoYg
 screenshot2: ""
 screenshot3: ""
 tags: ["AI", "Digital-Twin", "Logistics", "Simulation", "Urban-Planning"]
+tags: ["Simulation", "Urban-Planning", "Data-Analytics", "Logistics", "Visualization"]
 ---

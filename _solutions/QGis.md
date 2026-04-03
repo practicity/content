@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://qgis.org/img/logosign.svg"
 screenshot2: "https://qgis.org/img/main-edit.webp"
 screenshot3: "https://qgis.org/img/main-analyze.webp"
+tags: ["GIS", "Simulation", "Urban-Planning", "Visualization", "Data-Analytics"]
 ---

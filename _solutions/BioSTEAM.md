@@ -15,4 +15,5 @@ screenshot1: "https://scyjth.github.io/biosteam_lca/_images/TOC_V2.png"
 screenshot2: ""
 screenshot3: ""
 tags: ["Assessment", "Chemistry", "Economics", "Python", "Simulation"]
+tags: ["Python", "Simulation", "Economics", "Energy", "Thermodynamics"]
 ---

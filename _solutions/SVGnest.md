@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://svgnest.com/img/logo.svg"
 screenshot2: "https://i0.wp.com/makezine.com/wp-content/uploads/2016/02/SVGNest.png?ssl=1"
 screenshot3: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuS7sq8Pu_Zl2LwDS81dNOSaA7qYMJQjFKrQ&s"
+tags: ["CAD/CAM", "CNC", "Manufacturing", "JavaScript", "Visualization"]
 ---

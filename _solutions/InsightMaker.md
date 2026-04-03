@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://insightmaker.com/images/logo.png"
 screenshot2: "https://ars.els-cdn.com/content/image/1-s2.0-S1569190X14000513-gr6.jpg"
 screenshot3: "https://i.ytimg.com/vi/TuXt_UIKA-w/maxresdefault.jpg"
+tags: ["Decision-Making", "Simulation", "Visualization", "Cloud-Computing", "Business-Administration"]
 ---
