@@ -12,4 +12,5 @@ screenshot2: ""
 Abstract: "[Summarized b AI] The video follows a drilling crew as they encounter a drilling break, which indicates an influx of formation fluids into the wellbore. This is a critical situation that requires immediate action to prevent a blowout. The crew initiates a well control procedure, which involves shutting in the well and then pumping heavier 'kill mud' into the wellbore to counteract the pressure of the influx.
 Proper training [ndlr : in a high fidelity simulator] and adherence to procedures, even in the face of unexpected problems, are crucial for safely managing these high-stakes situations. The goal is to recognize indications of trouble, take timely and effective action, and ultimately achieve a successful well kill.
 "
+tags: ["Crisis-Management", "Emergency-Response", "Energy", "Simulation", "Teamwork"]
 ---
