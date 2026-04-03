@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "http://www.chilipeppr.com/img/chilipeppr_logo.png"
 screenshot2: ""
 screenshot3: ""
+tags: ["CAD/CAM", "CNC", "Manufacturing", "Simulation", "Visualization"]
 ---
