@@ -43,6 +43,18 @@ title: All Tags
       <a class="tag-pill" href="{{ '/tags/' | append: tag | slugify: 'latin' | relative_url }}/">
         #{{ tag }} <span class="tag-count">{{ art_count }}</span>
       </a>
+      <ul>
+        {% for item in articles %}
+          {% if item.tags contains tag %}
+            <li>
+              <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% if item.type %}
+                <span class="item-type">{{ item.type }}</span>
+              {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
     {% endif %}
   {% endfor %}
 </div>
@@ -62,6 +74,21 @@ title: All Tags
       <a class="tag-pill" href="{{ '/tags/' | append: tag | slugify: 'latin' | relative_url }}/">
         #{{ tag }} <span class="tag-count">{{ sol_count }}</span>
       </a>
+      <ul>
+        {% for item in solutions %}
+          {% if item.tags contains tag %}
+            <li>
+              <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% if item.type %}
+                <span class="item-type">{{ item.type }}</span>
+              {% endif %}
+              {% if item.category %}
+                <span class="item-category">{{ item.category }}</span>
+              {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
     {% endif %}
   {% endfor %}
 </div>

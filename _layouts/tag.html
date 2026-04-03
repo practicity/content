@@ -4,7 +4,6 @@ layout: default
 
 <h1>🏷️ {{ page.tag }}</h1>
 
-
 {% assign tagged_posts = "" | split: "" %}
 {% for item in site.posts %}
   {% if item.tags contains page.tag %}
@@ -49,6 +48,9 @@ layout: default
     {% for item in tagged_articles %}
       <li>
         <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% if item.type %}
+          <span style="font-size:0.8em; color:#888;">· {{ item.type }}</span>
+        {% endif %}
         {% if item.date %}
           <span style="font-size:0.8em; color:#666;">· {{ item.date | date: "%b %d, %Y" }}</span>
         {% endif %}
@@ -63,6 +65,12 @@ layout: default
     {% for item in tagged_solutions %}
       <li>
         <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% if item.type %}
+          <span style="font-size:0.8em; color:#888;">· {{ item.type }}</span>
+        {% endif %}
+        {% if item.category %}
+          <span style="font-size:0.8em; color:#888;">· {{ item.category }}</span>
+        {% endif %}
         {% if item.date %}
           <span style="font-size:0.8em; color:#666;">· {{ item.date | date: "%b %d, %Y" }}</span>
         {% endif %}

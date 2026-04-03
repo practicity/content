@@ -1,61 +1,16 @@
 ---
 layout: post
-title: Simulation Software to be added to the catalog
-tags: [Simulation, Solutions]
+title: Your contributions are welcomed !
+tags: [Community, News]
 ---
 
-This post simply lists simulation software to be added to the 'Simsoftware' catalog.
+Enrich our community with your contributions !
+Do you know of OPEN SOURCE simulation software ? => Digital Solutions
+Do you want to inform about your EXPERIENTIAL LEARNING experiences ? => Articles
 
-https://fmi-standard.org/
-Not a software but a standard
+You are most welcomed to contribute to our community web site !
 
-https://calculix.de/
+At this point we can only accept them via email (alexandre.gain@experiential.fr)
 
-https://openradioss.org/
-
-https://awslabs.github.io/palace/stable/config/config/
-
-https://su2code.github.io/download.html
-
-https://gmat.atlassian.net/wiki/spaces/GW/overview
-
-https://lcgamboa.github.io/picsimlab_docs/stable/
-
-https://www.gridlabd.org/
-
-https://github.com/newton-physics/newton
-
-
-https://pyams.sourceforge.io/
-
-https://github.com/yrlu/quadrotor
-
-https://solarnetwork.net/
-
-https://tellurium.analogmachine.org/
-
-https://sourceforge.net/projects/kulkijg/
-
-https://github.com/Sidd0OP/A-Simple-Game-About-Scheduling-Trains
-
-https://sourceforge.net/projects/popppy/
-
-https://github.com/LabRPS/LabRPS
-
-https://physicell.org/
-
-https://www.hyperfit.cz/screenshots.php
-
-https://acousto.sourceforge.net/
-
-https://octave.org/
-
-https://a-b-street.github.io/docs/tech/trafficsim/discrete_event/index.html
-
-https://omnetpp.org/
-
-
-
-
-
-
+We will implement a user based access asap.
+In the meantime, enjoy !
