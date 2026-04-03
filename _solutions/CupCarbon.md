@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://avatars.githubusercontent.com/u/5851235?v=4"
 screenshot2: ""
 screenshot3: ""
+tags: ["IoT", "Networking", "Simulation", "Urban-Planning", "Visualization"]
 ---
