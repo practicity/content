@@ -6,7 +6,6 @@ type: "Simulation Software"
 category: "Aerospace / Flight Simulation"
 complexity: "★★★★★"
 activity: "★★★★★"
-tags: [Simulation, Game, Aerospace, Vehicles, Cpp]
 website: "https://www.flightgear.org/"
 github: "https://sourceforge.net/projects/flightgear/"
 license: "GPL 2.0"
@@ -14,6 +13,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://www.flightgear.org/_astro/fgfs-screen-070.CYA75v3C.jpg"
 screenshot2: ""
 screenshot3: ""
-tags: ["Aerospace", "Aviation", "Experiential-Learning", "Game-Based", "Simulation"]
-tags: ["Aerospace", "Aviation", "Experiential-Learning", "Game-Based", "Simulation"]
+tags: ["Aerospace", "Aviation", "Experiential-Learning", "Game-Based", "Simulation", "C++"]
 ---

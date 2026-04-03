@@ -6,7 +6,6 @@ type: "Simulation Software"
 category: "Traffic / Urban Mobility"
 complexity: "★★★★★"
 activity: "★★★★★"
-tags: [Simulation, Traffic, Public Transit, Cpp]
 website: "https://eclipse.dev/sumo/"
 github: "https://github.com/eclipse-sumo/sumo"
 license: "Eclipse Public License 2.0"
@@ -14,6 +13,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ_s1GnyqoYgAuKNNO-cYYRJy4A1fMwTJ57w&s"
 screenshot2: ""
 screenshot3: ""
-tags: ["AI", "Digital-Twin", "Logistics", "Simulation", "Urban-Planning"]
-tags: ["Simulation", "Urban-Planning", "Data-Analytics", "Logistics", "Visualization"]
+tags: ["Simulation", "Urban-Planning", "AI", "Data-Analytics", "Logistics", "Visualization", "C++"]
 ---

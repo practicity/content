@@ -6,7 +6,6 @@ type: "Simulation Software"
 category: "Multi-Physics / Finite Element Method"
 complexity: "★★★★☆"
 activity: "★★★★☆"
-tags: [Simulation, FEM, Physics, CFD, Electromagnetic, Thermodynamics, Fortran]
 website: "https://www.elmerfem.org/"
 github: "https://github.com/ElmerCSC/elmerfem"
 license: "GPL 2.0"
@@ -14,7 +13,6 @@ last_survey: "March 28, 2026"
 screenshot1: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Elmerlogo.png"
 screenshot2: "https://i.ytimg.com/vi/xcR0QfJ27mA/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBBQvUJZEJVsSqD1X-5wqJZMCOEAg"
 screenshot3: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGMqfGAxTfmmIQv2-KofO0Dn--LIxhBTQOlw&s"
-tags: ["FEM", "Fluid-Dynamics", "Physics", "Simulation", "Mathematics"]
-tags: ["FEM", "Fluid-Dynamics", "Physics", "Simulation", "Thermodynamics"]
+tags: ["FEM", "Fluid-Dynamics", "Physics", "Simulation", "Thermodynamics", "Fortran"]
 ---
 

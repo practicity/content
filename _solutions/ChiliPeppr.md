@@ -6,7 +6,7 @@ type: "Simulation Software"
 category: "CNC / Manufacturing"
 complexity: "★★★☆☆"
 activity: "★★★☆☆"
-tags: [Simulation, CNC, G-code, Milling, JavaScript]
+tags: ["CAD/CAM", "CNC", "Manufacturing", "Simulation", "Visualization"]
 website: "http://chilipeppr.com/"
 github: "https://github.com/chilipeppr"
 license: "MIT"
@@ -14,6 +14,4 @@ last_survey: "March 24, 2026"
 screenshot1: "http://www.chilipeppr.com/img/chilipeppr_logo.png"
 screenshot2: ""
 screenshot3: ""
-tags: ["CAD/CAM", "CNC", "Manufacturing", "Simulation", "Visualization"]
-tags: ["CAD/CAM", "CNC", "Manufacturing", "Simulation", "Visualization"]
 ---

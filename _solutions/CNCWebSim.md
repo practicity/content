@@ -6,7 +6,7 @@ type: "Simulation Software"
 category: "CNC / Manufacturing"
 complexity: "★★☆☆☆"
 activity: "★★☆☆☆"
-tags: [Simulation, CNC, G-code, Milling, JavaScript]
+tags: ["CAD/CAM", "CNC", "Experiential-Learning", "Manufacturing", "Simulation", "Javascript"]
 website: "https://filipecaixeta.github.io/cncwebsim/"
 github: "https://github.com/filipecaixeta/cncwebsim"
 license: "MIT"
@@ -14,6 +14,4 @@ last_survey: "March 24, 2026"
 screenshot1: "https://www.wittystore.com/image/data/software_imgs/cnc-simulator/free-cnc-simulator-online.JPG"
 screenshot2: ""
 screenshot3: ""
-tags: ["CAD/CAM", "CNC", "Manufacturing", "Simulation", "Visualization"]
-tags: ["CAD/CAM", "CNC", "Experiential-Learning", "Manufacturing", "Simulation"]
 ---

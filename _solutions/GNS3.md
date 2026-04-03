@@ -6,7 +6,6 @@ type: "Simulation Software"
 category: "Networking / IT"
 complexity: "★★★★☆"
 activity: "★★★★★"
-tags: [Simulation, Networking, Emulation, SDN, Python]
 website: "https://gns3.com/"
 github: "https://github.com/GNS3/gns3-gui"
 license: "GPL 3"
@@ -14,5 +13,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://dosztal.com/blog/gns3-automation/cover.png"
 screenshot2: "https://wiki.ubiquitous-network.ch/lib/exe/fetch.php?w=600&tok=107b21&media=fr:gns3:gns3.jpg"
 screenshot3: "https://user-images.githubusercontent.com/42133604/56846755-2e4cd780-68e8-11e9-87e2-5217cd847b19.JPG"
-tags: ["Networking", "Simulation"]
+tags: ["Networking", "Simulation", "Python", "Emulation"]
 ---

@@ -6,7 +6,6 @@ type: "Simulation Software"
 category: "Co-simulation"
 complexity: "★★★★★"
 activity: "★★★★★"
-tags: [Simulation, Co-simulation, HPC, Energy, Cpp, Python]
 website: "https://helics.org/"
 github: "https://github.com/GMLC-TDC/HELICS"
 license: "BSD 3-Clause"
@@ -14,5 +13,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://docs.helics.org/en/main/doxygen/helics-logo-long-primary-black.svg"
 screenshot2: ""
 screenshot3: ""
-tags: ["Communication", "Digital-Twin", "Energy", "Networking", "Simulation"]
+tags: ["Communication", "Digital-Twin", "Energy", "Networking", "Simulation", "C++", "Python"]
 ---

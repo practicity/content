@@ -6,7 +6,7 @@ type: "Simulation Software"
 category: "Chemical Kinetics / Thermodynamics"
 complexity: "★★★★☆"
 activity: "★★★★★"
-tags: [Simulation, Chemistry, Thermodynamics, Python, Cpp]
+tags: ["Chemistry", "C++", "Energy", "Python", "Thermodynamics"]
 website: "https://cantera.org/"
 github: "https://github.com/Cantera/cantera"
 license: "BSD 3-Clause"
@@ -14,6 +14,4 @@ last_survey: "March 24, 2026"
 screenshot1: "https://cantera.org/_static/cantera-logo.png"
 screenshot2: ""
 screenshot3: ""
-tags: ["C++", "Chemistry", "Python", "Simulation", "Thermodynamics"]
-tags: ["Chemistry", "C++", "Energy", "Python", "Thermodynamics"]
 ---

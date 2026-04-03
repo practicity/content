@@ -6,7 +6,7 @@ type: "Simulation Software"
 category: "Marine Simulation"
 complexity: "★★★☆☆"
 activity: "★★★☆☆"
-tags: [Simulation, Maritime, Vehicles]
+tags: ["Active-Learning", "Corporate-Training", "Experiential-Learning", "Simulation", "Teamwork"]
 website: "https://www.bridgecommand.co.uk/"
 github: "https://github.com/bridgecommand/bc"
 license: "GPL 2.0"
@@ -14,6 +14,4 @@ last_survey: "March 24, 2026"
 screenshot1: "https://www.bridgecommand.co.uk/data/_uploaded/image/ASD%20Tug.png"
 screenshot2: ""
 screenshot3: ""
-tags: ["Active-Learning", "Corporate-Training", "Experiential-Learning", "Simulation", "Teamwork"]
-tags: ["Active-Learning", "Corporate-Training", "Experiential-Learning", "Game-Based", "Simulation"]
 ---

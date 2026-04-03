@@ -6,7 +6,6 @@ type: "Simulation Software"
 category: "System Dynamics / Agent-Based"
 complexity: "★★★☆☆"
 activity: "★★★★☆"
-tags: [Simulation, System Dynamics, Agent-Based, JavaScript]
 website: "https://insightmaker.com/"
 github: "https://github.com/scottdturner/insightmaker"
 license: "AGPL 3"
@@ -14,5 +13,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://insightmaker.com/images/logo.png"
 screenshot2: "https://ars.els-cdn.com/content/image/1-s2.0-S1569190X14000513-gr6.jpg"
 screenshot3: "https://i.ytimg.com/vi/TuXt_UIKA-w/maxresdefault.jpg"
-tags: ["Decision-Making", "Simulation", "Visualization", "Cloud-Computing", "Business-Administration"]
+tags: ["Decision-Making", "Simulation", "Visualization", "Cloud-Computing", "Business-Administration", "Javascript"]
 ---
