@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://www.wittystore.com/image/data/software_imgs/cnc-simulator/free-cnc-simulator-online.JPG"
 screenshot2: ""
 screenshot3: ""
+locationsids: ["ENDER"]
 ---

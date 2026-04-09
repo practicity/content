@@ -1,3 +1,20 @@
+// for individual detail pages (location, article, solution)
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 600px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-grid .illustrations {
+    order: -1;
+  }
+}
+
 .item {
   margin-bottom: 40px;
   padding-bottom: 25px;
@@ -40,6 +57,22 @@
 
 .item-content p {
   margin: 10;
+}
+
+@media (max-width: 600px) {
+  .item-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .item-image img {
+    max-width: 100%;
+    max-height: none;
+  }
 }
 
 .tag {

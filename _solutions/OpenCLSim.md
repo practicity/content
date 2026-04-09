@@ -14,4 +14,5 @@ screenshot1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAS8AAACYCAMAAACCuJ+T
 screenshot2: ""
 screenshot3: ""
 tags: ["Python", "Logistics", "Simulator", "Digital-Twin", "Data-Analytics", "Maritime"]
+locationsids: ["PRACTIPORT"]
 ---

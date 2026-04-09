@@ -14,4 +14,5 @@ screenshot1: "https://github.com/Quod-Financial/quantreplay/raw/main/images/imag
 screenshot2: "https://github.com/Quod-Financial/quantreplay/raw/main/images/image02_dark.png"
 screenshot3: ""
 tags: ["AI", "Data-Analytics", "Decision-Making", "Economics", "Simulator", "Python"]
+locationsids: ["SIMFIN"]
 ---

@@ -14,4 +14,5 @@ screenshot1: "https://opendss.epri.com/lib/NewItem26.png"
 screenshot2: "https://figures.semanticscholar.org/4a718bf84863370bed30066d03fdefdb2d38b56e/3-Figure4-1.png"
 screenshot3: "https://a.fsdn.com/con/app/proj/electricdss/screenshots/238706.jpg/max/max/1"
 tags: ["Energy", "Simulator", "Mathematics", "Physics", "Urban-Planning", "Delphi"]
+locationsids: ["HSNPP"]
 ---

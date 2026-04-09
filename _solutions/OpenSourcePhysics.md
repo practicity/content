@@ -14,4 +14,5 @@ screenshot1: "https://www.compadre.org/osp/images/header_h1.gif"
 screenshot2: "https://www.compadre.org/osp/images/modeling/modeling_overview.gif"
 screenshot3: "https://www.compadre.org/osp/images/EclipseItemCombined.jpg"
 tags: ["Active-Learning", "Curriculum-Design", "Java", "JavaScript", "Physics"]
+locationsids: ["DEWEY"]
 ---

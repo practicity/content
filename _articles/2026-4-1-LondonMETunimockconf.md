@@ -10,5 +10,5 @@ screenshot1: "https://i.ytimg.com/vi/LcqXyUF_iGE/hqdefault.jpg?sqp=-oaymwEnCNACE
 screenshot2: ""
 Abstract: "This is an event organised by MA Conference Interpreting students at London Metropolitan University for the sole purpose of interpreting practise."
 tags: ["Assessment", "Communication", "Reflective-Practice", "Event"]
-locationid: "PANSIM"
+locationids: ["PANSIM"]
 ---

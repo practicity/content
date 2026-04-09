@@ -4,31 +4,61 @@ layout: default
 
 <p>{{ page.description }}</p>
 <hr>
-<h3>📊 Quick Facts</h3>
-<table>
-  <tr><td><strong>Type</strong></td><td>{{ page.type }}</td></tr>
-  <tr><td><strong>Category</strong></td><td>{{ page.category }}</td></tr>
-  <tr><td><strong>Complexity</strong></td><td><span style="color:#f1c40f;">{{ page.complexity }}</span></td></tr>
-  <tr><td><strong>Activity</strong></td><td><span style="color:#3498db;">{{ page.activity }}</span></td></tr>
-  <tr><td><strong>License</strong></td><td>{{ page.license }}</td></tr>
-  <tr><td><strong>Last Survey</strong></td><td>{{ page.last_survey }}</td></tr>
-</table>
 
-{% if page.screenshot1 or page.screenshot2 or page.screenshot3 %}
-<hr>
-<h3>🖼️ Screenshots</h3>
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
-  {% if page.screenshot1 %}
-    <img src="{{ page.screenshot1 }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
-  {% endif %}
-  {% if page.screenshot2 %}
-    <img src="{{ page.screenshot2 }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
-  {% endif %}
-  {% if page.screenshot3 %}
-    <img src="{{ page.screenshot3 }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
-  {% endif %}
+<div class="detail-grid">
+
+  <div class="quick-facts">
+    <h3 style="margin-top: 0;">📊 Quick Facts</h3>
+    <table>
+      <tr><td><strong>Type</strong></td><td>{{ page.type }}</td></tr>
+      <tr><td><strong>Category</strong></td><td>{{ page.category }}</td></tr>
+      <tr><td><strong>Complexity</strong></td><td><span style="color:#f1c40f;">{{ page.complexity }}</span></td></tr>
+      <tr><td><strong>Activity</strong></td><td><span style="color:#3498db;">{{ page.activity }}</span></td></tr>
+      <tr><td><strong>License</strong></td><td>{{ page.license }}</td></tr>
+      <tr><td><strong>Last Survey</strong></td><td>{{ page.last_survey }}</td></tr>
+      {% if page.locationids %}
+      <tr>
+        <td style="padding-right: 30px;"><strong>Location(s)</strong></td>
+        <td>
+          {% for lid in page.locationids %}
+            {% assign loc = site.locations | where: "locationid", lid | first %}
+            {% if loc %}<a href="{{ site.baseurl }}{{ loc.url }}">{{ loc.name }}</a>{% else %}{{ lid }}{% endif %}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </td>
+      </tr>
+      {% endif %}
+    </table>
+
+    {% if page.locationids %}
+    <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px;">
+      {% for lid in page.locationids %}
+      <a href="{{ site.microverse_url }}?locationid={{ lid }}" target="_blank" rel="noopener"
+         style="display:inline-block; padding:8px 14px; background:#333; color:#fff; border-radius:6px; text-decoration:none; font-size:0.9em;">
+        🌐 Microverse — {{ lid }}
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="illustrations">
+    {% if page.screenshot1 or page.screenshot2 or page.screenshot3 %}
+      <h3 style="margin-top: 0;">🖼️ Illustrations</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+        {% if page.screenshot1 %}
+          <img src="{{ page.screenshot1 }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
+        {% endif %}
+        {% if page.screenshot2 %}
+          <img src="{{ page.screenshot2 }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
+        {% endif %}
+        {% if page.screenshot3 %}
+          <img src="{{ page.screenshot3 }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
 </div>
-{% endif %}
 
 
 <h3>🔗 Resources</h3>

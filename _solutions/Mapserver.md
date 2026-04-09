@@ -14,4 +14,5 @@ screenshot1: "https://mapserver.org/_static/banner.png"
 screenshot2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmKvWcOqiLMt6vyCzIPN4KUJU4D_lk5ytowg&s"
 screenshot3: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwYznGIlK_dVShlh-uhcEJAyq1aHS8Rs_3MA&s"
 tags: ["GIS", "Simulator", "Visualization", "Urban-Planning", "Javascript", "Python", "PHP"]
+locationsids: ["CITYHALL"]
 ---

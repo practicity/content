@@ -14,4 +14,6 @@ screenshot1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyKm1eXi4H0i
 screenshot2: "https://myopenlab.org/wp-content/uploads/2017/07/VariablesExample.png"
 screenshot3: "https://myopenlab.org/wp-content/uploads/2017/07/VariablesExample-Logic.png"
 tags: ["Active-Learning", "Experiential-Learning", "IoT", "Physics", "Simulator", "Java"]
+
+locationsids: ["PIAGET", "ENDER"]
 ---

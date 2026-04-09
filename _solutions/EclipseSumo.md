@@ -14,4 +14,5 @@ screenshot1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ_s1GnyqoYg
 screenshot2: ""
 screenshot3: ""
 tags: ["Simulator", "Urban-Planning", "AI", "Data-Analytics", "Logistics", "Visualization", "C++"]
+locationsids: ["CITYHALL"]
 ---

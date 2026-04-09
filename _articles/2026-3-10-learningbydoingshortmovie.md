@@ -10,5 +10,5 @@ screenshot1: "https://i.ytimg.com/vi/g0O6VAbnDt8/hqdefault.jpg"
 screenshot2: ""
 Abstract: "Nin’s dream of becoming a teacher has come true. Learning by doing explained with inspirational story."
 tags: ["Active-Learning", "Experiential-Learning", "Curriculum-Design"]
-locationid: "CINEMAT"
+locationids: ["CINEMAT"]
 ---

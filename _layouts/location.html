@@ -6,7 +6,7 @@ layout: default
 
 <hr>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+<div class="detail-grid">
 
   <!-- LEFT COLUMN: Location Facts -->
   <div class="quick-facts">
@@ -61,7 +61,7 @@ layout: default
 
 </div>
 
-{% assign related = site.articles | where: "locationid", page.locationid %}
+{% assign related = site.articles | where_exp: "item", "item.locationids contains page.locationid" %}
 {% if related.size > 0 %}
 <hr>
 <h3>📚 Tenants <span style="font-weight: normal; color: #888; font-size: 0.85em;">({{ related.size }})</span></h3>
@@ -72,6 +72,20 @@ layout: default
     <a href="{{ site.baseurl }}{{ article.url }}" style="color: #4a6fa5; text-decoration: none;">{{ article.title }}</a>
     {% if article.type %}<span style="color: #888; font-size: 0.85em;"> · {{ article.type }}</span>{% endif %}
     {% if article.date %}<span style="color: #888; font-size: 0.85em;"> · {{ article.date | date: "%b %d, %Y" }}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% assign equipements = site.solutions | where_exp: "item", "item.locationids contains page.locationid" %}
+{% if equipements.size > 0 %}
+<hr>
+<h3>🛠️ Equipements <span style="font-weight: normal; color: #888; font-size: 0.85em;">({{ equipements.size }})</span></h3>
+<ul style="list-style: disc; padding-left: 20px; margin: 0;">
+  {% for sol in equipements %}
+  <li style="margin-bottom: 6px;">
+    <a href="{{ site.baseurl }}{{ sol.url }}" style="color: #4a6fa5; text-decoration: none;">{{ sol.title }}</a>
+    {% if sol.type %}<span style="color: #888; font-size: 0.85em;"> · {{ sol.type }}</span>{% endif %}
   </li>
   {% endfor %}
 </ul>

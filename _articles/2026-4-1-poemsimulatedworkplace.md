@@ -27,5 +27,5 @@ We should nurture, mentor, and facilitate their learning.
 Not determine, decide, dictate—possibly limit their potential earnings
 They are the tomorrow—they’re the doers, the thinkers, the discoverers, and so much more.
 EMPOWERMENT—it will unlock their unique door!"
-locationid: "KOLBLIB"
+locationids: ["KOLBLIB"]
 ---

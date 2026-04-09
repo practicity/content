@@ -14,4 +14,5 @@ screenshot1: "https://avatars.githubusercontent.com/u/5851235?v=4"
 screenshot2: ""
 screenshot3: ""
 tags: ["IoT", "Networking", "Simulator", "Urban-Planning", "Visualization"]
+locationsids: ["CITYHALL"]
 ---

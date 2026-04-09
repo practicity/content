@@ -14,4 +14,5 @@ screenshot1: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi592x8N
 screenshot2: "https://i.ytimg.com/vi/jlMqWlEF7Y4/maxresdefault.jpg"
 screenshot3: "https://lh3.googleusercontent.com/-iDOxJXuTlA8/Wri7fegs3zI/AAAAAAAAAAM/qUQqCG_Ut6IY1EZCRF0q97sxgfnomnY0gCLcBGAs/s1600/MyAssign.JPG"
 tags: ["Logistics", "Manufacturing", "Simulator", "Java"]
+locationids: ["SIMFAC"]
 ---

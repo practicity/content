@@ -14,4 +14,5 @@ screenshot1: "https://openmodelica.org/images/logo-glow.svg"
 screenshot2: "https://openmodelica.org/doc/OpenModelicaUsersGuide/latest/_images/taskgraph.png"
 screenshot3: "https://openmodelica.org/images/BR-CED.JPG"
 tags: ["Digital-Twin", "Fluid-Dynamics", "Physics", "Manufacturing", "Simulator", "Thermodynamics", "C++"]
+locationsids: ["ENDER", "SIMFAC", "PIAGET", "KEMSYM"]
 ---

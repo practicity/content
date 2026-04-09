@@ -14,4 +14,5 @@ last_survey: "March 24, 2026"
 screenshot1: "https://www.bridgecommand.co.uk/data/_uploaded/image/ASD%20Tug.png"
 screenshot2: ""
 screenshot3: ""
+locationids: ["VOYAGER"]
 ---

@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:practicity.github.io)"
+      "WebFetch(domain:practicity.github.io)",
+      "Bash(sed:*)"
     ]
   }
 }

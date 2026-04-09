@@ -10,5 +10,5 @@ screenshot1: "https://i.ytimg.com/vi/UlKBwUffUVU/hqdefault.jpg"
 screenshot2: ""
 Abstract: "This uncommented video drives us inside an ELPHINSTONE Simulated Environment reproducing an entire production line (wooden made cabins). The line is equipped with Kanban bins. The last part shows a debrief session with the participants."
 tags: ["Corporate-Training", "Debriefing", "Experiential-Learning", "Industrial-Operations", "Simulation", "Simulated-Workplace"]
-locationid: "SIMFAC"
+locationids: ["SIMFAC"]
 ---
