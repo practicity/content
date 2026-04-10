@@ -1,0 +1,92 @@
+---
+layout: default
+permalink: /posts/
+---
+
+<div class="page-hero" style="display: flex; align-items: center; gap: 2em; margin-bottom: 2em; padding: 1.5em; background: #f9f9f9; border-radius: 12px;">
+  <div style="font-size: 3em;">📝</div>
+  <div>
+    <h1 style="margin: 0 0 0.3em;">Posts</h1>
+    <p style="margin: 0; color: #555;">
+      News, updates, and announcements from the Practi.city project.
+      Browse by tag or scroll through all.
+    </p>
+    <p style="margin: 0.5em 0 0; color: #888; font-size: 0.9em;">
+      {{ site.posts | size }} posts available
+    </p>
+  </div>
+</div>
+
+<div style="margin-bottom: 2em;">
+  <strong>Browse by tag:</strong>
+  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.5em;">
+
+    {% assign post_tags = "" | split: "" %}
+    {% for item in site.posts %}
+      {% for tag in item.tags %}
+        {% unless post_tags contains tag %}
+          {% assign post_tags = post_tags | push: tag %}
+        {% endunless %}
+      {% endfor %}
+    {% endfor %}
+
+    {% assign decorated = "" | split: "" %}
+    {% for tag in post_tags %}
+      {% assign tag_count = 0 %}
+      {% for item in site.posts %}
+        {% if item.tags contains tag %}
+          {% assign tag_count = tag_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      {% assign padded = tag_count | prepend: "000" | slice: -3, 3 %}
+      {% assign entry = padded | append: "|" | append: tag %}
+      {% assign decorated = decorated | push: entry %}
+    {% endfor %}
+
+    {% assign decorated = decorated | sort | reverse %}
+
+    {% for entry in decorated %}
+      {% assign parts = entry | split: "|" %}
+      {% assign tag = parts[1] %}
+      {% assign tag_count = parts[0] | plus: 0 %}
+      <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/"
+         style="background-color: #f0f0f0; padding: 4px 10px; border-radius: 20px; font-size: 0.85em; text-decoration: none; color: #333;">
+        {{ tag }} <span style="color: #999;">{{ tag_count }}</span>
+      </a>
+    {% endfor %}
+
+  </div>
+</div>
+
+<div class="items-list">
+  {% for item in site.posts %}
+    <article class="item">
+      <div class="item-grid">
+
+        <div class="item-image">
+          {% if item.screenshot1 %}
+            <a href="{{ item.url | relative_url }}">
+              <img src="{{ item.screenshot1 | relative_url }}" alt="{{ item.title }}">
+            </a>
+          {% endif %}
+        </div>
+
+        <div class="item-content">
+          <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+          {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+          {% if item.date %}
+            <p style="font-size: 0.85em; color: #888;">{{ item.date | date: "%b %d, %Y" }}</p>
+          {% endif %}
+          {% if item.tags %}
+            <div class="item-tags">
+              {% for tag in item.tags %}
+                <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag">{{ tag }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+      </div>
+    </article>
+  {% endfor %}
+</div>

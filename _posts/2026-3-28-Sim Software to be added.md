@@ -2,6 +2,7 @@
 layout: post
 title: The Experiential Community Contributions Page is ready
 tags: [Simulation, Practi.city, News]
+screenshot1: "/images/posts/news.jpg"
 ---
 
 This post simply lists simulation software to be added to the 'Simsoftware' catalog.

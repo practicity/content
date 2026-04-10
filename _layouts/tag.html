@@ -26,55 +26,84 @@ layout: default
 {% endfor %}
 
 {% assign total = tagged_posts.size | plus: tagged_articles.size | plus: tagged_solutions.size %}
-<p>{{ total }} item(s) tagged with <strong>#{{ page.tag }}</strong></p>
+<p>
+  {{ total }} item(s) tagged with <strong>#{{ page.tag }}</strong>{% if tagged_posts.size > 0 %} · {{ tagged_posts.size }} post(s){% endif %}{% if tagged_articles.size > 0 %} · {{ tagged_articles.size }} article(s){% endif %}{% if tagged_solutions.size > 0 %} · {{ tagged_solutions.size }} solution(s){% endif %}
+</p>
 
 {% if tagged_posts.size > 0 %}
   <h2>📝 Posts <span style="font-size:0.8em; color:#666;">({{ tagged_posts.size }})</span></h2>
-  <ul>
-    {% for item in tagged_posts %}
-      <li>
-        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-        {% if item.date %}
-          <span style="font-size:0.8em; color:#666;">· {{ item.date | date: "%b %d, %Y" }}</span>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+  {% for item in tagged_posts %}
+    <article class="item">
+      <div class="item-grid">
+        <div class="item-image">
+          {% if item.screenshot1 %}
+            <a href="{{ item.url | relative_url }}">
+              <img src="{{ item.screenshot1 }}" alt="{{ item.title }}">
+            </a>
+          {% endif %}
+        </div>
+        <div class="item-content">
+          <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+          {% if item.date %}
+            <p style="font-size:0.85em; color:#666;">{{ item.date | date: "%b %d, %Y" }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
 {% endif %}
 
 {% if tagged_articles.size > 0 %}
   <h2>📰 Articles <span style="font-size:0.8em; color:#666;">({{ tagged_articles.size }})</span></h2>
-  <ul>
-    {% for item in tagged_articles %}
-      <li>
-        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-        {% if item.type %}
-          <span style="font-size:0.8em; color:#888;">· {{ item.type }}</span>
-        {% endif %}
-        {% if item.date %}
-          <span style="font-size:0.8em; color:#666;">· {{ item.date | date: "%b %d, %Y" }}</span>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+  {% for item in tagged_articles %}
+    <article class="item">
+      <div class="item-grid">
+        <div class="item-image">
+          {% if item.screenshot1 %}
+            <a href="{{ item.url | relative_url }}">
+              <img src="{{ item.screenshot1 }}" alt="{{ item.title }}">
+            </a>
+          {% endif %}
+        </div>
+        <div class="item-content">
+          <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+          {% if item.type or item.date %}
+            <p style="font-size:0.85em; color:#666;">
+              {% if item.type %}{{ item.type }}{% endif %}
+              {% if item.type and item.date %} · {% endif %}
+              {% if item.date %}{{ item.date | date: "%b %d, %Y" }}{% endif %}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
 {% endif %}
 
 {% if tagged_solutions.size > 0 %}
   <h2>🔧 Solutions <span style="font-size:0.8em; color:#666;">({{ tagged_solutions.size }})</span></h2>
-  <ul>
-    {% for item in tagged_solutions %}
-      <li>
-        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-        {% if item.type %}
-          <span style="font-size:0.8em; color:#888;">· {{ item.type }}</span>
-        {% endif %}
-        {% if item.category %}
-          <span style="font-size:0.8em; color:#888;">· {{ item.category }}</span>
-        {% endif %}
-        {% if item.date %}
-          <span style="font-size:0.8em; color:#666;">· {{ item.date | date: "%b %d, %Y" }}</span>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+  {% for item in tagged_solutions %}
+    <article class="item">
+      <div class="item-grid">
+        <div class="item-image">
+          {% if item.screenshot1 %}
+            <a href="{{ item.url | relative_url }}">
+              <img src="{{ item.screenshot1 }}" alt="{{ item.title }}">
+            </a>
+          {% endif %}
+        </div>
+        <div class="item-content">
+          <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+          {% if item.type or item.category or item.date %}
+            <p style="font-size:0.85em; color:#666;">
+              {% if item.type %}{{ item.type }}{% endif %}
+              {% if item.type and item.category %} · {% endif %}
+              {% if item.category %}{{ item.category }}{% endif %}
+              {% if item.date %} · {{ item.date | date: "%b %d, %Y" }}{% endif %}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
 {% endif %}

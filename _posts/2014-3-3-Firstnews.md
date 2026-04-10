@@ -2,6 +2,7 @@
 layout: post
 title: Your contributions are welcomed !
 tags: [Community, News]
+screenshot1: "/images/posts/news.jpg"
 ---
 
 Enrich our community with your contributions !
