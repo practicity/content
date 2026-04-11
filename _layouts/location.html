@@ -2,6 +2,14 @@
 layout: default
 ---
 
+<script>
+  console.group("Jekyll Debug Info");
+  console.log("Microverse URL variable:", "{{ site.microverse_url }}");
+  console.log("Site URL variable:", "{{ site.url }}");
+  console.log("Base URL variable:", "{{ site.baseurl }}");
+  console.groupEnd();
+</script>
+
 <p>{{ page.description }}</p>
 
 <hr>
@@ -102,3 +110,6 @@ layout: default
   {% endfor %}
 </div>
 {% endif %}
+
+
+
