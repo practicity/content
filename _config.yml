@@ -62,21 +62,23 @@ homepage:
 hero:
   autoplay_ms: 5000   # milliseconds between slides (0 = no autoplay)
   slides:
-    - image: /images/hero/slide1.png
+    - image: /images/hero/hero1.png
       title: "Experiential Learning at Scale"
-      subtitle: "Immersive, high-definition simulations for real-world skill development"
+      subtitle: "Real-scale experiences for real-world skill development"
       link: /articles/
-      cta: "Explore Articles"
-    - image: /images/hero/slide1.png
-      title: "HD Simulation Environments"
-      subtitle: "Bring complex systems to life inside the classroom or training center"
+      cta: "Browse our Experiential Learning Articles Database"
+    
+    - image: /images/hero/hero2.png
+      title: "High Definition Simulation Environments"
+      subtitle: "Bring complex systems to life with open-source simulation software"
       link: /solutions/
-      cta: "See Solutions"
-    - image: /images/hero/slide1.png
-      title: "A Global Community of Practice"
-      subtitle: "Practitioners, educators, and designers sharing the best of situational learning"
+      cta: "Find Open Source Digital Solutions"
+    
+    - image: /images/hero/hero3.png
+      title: "Let's imagine PractiCity together"
+      subtitle: "PractiCity Microverse is a Global Community of Experiential Learning Practitioners"
       link: /locations/
-      cta: "Discover Locations"
+      cta: "Navigate into PractiCity Microverse"
 
 
 # If you're hosting your site at a Project repository on GitHub pages
@@ -84,6 +86,14 @@ hero:
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
+
+
+
+
+
+
+
+
 
 
 #
