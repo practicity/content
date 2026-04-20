@@ -1,13 +1,12 @@
 ---
 ---
 
-//
-// IMPORTS
-//
-
-@import "reset";
-@import "variables";
-// Syntax highlighting @import is at the bottom of this file
+@use "sass:color";
+@use "reset";
+@use "variables" as *;
+@use "highlights";
+@use "svg-icons";
+@use "solutions";
 
 /**************/
 /* BASE RULES */
@@ -302,12 +301,163 @@ footer {
   }
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
+/*********************/
+/* HERO CAROUSEL     */
+/*********************/
 
-@import "_solutions";
+// Break out of the .container to go full-width
+.hero-carousel {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 480px;
+  overflow: hidden;
+  margin-bottom: 2.5em;
+  background: #111;
 
+  @include mobile {
+    height: 300px;
+  }
+}
 
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
+  &.active {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25) 0%,
+    rgba(0,0,0,0.65) 100%
+  );
+}
+
+.hero-caption {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 780px;
+  padding: 0 24px;
+}
+
+.hero-title {
+  font-size: 2.4em;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.3em;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+
+  @include mobile {
+    font-size: 1.6em;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.15em;
+  color: rgba(255,255,255,0.9);
+  margin: 0 0 1.4em;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  line-height: 1.5;
+
+  @include mobile {
+    font-size: 0.95em;
+  }
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 0.65em 1.8em;
+  background: $blue;
+  color: #fff !important;
+  border-radius: 3px;
+  font-size: 0.95em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+
+  &:hover, &:active {
+    background: color.adjust($blue, $lightness: -12%);
+    transform: translateY(-1px);
+    color: #fff !important;
+  }
+}
+
+// Arrows
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: rgba(0,0,0,0.35);
+  border: none;
+  color: #fff;
+  font-size: 2.2em;
+  line-height: 1;
+  width: 48px;
+  height: 64px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.2s;
+
+  &:hover { background: rgba(0,0,0,0.65); }
+
+  &.prev { left: 12px; }
+  &.next { right: 12px; }
+
+  @include mobile {
+    font-size: 1.6em;
+    width: 36px;
+    height: 48px;
+  }
+}
+
+// Dot indicators
+.hero-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, border-color 0.2s;
+
+  &.active {
+    background: #fff;
+    border-color: #fff;
+  }
+
+  &:hover {
+    border-color: #fff;
+  }
+}

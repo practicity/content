@@ -1,6 +1,6 @@
 name: Practi.City
 description: the Experiential and HD simulations for situational learning community around the world
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: /images/practicity_tmp_logo.jpg
 
 collections:
   locations:
@@ -41,10 +41,42 @@ disqus:
 google_analytics:
 
 # Used for Sitemap.xml and your RSS feed
-url: "practi.city"
+url: "https://practi.city"
 
 # Microverse base URL
 microverse_url: "https://microverse.practi.city"
+
+# Homepage display counts
+homepage:
+  news_count: 4
+  articles_count: 2
+  solutions_count: 2
+  locations_count: 2
+
+# Hero banner carousel — add/remove/reorder slides freely
+# image: path relative to site root (or absolute URL)
+# title: large headline
+# subtitle: supporting line
+# link: where the CTA button points (optional)
+# cta: button label (optional, defaults to "Learn more")
+hero:
+  autoplay_ms: 5000   # milliseconds between slides (0 = no autoplay)
+  slides:
+    - image: /images/hero/slide1.png
+      title: "Experiential Learning at Scale"
+      subtitle: "Immersive, high-definition simulations for real-world skill development"
+      link: /articles/
+      cta: "Explore Articles"
+    - image: /images/hero/slide1.png
+      title: "HD Simulation Environments"
+      subtitle: "Bring complex systems to life inside the classroom or training center"
+      link: /solutions/
+      cta: "See Solutions"
+    - image: /images/hero/slide1.png
+      title: "A Global Community of Practice"
+      subtitle: "Practitioners, educators, and designers sharing the best of situational learning"
+      link: /locations/
+      cta: "Discover Locations"
 
 
 # If you're hosting your site at a Project repository on GitHub pages
@@ -52,12 +84,6 @@ microverse_url: "https://microverse.practi.city"
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
-
-
-
-
-
-
 
 
 #
@@ -82,6 +108,7 @@ kramdown:
 # Set the Sass partials directory, as we're using @imports
 sass:
   style: :expanded # You might prefer to minify using :compressed
+  quiet_deps: true
 
 # Use the following plug-ins
 gems:

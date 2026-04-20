@@ -1,6 +1,22 @@
 name: Practi.City
 description: the Experiential and HD simulations for situational learning community around the world
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: /images/practicity_tmp_logo.jpg
+
+
+# Used for Sitemap.xml and your RSS feed
+url: "http://localhost:4000"
+
+# If you're hosting your site at a Project repository on GitHub pages
+# (http://yourusername.github.io/repository-name)
+# and NOT your User repository (http://yourusername.github.io)
+# then add in the baseurl here, like this: "/repository-name"
+baseurl: ""
+
+# Microverse base URL
+microverse_url: "http://localhost:5173/" #new vite deployment URL for local development
+# because the local CMS needs to address local microverse
+microverse_urlparams: ["env=local"]     
+
 
 collections:
   locations:
@@ -41,13 +57,8 @@ disqus:
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
-# Used for Sitemap.xml and your RSS feed
-url: "http://127.0.0.1:4000/practicity-content"
 
-# Microverse base URL
-microverse_url: "http://127.0.0.1:5500"
-# because the local CMS needs to address local microverse
-microverse_urlparams: ["env=local"]     
+
 
 #low level settings for development server
 webrick:
@@ -55,11 +66,33 @@ webrick:
     Access-Control-Allow-Origin: "*"
 
 
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: "/practicity-content"
+
+hero:
+  autoplay_ms: 5000   # milliseconds between slides (0 = no autoplay)
+  slides:
+    - image: /images/hero/hero1.png
+      title: "Experiential Learning at Scale"
+      subtitle: "Real-scale experiences for real-world skill development"
+      link: /articles/
+      cta: "Browse our Experiential Learning Articles Database"
+    
+    - image: /images/hero/hero2.png
+      title: "High Definition Simulation Environments"
+      subtitle: "Bring complex systems to life with open-source simulation software"
+      link: /solutions/
+      cta: "Find Open Source Digital Solutions"
+    
+    - image: /images/hero/hero3.png
+      title: "Let's imagine PractiCity together"
+      subtitle: "PractiCity Microverse is a Global Community of Experiential Learning Practitioners"
+      link: /locations/
+      cta: "Navigate into PractiCity Microverse"
+
+
+
+
+
+
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -98,3 +131,6 @@ exclude:
   - CNAME
 
 theme: minimal-mistakes-jekyll
+
+
+

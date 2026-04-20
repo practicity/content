@@ -7,7 +7,11 @@
       "Bash(grep -h \"^image:\" \"/c/Users/alexa/OneDrive - RAMPART.CLOUD/Documents/DEVELOPMENT PROJECTS/practicity-content/_locations\"/*.md)",
       "Bash(grep -h \"locationids\\\\|locationsids\\\\|locationdis\" *.md)",
       "Bash(grep -hE \"locationids|locationsids|locationdis\" *.md)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(wc -l \"C:\\\\Users\\\\AlexandreGAINEDMV\\\\OneDrive - RAMPART.CLOUD\\\\Documents\\\\DEVELOPMENT PROJECTS\\\\practicity-content\\\\_articles\"/*.md)",
+      "Bash(wc -l \"C:\\\\Users\\\\AlexandreGAINEDMV\\\\OneDrive - RAMPART.CLOUD\\\\Documents\\\\DEVELOPMENT PROJECTS\\\\practicity-content\\\\_solutions\"/*.md)",
+      "Bash(xargs grep *)",
+      "Bash(bundle exec *)"
     ]
   }
 }

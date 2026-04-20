@@ -2,29 +2,237 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post" style="margin-bottom: 1.5em;">
+{% if site.hero.slides and site.hero.slides.size > 0 %}
+<!-- ===== Hero Banner Carousel ===== -->
+<div class="hero-carousel" id="heroCarousel"
+     aria-label="Hero banner"
+     aria-roledescription="carousel">
 
-      <h2 style="margin-bottom: 0.2em;">
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h2>
-
-      <div class="entry">
-        {{ post.excerpt }}
+  <div class="hero-track" id="heroTrack">
+    {% for slide in site.hero.slides %}
+    <div class="hero-slide{% if forloop.first %} active{% endif %}"
+         role="group"
+         aria-roledescription="slide"
+         aria-label="{{ forloop.index }} of {{ forloop.length }}"
+         style="background-image: url('{{ slide.image | relative_url }}');">
+      <div class="hero-overlay"></div>
+      <div class="hero-caption">
+        {% if slide.title %}<h2 class="hero-title">{{ slide.title }}</h2>{% endif %}
+        {% if slide.subtitle %}<p class="hero-subtitle">{{ slide.subtitle }}</p>{% endif %}
+        {% if slide.link %}
+        <a href="{{ slide.link | relative_url }}" class="hero-cta">
+          {{ slide.cta | default: "Learn more" }}
+        </a>
+        {% endif %}
       </div>
+    </div>
+    {% endfor %}
+  </div>
 
-      <div style="font-size: 0.8em; color: #666; margin-bottom: 0.5em;">
-        {{ post.date | date: "%B %e, %Y" }}
-        {% for tag in post.tags %}
-          <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/"
-             style="background-color: #f0f0f0; padding: 2px 8px; border-radius: 20px; text-decoration: none; color: #333; margin-left: 4px;">
-            {{ tag }}
-          </a>
-        {% endfor %}
-      </div>
+  <!-- Prev / Next arrows -->
+  <button class="hero-arrow hero-prev" onclick="heroMove(-1)" aria-label="Previous slide">&#8249;</button>
+  <button class="hero-arrow hero-next" onclick="heroMove(1)"  aria-label="Next slide">&#8250;</button>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+  <!-- Dot indicators -->
+  <div class="hero-dots" role="tablist" aria-label="Slides">
+    {% for slide in site.hero.slides %}
+    <button class="hero-dot{% if forloop.first %} active{% endif %}"
+            role="tab"
+            aria-label="Go to slide {{ forloop.index }}"
+            onclick="heroGo({{ forloop.index | minus: 1 }})"></button>
+    {% endfor %}
+  </div>
 </div>
+
+<script>
+(function () {
+  var total   = {{ site.hero.slides.size }};
+  var current = 0;
+  var timer   = null;
+  var ms      = {{ site.hero.autoplay_ms | default: 5000 }};
+
+  function update(next) {
+    var slides = document.querySelectorAll('.hero-slide');
+    var dots   = document.querySelectorAll('.hero-dot');
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (next + total) % total;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  window.heroMove = function (dir) { resetTimer(); update(current + dir); };
+  window.heroGo   = function (idx) { resetTimer(); update(idx); };
+
+  function resetTimer() {
+    if (timer) clearInterval(timer);
+    if (ms > 0) timer = setInterval(function () { update(current + 1); }, ms);
+  }
+
+  // Pause on hover
+  var el = document.getElementById('heroCarousel');
+  if (el) {
+    el.addEventListener('mouseenter', function () { if (timer) clearInterval(timer); });
+    el.addEventListener('mouseleave', resetTimer);
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft')  heroMove(-1);
+    if (e.key === 'ArrowRight') heroMove(1);
+  });
+
+  if (ms > 0 && total > 1) resetTimer();
+})();
+</script>
+{% endif %}
+
+{% assign news_count      = site.homepage.news_count      | default: 4 %}
+{% assign articles_count  = site.homepage.articles_count  | default: 2 %}
+{% assign solutions_count = site.homepage.solutions_count | default: 2 %}
+{% assign locations_count = site.homepage.locations_count | default: 2 %}
+
+<!-- ===== Latest News ===== -->
+<section style="margin-bottom: 2.5em;">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1em; border-bottom: 2px solid #eee; padding-bottom: 0.4em;">
+    <h2 style="margin: 0;">Latest News</h2>
+    <a href="{{ site.baseurl }}/posts/" style="font-size: 0.9em; color: #666;">See all posts &rarr;</a>
+  </div>
+  <div class="items-list">
+    {% assign recent_posts = site.posts | slice: 0, news_count %}
+    {% for post in recent_posts %}
+      <article class="item">
+        <div class="item-grid">
+          <div class="item-image">
+            {% if post.screenshot1 %}
+              <a href="{{ post.url | relative_url }}">
+                <img src="{{ post.screenshot1 | relative_url }}" alt="{{ post.title }}">
+              </a>
+            {% endif %}
+          </div>
+          <div class="item-content">
+            <h3 style="margin-top: 0;"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p style="font-size: 0.85em; color: #888; margin-bottom: 0.4em;">{{ post.date | date: "%b %d, %Y" }}</p>
+            {{ post.excerpt }}
+            {% if post.tags %}
+              <div class="item-tags">
+                {% for tag in post.tags %}
+                  <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag">{{ tag }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ===== Latest Articles ===== -->
+<section style="margin-bottom: 2.5em;">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1em; border-bottom: 2px solid #eee; padding-bottom: 0.4em;">
+    <h2 style="margin: 0;">Latest Articles</h2>
+    <a href="{{ site.baseurl }}/articles/" style="font-size: 0.9em; color: #666;">See all articles &rarr;</a>
+  </div>
+  <div class="items-list">
+    {% assign recent_articles = site.articles | slice: 0, articles_count %}
+    {% for item in recent_articles %}
+      <article class="item">
+        <div class="item-grid">
+          <div class="item-image">
+            {% if item.screenshot1 %}
+              <a href="{{ item.url | relative_url }}">
+                <img src="{{ item.screenshot1 | relative_url }}" alt="{{ item.title }}">
+              </a>
+            {% endif %}
+          </div>
+          <div class="item-content">
+            <h3 style="margin-top: 0;"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+            {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+            {% if item.tags %}
+              <div class="item-tags">
+                {% for tag in item.tags %}
+                  <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag">{{ tag }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ===== Latest Solutions ===== -->
+<section style="margin-bottom: 2.5em;">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1em; border-bottom: 2px solid #eee; padding-bottom: 0.4em;">
+    <h2 style="margin: 0;">Latest Solutions</h2>
+    <a href="{{ site.baseurl }}/solutions/" style="font-size: 0.9em; color: #666;">See all solutions &rarr;</a>
+  </div>
+  <div class="items-list">
+    {% assign recent_solutions = site.solutions | slice: 0, solutions_count %}
+    {% for item in recent_solutions %}
+      <article class="item">
+        <div class="item-grid">
+          <div class="item-image">
+            {% if item.screenshot1 %}
+              <a href="{{ item.url | relative_url }}">
+                <img src="{{ item.screenshot1 | relative_url }}" alt="{{ item.title }}">
+              </a>
+            {% endif %}
+          </div>
+          <div class="item-content">
+            <h3 style="margin-top: 0;"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+            {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+            {% if item.tags %}
+              <div class="item-tags">
+                {% for tag in item.tags %}
+                  <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag">{{ tag }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ===== Locations ===== -->
+<section style="margin-bottom: 2.5em;">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1em; border-bottom: 2px solid #eee; padding-bottom: 0.4em;">
+    <h2 style="margin: 0;">Locations</h2>
+    <a href="{{ site.baseurl }}/locations/" style="font-size: 0.9em; color: #666;">See all locations &rarr;</a>
+  </div>
+  <div class="items-list">
+    {% assign recent_locations = site.locations | slice: 0, locations_count %}
+    {% for item in recent_locations %}
+      <article class="item">
+        <div class="item-grid">
+          <div class="item-image">
+            {% if item.screenshot1 %}
+              <a href="{{ item.url | relative_url }}">
+                <img src="{{ item.screenshot1 | relative_url }}" alt="{{ item.name }}">
+              </a>
+            {% endif %}
+          </div>
+          <div class="item-content">
+            <h3 style="margin-top: 0;">
+              <a href="{{ item.url | relative_url }}">{{ item.name }}
+                <span style="font-size: 0.6em; color: #999; font-weight: normal;">({{ item.locationid }})</span>
+              </a>
+            </h3>
+            {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+            {% if item.tags %}
+              <div class="item-tags">
+                {% for tag in item.tags %}
+                  <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag">{{ tag }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

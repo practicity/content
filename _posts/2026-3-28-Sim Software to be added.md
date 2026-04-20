@@ -1,7 +1,7 @@
 ---
 layout: post
-title: The Experiential Community Contributions Page is ready
-tags: [Simulation, Practi.city, News]
+title: A list of simulation open source software to be added
+tags: [Simulation, Community]
 screenshot1: "/images/posts/news.jpg"
 ---
 

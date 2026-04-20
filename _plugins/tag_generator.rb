@@ -9,7 +9,13 @@ module Jekyll
         all_items += collection.docs
       end
 
-      tags = all_items.flat_map { |item| item.data['tags'] || [] }.uniq
+      # Deduplicate by slug so that e.g. "JavaScript" and "javascript" don't
+      # both generate tags/javascript/ and cause a destination conflict.
+      tags = all_items.flat_map { |item| item.data['tags'] || [] }
+                      .each_with_object({}) { |t, h|
+                        slug = Jekyll::Utils.slugify(t, mode: 'latin')
+                        h[slug] ||= t
+                      }.values
 
       tags.each do |tag|
         site.pages << TagPage.new(site, site.source, tag)
