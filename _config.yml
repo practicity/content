@@ -70,7 +70,7 @@ hero:
     
     - image: /images/hero/hero2.png
       title: "High Definition Simulation Environments"
-      subtitle: "Bring complex systems to life with open-source simulation software"
+      subtitle: "Bring complex systems to life with simulators"
       link: /solutions/
       cta: "Find Open Source Digital Solutions"
     
