@@ -1,5 +1,6 @@
 name: Practi.City
-description: A Volunteer Community for Experiential Learning & Open-Source Simulatorsavatar: /images/practicity_tmp_logo.jpg
+description: "A Volunteer Community for Experiential Learning & Open-Source Simulators"
+avatar: /images/practicity_tmp_logo.jpg
 
 collections:
   locations:
