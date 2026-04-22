@@ -22,19 +22,30 @@
   <body>
     <div class="wrapper-masthead">
       <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+        <header class="masthead">
+          <div class="masthead-top">
+            <div class="masthead-brand">
+              <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+              <div class="site-info">
+                <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+                <p class="site-description">{{ site.description }}</p>
+              </div>
+            </div>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
+            <div class="masthead-cta">
+              {% if site.microverse_url contains '?' %}{% assign mv_sep = '&' %}{% else %}{% assign mv_sep = '?' %}{% endif %}
+              <a href="{{ site.microverse_url }}{{ mv_sep }}locationid=PRACTICITY" target="microverse-tab"
+                 style="display:inline-block; padding:8px 14px; background:#333; color:#fff; border-radius:6px; text-decoration:none; font-size:0.9em; white-space:nowrap;">
+                🌐 Practicity Microverse
+              </a>
+            </div>
           </div>
 
           <nav>
             <a href="{{ site.baseurl }}/posts">Posts</a>
             <a href="{{ site.baseurl }}/articles">Articles</a>
-            <a href="{{ site.baseurl }}/locations">Locations</a>
             <a href="{{ site.baseurl }}/solutions">Digital Solutions</a>
+            <a href="{{ site.baseurl }}/contributors">Contributors</a>
           </nav>
         </header>
       </div>

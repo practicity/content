@@ -15,4 +15,6 @@ screenshot2: "https://qblade.org/assets/turbines_overview-1-966x1024.jpg.webp"
 screenshot3: "https://qblade.org/assets/QB_validation_verification-1024x1017.png.webp"
 tags: ["Energy", "Fluid-Dynamics", "Physics", "Simulator", "C++"]
 locationids: ["HSNPP"]
+contributor_id: alexandre-gain
+
 ---

@@ -5,7 +5,7 @@ description: "A video showing the Building Leadership Simulation Centre with all
 type: "Interview"
 original: "https://www.youtube.com/watch?v=FumTXwAM6zM"
 created_on: "March 24, 2026"
-author: "BLSC"
+contributor_id: alexandre-gain
 screenshot1: "https://i.ytimg.com/vi/FumTXwAM6zM/hqdefault.jpg"
 screenshot2: ""
 Abstract: "[Copied from YouTube video description] The BLSC allows you to learn by doing in an immersive construction environment. Receive real-time feedback from psychologists and industry professionals to fast track your leadership development.

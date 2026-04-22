@@ -15,4 +15,6 @@ screenshot2: "http://opensimulator.org/images/thumb/0/0d/Oscc13_001_002_grady_bo
 screenshot3: "http://opensimulator.org/images/c/c6/Your2ndlife.com_06_1.jpg"
 tags: ["3D-Modeling", "Digital-Twin", "Game-Based", "Simulator", "VR/AR", "C#"]
 locationids: ["PRAXIS"]
+contributor_id: alexandre-gain
+
 ---

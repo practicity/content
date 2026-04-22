@@ -15,4 +15,6 @@ screenshot1: "https://www.wittystore.com/image/data/software_imgs/cnc-simulator/
 screenshot2: ""
 screenshot3: ""
 locationids: ["ENDER"]
+contributor_id: alexandre-gain
+
 ---

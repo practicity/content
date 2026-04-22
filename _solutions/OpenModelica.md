@@ -15,4 +15,6 @@ screenshot2: "https://openmodelica.org/doc/OpenModelicaUsersGuide/latest/_images
 screenshot3: "https://openmodelica.org/images/BR-CED.JPG"
 tags: ["Digital-Twin", "Fluid-Dynamics", "Physics", "Manufacturing", "Simulator", "Thermodynamics", "C++"]
 locationids: ["ENDER", "SIMFAC", "PIAGET", "KEMSYM"]
+contributor_id: alexandre-gain
+
 ---

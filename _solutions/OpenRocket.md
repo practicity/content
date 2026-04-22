@@ -15,4 +15,6 @@ screenshot2: "https://openrocket.info/assets/img/screenshots/OpenRocket_home_3D.
 screenshot3: "https://upload.wikimedia.org/wikipedia/commons/e/e2/OpenRocket_23.09_Photo_Studio.png"
 tags: ["Aerospace", "Physics", "Simulator", "Visualization", "Java"]
 locationids: ["RASMUSSEN"]
+contributor_id: alexandre-gain
+
 ---

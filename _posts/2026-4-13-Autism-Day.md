@@ -3,6 +3,8 @@ layout: post
 title: Neurodiversity - A New Frontier for PractiCity
 tags: [Simulation, Healthcare]
 screenshot1: "/images/posts/post.jpeg"
+contributor_id: alexandre-gain
+
 ---
 
 They say professional relationships need regular maintenance. Recently, I caught up with Stefano, an old friend and former colleague from our ERP project days in Lyon.

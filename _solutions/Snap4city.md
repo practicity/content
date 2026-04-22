@@ -14,4 +14,6 @@ screenshot1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxT8cZxKQ17x
 screenshot2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlIhZQWu2hHhTnz-N7d0FjmPHVjn3tVxfUoA&s"
 screenshot3: "https://www.fiware.org/wp-content/uploads/ImpactStories_Snap4City_Fig-2.png"
 tags: ["IoT", "Data-Analytics", "Simulator", "Urban-Planning"]
+contributor_id: alexandre-gain
+
 ---

@@ -15,4 +15,6 @@ screenshot2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTWkbcdtkHyE
 screenshot3: "https://www.gprmax.com/images/projects/permittivity_model.png"
 tags: ["3D-Modeling", "Physics", "Simulator", "Mathematics", "Python"]
 locationids: ["PIAGET"]
+contributor_id: alexandre-gain
+
 ---

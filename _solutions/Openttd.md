@@ -15,4 +15,6 @@ screenshot2: "https://www.openttd.org/screenshots/1.9-alexthedacian_2_thumb.png"
 screenshot3: "https://www.openttd.org/screenshots/1.4-cargodist_thumb.png"
 tags: ["Aerospace", "Urban-Planning", "Business-Administration", "Game-Based", "Logistics", "Simulator", "C++"]
 locationids: ["CINEMATRIX"]
+contributor_id: alexandre-gain
+
 ---

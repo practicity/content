@@ -15,4 +15,6 @@ screenshot2: "http://osm2world.org/examples/0.2.0/thumbs/Passau_from_Inn_2012-09
 screenshot3: "https://osm2world.org/examples/webgl/Akropolis.png"
 tags: ["3D-Modeling", "Digital-Twin", "GIS", "Simulator", "Urban-Planning", "Java"]
 locationids: ["CITYHALL"]
+contributor_id: alexandre-gain
+
 ---

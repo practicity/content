@@ -5,7 +5,7 @@ description: "The video shows sequences of crisis management situation as an aft
 type: "Interview"
 original: "https://www.youtube.com/watch?v=BhleNR3CLLA"
 created_on: "March 24, 2026"
-author: "Alexandre GAIN"
+contributor_id: alexandre-gain
 screenshot1: "https://i.ytimg.com/vi/BhleNR3CLLA/hqdefault.jpg"
 screenshot2: ""
 Abstract: "This video coverage and series of mini interviews shows how realistic a crisis situation management simulation may be. It also shows how multiple resources and stakeholders can be involved and coordinated. An interesting interview of an evaluator is given. 

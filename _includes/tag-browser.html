@@ -28,7 +28,7 @@
       {% endif %}
     {% endfor %}
     <a href="#{{ tag | slugify }}" class="tag-pill">
-      #{{ tag }} <span class="tag-count">{{ count }}</span>
+      #{{ tag }} {{ count }}
     </a>
   {% endfor %}
 </div>

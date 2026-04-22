@@ -16,4 +16,6 @@ screenshot2: "https://opm-project.org/wp-content/uploads/2015/10/ResInsight.png"
 screenshot3: "https://opm-project.org/wp-content/uploads/2015/10/OPM-polymer.png"
 tags: ["Energy", "Fluid-Dynamics", "Mathematics", "Physics", "Simulator", "C++"]
 locationids: ["DERRICK"]
+contributor_id: alexandre-gain
+
 ---

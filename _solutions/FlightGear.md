@@ -15,4 +15,6 @@ screenshot2: ""
 screenshot3: ""
 tags: ["Aerospace", "Game-Based", "Simulator", "C++"]
 locationids: ["ARTWAPT"]
+contributor_id: alexandre-gain
+
 ---

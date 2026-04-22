@@ -15,4 +15,6 @@ screenshot2: "https://i.ytimg.com/vi/1YDbia44vMA/hq720.jpg?sqp=-oaymwEhCK4FEIIDS
 screenshot3: "https://solbraa.folk.ntnu.no/neqsim/screeshot_files/image002.jpg"
 tags: ["Energy", "Fluid-Dynamics", "Java", "Simulator", "Thermodynamics"]
 locationids: ["DERRICK", "KEMSYM"]
+contributor_id: alexandre-gain
+
 ---

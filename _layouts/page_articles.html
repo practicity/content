@@ -49,9 +49,8 @@ permalink: /articles/
       {% assign parts = entry | split: "|" %}
       {% assign tag = parts[1] %}
       {% assign tag_count = parts[0] | plus: 0 %}
-      <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/"
-         style="background-color: #f0f0f0; padding: 4px 10px; border-radius: 20px; font-size: 0.85em; text-decoration: none; color: #333;">
-        {{ tag }} <span style="color: #999;">{{ tag_count }}</span>
+      <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">
+        {{ tag }} {{ tag_count }}
       </a>
     {% endfor %}
 
@@ -77,7 +76,7 @@ permalink: /articles/
           {% if item.tags %}
             <div class="item-tags">
               {% for tag in item.tags %}
-                <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag">{{ tag }}</a>
+                <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">{{ tag }}</a>
               {% endfor %}
             </div>
           {% endif %}

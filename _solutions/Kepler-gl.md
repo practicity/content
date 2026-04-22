@@ -15,4 +15,6 @@ screenshot2: "https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/website/hero/keple
 screenshot3: "https://spatial-desktop.foursquare.com/app-data/keplergl/images/screenshots/img-2.png"
 tags: ["Data-Analytics", "GIS", "Urban-Planning", "Visualization", "Javascript"]
 locationids: ["CITYHALL"]
+contributor_id: alexandre-gain
+
 ---

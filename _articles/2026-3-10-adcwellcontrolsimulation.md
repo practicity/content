@@ -5,7 +5,7 @@ description: "The video demonstrates a complex, simulated oil rig well control o
 type: "Tutorial"
 original: "https://www.youtube.com/watch?v=2HINmpjL6aY"
 created_on: "March 24, 2026"
-author: "Studio 52"
+contributor_id: alexandre-gain
 screenshot1: "https://i.ytimg.com/vi/2HINmpjL6aY/hqdefault.jpg"
 screenshot2: ""
 Abstract: "[Summarized b AI] The video follows a drilling crew as they encounter a drilling break, which indicates an influx of formation fluids into the wellbore. This is a critical situation that requires immediate action to prevent a blowout. The crew initiates a well control procedure, which involves shutting in the well and then pumping heavier 'kill mud' into the wellbore to counteract the pressure of the influx.

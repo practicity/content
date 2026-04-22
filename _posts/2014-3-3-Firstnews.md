@@ -3,6 +3,8 @@ layout: post
 title: Your contributions are welcomed !
 tags: [Community]
 screenshot1: "/images/posts/news.jpg"
+contributor_id: alexandre-gain
+
 ---
 
 Enrich our community with your contributions !

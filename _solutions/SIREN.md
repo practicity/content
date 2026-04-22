@@ -13,4 +13,6 @@ screenshot1: "https://a.fsdn.com/allura/p/sensiren/icon?9ad59cbdd921892b831787f5
 screenshot2: "https://sen.asn.au/wp-content/uploads/SIREN_IMG.png"
 screenshot3: ""
 tags: ["Energy", "Simulator", "Visualization", "Economics", "Data-Analytics", "Decision-Making"]
+contributor_id: alexandre-gain
+
 ---

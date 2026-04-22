@@ -14,4 +14,6 @@ screenshot1: "https://pbs.twimg.com/profile_images/1089743660097228800/0Rl43p8-_
 screenshot2: "https://www.rigsofrods.org/_astro/background-truckrally.yzwuDcdj.png"
 screenshot3: "https://docs.rigsofrods.org/images/videocamera-debug-ingame.png"
 tags: ["Aerospace", "FEM", "Physics", "Simulator", "Game-Based", "C++", "Maritime"]
+contributor_id: alexandre-gain
+
 ---

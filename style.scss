@@ -162,16 +162,48 @@ img {
   }
 }
 
+.masthead-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.masthead-brand {
+  display: flex;
+  align-items: center;
+  width: 50%;
+
+  @include mobile {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.masthead-cta {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include mobile {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .site-avatar {
-  float: left;
+  flex-shrink: 0;
   width: 70px;
   height: 70px;
   margin-right: 15px;
 
   @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
+    margin: 0 auto 8px;
   }
 
   img {
@@ -180,12 +212,8 @@ img {
 }
 
 .site-info {
-  float: left;
-
   @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -518,9 +546,261 @@ footer {
 
 .hp-card-title {
   margin: 0;
-  padding: 0.6em 0.75em 0.7em;
+  padding: 0.6em 0.75em 0.4em;
   font-size: 0.9em;
   font-weight: 600;
   line-height: 1.35;
   color: #222;
+}
+
+.hp-card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  padding: 0 0.75em 0.65em;
+}
+
+.hp-card-date {
+  font-size: 0.55em;
+  color: #888;
+}
+
+// ===== Author pill =====
+.author-pill {
+  display: inline-block;
+  background: #e8f0fb;
+  color: #2c5fa5;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.60em;
+  font-weight: 300;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+
+  &:hover {
+    background: $blue;
+    color: #fff;
+  }
+}
+
+// ===== Author pill =====
+.tag-pill {
+  display: inline-block;
+  background: #f5feef;
+  color: #2ca54a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.60em;
+  font-weight: 300;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+
+  &:hover {
+    background: $blue;
+    color: #fff;
+  }
+}
+
+
+
+// ===== Minimal pill button =====
+.btn-pill {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #333;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.60em;
+  font-weight: normal;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+
+  &:hover {
+    background: #ddd;
+  }
+}
+
+// ===== Contributor profile =====
+.contributor-profile {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.contributor-header {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+  margin-bottom: 1.8em;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.contributor-headshot {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #eee;
+  background: #f0f0f0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.contributor-headshot-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #999;
+  background: linear-gradient(135deg, #e0e8f8 0%, #c8d8f0 100%);
+}
+
+.contributor-meta {
+  flex: 1;
+}
+
+.contributor-name {
+  margin: 0 0 0.15em;
+  font-size: 1.8em;
+}
+
+.contributor-byline {
+  margin: 0 0 0.3em;
+  color: #555;
+  font-size: 1em;
+}
+
+.contributor-location {
+  margin: 0 0 0.7em;
+  font-size: 0.9em;
+  color: #888;
+}
+
+.contributor-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+
+  @include mobile { justify-content: center; }
+}
+
+.social-link {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 0.82em;
+  text-decoration: none;
+  color: #444;
+  transition: border-color 0.15s, color 0.15s;
+
+  &:hover {
+    border-color: $blue;
+    color: $blue;
+  }
+}
+
+.contributor-bio {
+  font-size: 1em;
+  line-height: 1.7;
+  margin-bottom: 2em;
+  border-top: 1px solid #eee;
+  padding-top: 1.2em;
+}
+
+.contributor-contributions-title {
+  margin-bottom: 0.6em;
+}
+
+.contrib-section-title {
+  margin: 1.2em 0 0.6em;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  font-weight: 600;
+}
+
+.contrib-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+
+  @include mobile { grid-template-columns: repeat(2, 1fr); }
+}
+
+// ===== Contributors index =====
+.contributors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4em;
+  margin-top: 1.5em;
+
+  @include mobile { grid-template-columns: 1fr 1fr; }
+}
+
+.contributor-card {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  transition: box-shadow 0.18s, transform 0.18s;
+
+  &:hover {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.09);
+    transform: translateY(-2px);
+  }
+
+  .contributor-card-headshot {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #eee;
+    background: #f0f0f0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .contributor-headshot-placeholder {
+      font-size: 1.4em;
+    }
+  }
+
+  .contributor-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+    min-width: 0;
+
+    strong { font-size: 0.95em; color: #222; }
+    span   { font-size: 0.8em;  color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  }
 }

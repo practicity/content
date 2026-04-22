@@ -16,4 +16,6 @@ screenshot2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR83jG83cP_UR
 screenshot3: "https://media.licdn.com/dms/image/v2/D4E22AQHyOQVdkCTVFA/feedshare-shrink_800/B4EZdyTTZlGwAg-/0/1749969353349?e=2147483647&v=beta&t=BHBPu2rYnwMbl5xJl-eh-HUjFDTtoFZS61tmCW4lhB0"
 tags: ["3D-Modeling", "FEM", "Physics", "Simulator", "C++"]
 locationids: ["PIAGET"]
+contributor_id: alexandre-gain
+
 ---

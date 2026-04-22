@@ -15,4 +15,6 @@ screenshot1: "https://www.bridgecommand.co.uk/data/_uploaded/image/ASD%20Tug.png
 screenshot2: ""
 screenshot3: ""
 locationids: ["VOYAGER"]
+contributor_id: alexandre-gain
+
 ---

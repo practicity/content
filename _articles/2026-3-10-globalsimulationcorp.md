@@ -5,7 +5,7 @@ description: "Advances in computing and collective participation are reviving am
 type: "Interview"
 original: "https://www.youtube.com/watch?v=-gyA08fXmH0"
 created_on: "March 24, 2026"
-author: "Alexandre GAIN"
+contributor_id: alexandre-gain
 screenshot1: "https://i.ytimg.com/vi/-gyA08fXmH0/hqdefault.jpg"
 screenshot2: ""
 Abstract: "[Copied from YouTube video description] This video is from IFTF's 2014 Ten-Year Forecast, which explores 10 bold projects that have the potential to change the world over the next 10 years. Read more about the projects here: http://www.iftf.org/tyf2014  

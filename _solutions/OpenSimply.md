@@ -15,4 +15,6 @@ screenshot2: "https://opensimply.org/img/MMC_queue.png?v=1770327210"
 screenshot3: "https://opensimply.org/img/MMC_queue_OpenSIMPLY.gif?v=1578305474"
 tags: ["Logistics", "Simulator", "Visualization", "Pascal", "Lazarus"]
 locationids: ["CITYHALL"]
+contributor_id: alexandre-gain
+
 ---

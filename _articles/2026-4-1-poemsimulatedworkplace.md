@@ -6,7 +6,7 @@ type: "Other"
 tags: ["Simulated-Workplace", "Active-Learning", "Experiential-Learning"]
 original: "https://www.youtube.com/watch?v=IxmqQmb5iUE"
 created_on: "April 1, 2026"
-author: "Dr. Kathy D'Antoni"
+contributor_id: alexandre-gain
 screenshot1: "https://i.ytimg.com/vi/IxmqQmb5iUE/maxresdefault.jpg"
 screenshot2: ""
 Abstract: "[copied from YouTube video Description]

@@ -14,4 +14,6 @@ screenshot1: "https://sfctools-framework.readthedocs.io/en/latest/_images/title.
 screenshot2: ""
 screenshot3: ""
 tags: ["Economics", "Python", "Simulator", "Python"]
+contributor_id: alexandre-gain
+
 ---

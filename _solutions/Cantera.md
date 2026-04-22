@@ -15,4 +15,6 @@ screenshot1: "https://cantera.org/_static/cantera-logo.png"
 screenshot2: ""
 screenshot3: ""
 locationids: ["KEMSYM"]
+contributor_id: alexandre-gain
+
 ---

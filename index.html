@@ -102,6 +102,10 @@ layout: default
           {% endif %}
         </div>
         <p class="hp-card-title">{{ post.title }}</p>
+        <div class="hp-card-meta">
+          {% if post.date %}<span class="hp-card-date">{{ post.date | date: "%b %-d, %Y" }}</span>{% endif %}
+          {% if post.contributor_id %}{% assign _contrib = site.contributors | where: "contributor_id", post.contributor_id | first %}<span class="author-pill">{{ _contrib.title | default: post.contributor_id }}</span>{% endif %}
+        </div>
       </a>
       {% endfor %}
     </div>
@@ -125,6 +129,10 @@ layout: default
           {% endif %}
         </div>
         <p class="hp-card-title">{{ item.title }}</p>
+        <div class="hp-card-meta">
+          {% if item.created_on %}<span class="hp-card-date">{{ item.created_on }}</span>{% endif %}
+          {% if item.contributor_id %}{% assign _contrib = site.contributors | where: "contributor_id", item.contributor_id | first %}<span class="author-pill">{{ _contrib.title | default: item.contributor_id }}</span>{% endif %}
+        </div>
       </a>
       {% endfor %}
     </div>
@@ -148,6 +156,10 @@ layout: default
           {% endif %}
         </div>
         <p class="hp-card-title">{{ item.title }}</p>
+        <div class="hp-card-meta">
+          {% if item.last_survey %}<span class="hp-card-date">{{ item.last_survey }}</span>{% endif %}
+          {% if item.contributor_id %}{% assign _contrib = site.contributors | where: "contributor_id", item.contributor_id | first %}<span class="author-pill">{{ _contrib.title | default: item.contributor_id }}</span>{% endif %}
+        </div>
       </a>
       {% endfor %}
     </div>

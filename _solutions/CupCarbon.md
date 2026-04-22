@@ -15,4 +15,6 @@ screenshot2: ""
 screenshot3: ""
 tags: ["IoT", "Networking", "Simulator", "Urban-Planning", "Visualization"]
 locationids: ["CITYHALL"]
+contributor_id: alexandre-gain
+
 ---

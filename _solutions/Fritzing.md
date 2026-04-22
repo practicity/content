@@ -16,4 +16,6 @@ screenshot2: "https://fritzing.org/assets/fritzing-preview-bb-d6833748595f9f6b12
 screenshot3: "https://cdn-learn.adafruit.com/assets/assets/000/001/901/medium800/adafruit_products_logger.png?1396777295"
 tags: ["CAD/CAM", "Experiential-Learning", "Manufacturing", "Robotics", "IoT", "Simulator", "C++"]
 locationdis: ["ENDER", "SIMFAC"]
+contributor_id: alexandre-gain
+
 ---

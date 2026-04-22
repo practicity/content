@@ -15,4 +15,6 @@ screenshot1: "https://scyjth.github.io/biosteam_lca/_images/TOC_V2.png"
 screenshot2: ""
 screenshot3: ""
 locationids: ["KEMSYM"]
+contributor_id: alexandre-gain
+
 ---

@@ -3,6 +3,8 @@ layout: post
 title: A list of simulation open source software to be added
 tags: [Simulation, Community]
 screenshot1: "/images/posts/news.jpg"
+contributor_id: alexandre-gain
+
 ---
 
 This post simply lists simulation software to be added to the 'Simsoftware' catalog.

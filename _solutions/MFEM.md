@@ -15,4 +15,6 @@ screenshot2: "https://mfem.org/img/gallery/workshop25/cascadia.png"
 screenshot3: "https://mfem.org/img/gallery/workshop25/RFA-ElectricField.png"
 tags: ["C++", "FEM", "Physics", "Simulator"]
 locationids: ["PIAGET"]
+contributor_id: alexandre-gain
+
 ---

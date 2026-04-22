@@ -3,6 +3,8 @@ layout: post
 title: Understanding PractiCity blog
 tags: [Simulation, PractiCity]
 screenshot1: "/images/posts/post.jpeg"
+contributor_id: alexandre-gain
+
 ---
 
 

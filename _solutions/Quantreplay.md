@@ -15,4 +15,6 @@ screenshot2: "https://github.com/Quod-Financial/quantreplay/raw/main/images/imag
 screenshot3: ""
 tags: ["AI", "Data-Analytics", "Decision-Making", "Economics", "Simulator", "Python"]
 locationids: ["FINSIM"]
+contributor_id: alexandre-gain
+
 ---

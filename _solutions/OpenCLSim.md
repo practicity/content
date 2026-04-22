@@ -15,4 +15,6 @@ screenshot2: ""
 screenshot3: ""
 tags: ["Python", "Logistics", "Simulator", "Digital-Twin", "Data-Analytics", "Maritime"]
 locationids: ["PRACTIPORT"]
+contributor_id: alexandre-gain
+
 ---

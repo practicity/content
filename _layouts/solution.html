@@ -16,17 +16,7 @@ layout: default
       <tr><td><strong>Activity</strong></td><td><span style="color:#3498db;">{{ page.activity }}</span></td></tr>
       <tr><td><strong>License</strong></td><td>{{ page.license }}</td></tr>
       <tr><td><strong>Last Survey</strong></td><td>{{ page.last_survey }}</td></tr>
-      {% if page.locationids %}
-      <tr>
-        <td style="padding-right: 30px;"><strong>Location(s)</strong></td>
-        <td>
-          {% for lid in page.locationids %}
-            {% assign loc = site.locations | where: "locationid", lid | first %}
-            {% if loc %}<a href="{{ site.baseurl }}{{ loc.url }}">{{ loc.name }}</a>{% else %}{{ lid }}{% endif %}{% unless forloop.last %}, {% endunless %}
-          {% endfor %}
-        </td>
-      </tr>
-      {% endif %}
+      {% if page.contributor_id %}<tr><td><strong>Author</strong></td><td>{% include author-pill.html author=page.contributor_id %}</td></tr>{% endif %}
     </table>
 
     {% if page.locationids %}
@@ -47,17 +37,56 @@ layout: default
       <h3 style="margin-top: 0;">🖼️ Illustrations</h3>
       <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
         {% if page.screenshot1 %}
-          <img src="{{ page.screenshot1 | relative_url }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
+          <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot1 | relative_url }}">
+            <img src="{{ page.screenshot1 | relative_url }}" style="border-radius:8px; border:1px solid #eee; width:100%; cursor:zoom-in;">
+          </a>
         {% endif %}
         {% if page.screenshot2 %}
-          <img src="{{ page.screenshot2 | relative_url }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
+          <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot2 | relative_url }}">
+            <img src="{{ page.screenshot2 | relative_url }}" style="border-radius:8px; border:1px solid #eee; width:100%; cursor:zoom-in;">
+          </a>
         {% endif %}
         {% if page.screenshot3 %}
-          <img src="{{ page.screenshot3 | relative_url }}" style="border-radius:8px; border:1px solid #eee; width:100%;">
+          <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot3 | relative_url }}">
+            <img src="{{ page.screenshot3 | relative_url }}" style="border-radius:8px; border:1px solid #eee; width:100%; cursor:zoom-in;">
+          </a>
         {% endif %}
       </div>
     {% endif %}
   </div>
+
+<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center;">
+  <img id="lightbox-img" src="" style="max-width:90vw; max-height:90vh; border-radius:6px; box-shadow:0 8px 40px rgba(0,0,0,0.6);">
+  <button onclick="closeLightbox()" style="position:absolute; top:18px; right:24px; background:none; border:none; color:#fff; font-size:2em; cursor:pointer; line-height:1;" aria-label="Close">&times;</button>
+</div>
+
+<script>
+(function () {
+  var lb  = document.getElementById('lightbox');
+  var img = document.getElementById('lightbox-img');
+
+  document.querySelectorAll('.lightbox-trigger').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      img.src = this.dataset.src;
+      lb.style.display = 'flex';
+    });
+  });
+
+  window.closeLightbox = function () {
+    lb.style.display = 'none';
+    img.src = '';
+  };
+
+  lb.addEventListener('click', function (e) {
+    if (e.target === lb) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+})();
+</script>
 
 </div>
 
@@ -69,10 +98,9 @@ layout: default
 </ul>
 
 <hr>
-<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
   {% for tag in page.tags %}
-    <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/"
-       style="background-color:#f0f0f0; padding:4px 10px; border-radius:20px; font-size:0.8em; text-decoration:none; color:#333;">
+    <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">
       {{ tag }}
     </a>
   {% endfor %}

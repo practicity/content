@@ -15,5 +15,7 @@ screenshot2: "https://dwsim.org/wp-content/uploads/2020/11/ss2-1024x640.png"
 screenshot3: "https://dwsim.org/wp-content/uploads/2020/11/ss4-1024x640.png"
 tags: ["Chemistry", "Fluid-Dynamics", "Simulator", "Thermodynamics", "Visualization", "C#"]
 locationids: ["CITYHALL"]
+contributor_id: alexandre-gain
+
 ---
 

@@ -1,0 +1,132 @@
+---
+layout: default
+---
+
+{% assign contrib_posts     = site.posts     | where: "contributor_id", page.contributor_id %}
+{% assign contrib_articles  = site.articles  | where: "contributor_id", page.contributor_id %}
+{% assign contrib_solutions = site.solutions | where: "contributor_id", page.contributor_id %}
+{% assign contrib_locations = site.locations | where: "contributor_id", page.contributor_id %}
+
+<div class="contributor-profile">
+
+  <div class="contributor-header">
+    <div class="contributor-headshot">
+      {% if page.headshot %}
+        <img src="{{ page.headshot | relative_url }}" alt="{{ page.title }}">
+      {% else %}
+        <div class="contributor-headshot-placeholder">{{ page.title | slice: 0 }}</div>
+      {% endif %}
+    </div>
+
+    <div class="contributor-meta">
+      <h1 class="contributor-name">{{ page.title }}</h1>
+      {% if page.byline %}<p class="contributor-byline">{{ page.byline }}</p>{% endif %}
+      {% if page.city or page.country %}
+        <p class="contributor-location">
+          {% if page.city %}{{ page.city }}{% endif %}{% if page.city and page.country %}, {% endif %}{% if page.country %}{{ page.country }}{% endif %}
+        </p>
+      {% endif %}
+
+      <div class="contributor-stats" style="display:flex; flex-wrap:wrap; gap:0.6em; margin: 0.6em 0; font-size:0.85em;">
+        {% if contrib_posts.size     > 0 %}<span style="background:#eef2ff; padding:3px 9px; border-radius:12px; color:#444;">📰 {{ contrib_posts.size }} post{% if contrib_posts.size != 1 %}s{% endif %}</span>{% endif %}
+        {% if contrib_articles.size  > 0 %}<span style="background:#eef2ff; padding:3px 9px; border-radius:12px; color:#444;">📄 {{ contrib_articles.size }} article{% if contrib_articles.size != 1 %}s{% endif %}</span>{% endif %}
+        {% if contrib_solutions.size > 0 %}<span style="background:#eef2ff; padding:3px 9px; border-radius:12px; color:#444;">🌐 {{ contrib_solutions.size }} solution{% if contrib_solutions.size != 1 %}s{% endif %}</span>{% endif %}
+        {% if contrib_locations.size > 0 %}<span style="background:#eef2ff; padding:3px 9px; border-radius:12px; color:#444;">📍 {{ contrib_locations.size }} location{% if contrib_locations.size != 1 %}s{% endif %}</span>{% endif %}
+      </div>
+
+      {% if page.social %}
+      <div class="contributor-social">
+        {% if page.social.linkedin  and page.social.linkedin  != "" %}<a href="{{ page.social.linkedin }}"  target="_blank" rel="noopener" class="svg-icon linkedin"></a>{% endif %}
+        {% if page.social.twitter   and page.social.twitter   != "" %}<a href="{{ page.social.twitter }}"   target="_blank" rel="noopener" class="svg-icon twitter"></a>{% endif %}
+        {% if page.social.github    and page.social.github    != "" %}<a href="{{ page.social.github }}"    target="_blank" rel="noopener" class="svg-icon github"></a>{% endif %}
+        {% if page.social.instagram and page.social.instagram != "" %}<a href="{{ page.social.instagram }}" target="_blank" rel="noopener" class="svg-icon instagram"></a>{% endif %}
+        {% if page.social.youtube   and page.social.youtube   != "" %}<a href="{{ page.social.youtube }}"   target="_blank" rel="noopener" class="svg-icon youtube"></a>{% endif %}
+        {% if page.social.website   and page.social.website   != "" %}<a href="{{ page.social.website }}"   target="_blank" rel="noopener" class="svg-icon rss"></a>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="contributor-bio">
+    {{ content }}
+  </div>
+
+  {% if page.tags %}
+  <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 1em;">
+    {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">
+        {{ tag }}
+      </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</div>
+
+{% assign contrib_total = contrib_posts.size | plus: contrib_articles.size | plus: contrib_solutions.size | plus: contrib_locations.size %}
+
+{% if contrib_total > 0 %}
+<hr>
+<h2 class="contributor-contributions-title">Contributions <span style="font-size:0.7em; color:#999; font-weight:normal;">({{ contrib_total }})</span></h2>
+
+{% if contrib_posts.size > 0 %}
+<h3 class="contrib-section-title">News</h3>
+<div class="contrib-grid">
+  {% for item in contrib_posts limit: 4 %}
+  <a class="hp-card" href="{{ item.url | relative_url }}">
+    <div class="hp-card-thumb">
+      {% if item.screenshot1 %}<img src="{{ item.screenshot1 | relative_url }}" alt="{{ item.title }}">
+      {% else %}<div class="hp-card-placeholder"></div>{% endif %}
+    </div>
+    <p class="hp-card-title">{{ item.title }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if contrib_articles.size > 0 %}
+<h3 class="contrib-section-title">Articles</h3>
+<div class="contrib-grid">
+  {% for item in contrib_articles limit: 4 %}
+  <a class="hp-card" href="{{ item.url | relative_url }}">
+    <div class="hp-card-thumb">
+      {% if item.screenshot1 %}<img src="{{ item.screenshot1 | relative_url }}" alt="{{ item.title }}">
+      {% else %}<div class="hp-card-placeholder"></div>{% endif %}
+    </div>
+    <p class="hp-card-title">{{ item.title }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if contrib_solutions.size > 0 %}
+<h3 class="contrib-section-title">Solutions</h3>
+<div class="contrib-grid">
+  {% for item in contrib_solutions limit: 4 %}
+  <a class="hp-card" href="{{ item.url | relative_url }}">
+    <div class="hp-card-thumb">
+      {% if item.screenshot1 %}<img src="{{ item.screenshot1 | relative_url }}" alt="{{ item.title }}">
+      {% else %}<div class="hp-card-placeholder"></div>{% endif %}
+    </div>
+    <p class="hp-card-title">{{ item.title }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if contrib_locations.size > 0 %}
+<h3 class="contrib-section-title">Locations</h3>
+<div class="contrib-grid">
+  {% for item in contrib_locations limit: 4 %}
+  <a class="hp-card" href="{{ item.url | relative_url }}">
+    <div class="hp-card-thumb">
+      {% if item.screenshot1 %}<img src="{{ item.screenshot1 | relative_url }}" alt="{{ item.title | default: item.name }}">
+      {% else %}<div class="hp-card-placeholder"></div>{% endif %}
+    </div>
+    <p class="hp-card-title">{{ item.name | default: item.title }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% endif %}

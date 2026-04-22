@@ -15,4 +15,6 @@ screenshot1: "https://avatars.githubusercontent.com/u/5186827?s=200&v=4"
 screenshot2: "https://projectchrono.org/assets/Images/2millionrover.jpg"
 screenshot3: "https://projectchrono.org/assets/Images/TrackImage.jpg"
 tags: ["Physics", "Robotics", "Simulator", "Fluid-Dynamics", "Digital-Twin", "C++", "Python"]
+contributor_id: alexandre-gain
+
 ---

@@ -15,4 +15,6 @@ screenshot1: "https://raw.githubusercontent.com/pistolero/chilipeppr-offline/mas
 screenshot2: "https://forum.makerforums.info/uploads/default/original/3X/f/a/fa1a6c6b3af2445d19f22a859ab0231a37c9d9af.jpeg"
 screenshot3: "https://i.ytimg.com/vi/6WNE3E1ZZYY/mqdefault.jpg"
 locationids: ["ENDER"]
+contributor_id: alexandre-gain
+
 ---

@@ -15,4 +15,6 @@ screenshot2: ""
 screenshot3: ""
 tags: ["Simulator", "Urban-Planning", "AI", "Data-Analytics", "Logistics", "Visualization", "C++"]
 locationids: ["CITYHALL"]
+contributor_id: alexandre-gain
+
 ---

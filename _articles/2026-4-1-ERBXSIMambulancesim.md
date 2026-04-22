@@ -5,7 +5,7 @@ description: "A first-person account of a high-fidelity, pilot-scale carbon capt
 type: "Showcase"
 original: "https://www.youtube.com/watch?v=3VEN3AHr-B8"
 created_on: "April 1, 2026"
-author: "SimLeader"
+contributor_id: alexandre-gain
 screenshot1: "https://i.ytimg.com/vi/3VEN3AHr-B8/maxresdefault.jpg"
 screenshot2: ""
 Abstract: "[Copied from YouTube video description] Simleader's ERBOXSIM unique immersive ambulance simulator will allow your training center to systematically teach more skilled technicians for today's Emergency Medical Services workforce.

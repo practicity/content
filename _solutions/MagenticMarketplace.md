@@ -15,4 +15,6 @@ screenshot2: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBOb9zo4AYM8
 screenshot3: "https://cdn.thenewstack.io/media/2025/11/3a42a9b9-magentic-marketplace2.jpg"
 tags: ["AI", "Decision-Making", "Economics", "Negotiation", "Simulator", "Python"]
 locationids: ["FINSIM", "WBUSC"]
+contributor_id: alexandre-gain
+
 ---

@@ -1,10 +1,10 @@
 name: Practi.City
-description: the Experiential and HD simulations for situational learning community around the world
+description: A Volunteer Community for Experiential Learning & Open-Source Simulators
 avatar: /images/practicity_tmp_logo.jpg
 
 
 # Used for Sitemap.xml and your RSS feed
-url: "http://localhost:4000"
+url: "http://192.168.1.69:4000"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -13,7 +13,7 @@ url: "http://localhost:4000"
 baseurl: ""
 
 # Microverse base URL
-microverse_url: "http://localhost:5173/" #new vite deployment URL for local development
+microverse_url: "http://192.168.1.69:5173/" #new vite deployment URL for local development
 # because the local CMS needs to address local microverse
 microverse_urlparams: ["env=local"]     
 
@@ -31,6 +31,9 @@ collections:
   tags:
     output: true
     permalink: /tags/:name/
+  contributors:
+    output: true
+    permalink: /contributors/:name/
 
 
 # Includes an icon in the footer for each username you enter

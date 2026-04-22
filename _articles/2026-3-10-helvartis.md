@@ -5,7 +5,7 @@ description: "Helvartis, a non-profit founded in 1994, provides practical, adapt
 type: "Interview"
 original: "https://www.youtube.com/watch?v=yj9JW8xGyK0"
 created_on: "March 24, 2014"
-author: "Helvartis"
+contributor_id: alexandre-gain
 screenshot1: "https://i.ytimg.com/vi/yj9JW8xGyK0/hqdefault.jpg"
 screenshot2: ""
 Abstract: "[translated by AI] Founded in 1994 by the Commercial Employees Association in collaboration with the Secrétariat d’Etat à l’économie (SECO), Helvartis is a non-profit organization headquartered in La Chaux-de-Fonds (NE).

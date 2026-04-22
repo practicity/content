@@ -1,0 +1,8 @@
+{% if include.author %}
+  {% assign _contrib = site.contributors | where: "contributor_id", include.author | first %}
+  {% if _contrib %}
+    <a href="{{ _contrib.url | relative_url }}" class="author-pill">{{ _contrib.title }}</a>
+  {% else %}
+    <span class="author-pill">{{ include.author }}</span>
+  {% endif %}
+{% endif %}

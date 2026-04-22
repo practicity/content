@@ -30,6 +30,12 @@ layout: default
         <td>{{ page.locationid }}</td>
       </tr>
       {% endif %}
+      {% if page.contributor_id %}
+      <tr>
+        <td style="padding-right: 30px;"><strong>Author</strong></td>
+        <td>{% include author-pill.html author=page.contributor_id %}</td>
+      </tr>
+      {% endif %}
     </table>
 
     {% if page.locationid %}
@@ -101,10 +107,9 @@ layout: default
 
 {% if page.tags %}
 <hr>
-<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
   {% for tag in page.tags %}
-    <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/"
-       style="background-color:#f0f0f0; padding:4px 10px; border-radius:20px; font-size:0.8em; text-decoration:none; color:#333;">
+    <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">
       {{ tag }}
     </a>
   {% endfor %}

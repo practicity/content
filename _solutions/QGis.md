@@ -15,4 +15,6 @@ screenshot2: "https://qgis.org/img/main-edit.webp"
 screenshot3: "https://qgis.org/img/main-analyze.webp"
 tags: ["GIS", "Simulator", "Urban-Planning", "Visualization", "Data-Analytics", "C++"]
 locationids: ["CITYHALL"]
+contributor_id: alexandre-gain
+
 ---
