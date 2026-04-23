@@ -9,8 +9,6 @@ backend:
     name: github
     branch: main
     repo: practicity/content
-    auth_type: pkce
-    app_id: Ov23liZ6JqKsDEAFA8lO #GITHUB_OAUTH_APP_CLIENT_ID
 
 
 media_folder: "/images"
