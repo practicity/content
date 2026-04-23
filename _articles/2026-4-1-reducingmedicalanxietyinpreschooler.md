@@ -4,7 +4,6 @@ layout: article
 title: "Reducing Medical Anxiety in Preschoolers Through Hospital Simulation Workshops in Northern Portugal"
 description: "A Northern Portugal hospital’s simulation-based outreach engages nursery children in hands-on medical role-play and games to alleviate fear of healthcare encounters and improve attitudes toward treatment."
 type: "Interview"
-tags: ["Pediatric Psychology", "Health Education", "Simulation Training", "Early Childhood", "Hospital Outreach", "Anxiety Reduction"]
 original: "https://www.youtube.com/watch?v=Hr0CVL6e7jM&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=67"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

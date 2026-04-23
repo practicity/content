@@ -4,7 +4,6 @@ layout: article
 title: "Experiential Simulation of South China Sea Boundary Negotiations at Penn State University"
 description: "A Penn State experiential learning simulation has students and law advisers negotiate South China Sea maritime boundaries using international law and UN Charter principles."
 type: "Interview"
-tags: ["Experiential Learning", "International Law", "Simulation Exercise", "Negotiation", "South China Sea", "Legal Education"]
 original: "https://www.youtube.com/watch?v=rQOvB1hg_Vs&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=60"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

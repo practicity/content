@@ -4,7 +4,6 @@ layout: article
 title: "Learning Through Stakeholder Simulations: Student Reflections on Collaborative Decision-Making"
 description: "A participant explains how small-group stakeholder simulations and role-play foster deep engagement, multi-perspective debate, collaborative decisions, and tangible learning outcomes beyond textbooks or news."
 type: "Interview"
-tags: ["Experiential Learning", "Stakeholder Engagement", "Role-Playing", "Collaborative Decision-Making", "Policy Simulation", "Active Learning"]
 original: "https://www.youtube.com/watch?v=Gbf8KnNEy0g&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=18"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

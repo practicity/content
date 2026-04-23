@@ -7,7 +7,6 @@ type: "Simulation Software"
 category: "Chemical Engineering"
 complexity: "★★★☆☆"
 activity: "★★★☆☆"
-tags: [Simulation, Chemistry, Thermodynamics, Cpp]
 website: "https://srebughini.github.io/ASALI/"
 github: "https://github.com/srebughini/ASALI"
 license: "GPL 3.0"
@@ -16,7 +15,7 @@ screenshot1: "https://github.com/srebughini/ASALI/raw/master/GUI/src/resources/i
 screenshot2: ""
 screenshot3: ""
 tags: ["Chemistry", "Fluid-Dynamics", "Physics", "Simulator", "Thermodynamics"]
-locationds: ["KEMSYM"]
+locationids: ["KEMSYM"]
 contributor_id: alexandre-gain
 
 ---

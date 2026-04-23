@@ -4,7 +4,6 @@ layout: article
 title: "Experiencing Scarcity through a Life Simulation for Credit Union Professionals"
 description: "Participant reflections from a facilitated life simulation reveal how low income, time scarcity, and housing precarity shape decision-making, stress, and empathy in credit union contexts."
 type: "Interview"
-tags: ["Poverty Simulation", "Credit Unions", "Behavioral Economics", "Financial Literacy", "Empathy Training"]
 original: "https://www.youtube.com/watch?v=cEfUOdwExGg&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=7"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

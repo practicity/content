@@ -4,7 +4,6 @@ layout: article
 title: "Role-Play Simulations in Business Education: Undergraduate and Master’s-Level Implementation and Assessment"
 description: "The video outlines how role-play simulations are designed and assessed in undergraduate and master’s business courses to foster real-world decision-making under ambiguity."
 type: "Interview"
-tags: ["Experiential Learning", "Role Play", "Business Education", "Case Method", "Peer Assessment", "Graduate Education"]
 original: "https://www.youtube.com/watch?v=GF30nXmYMkk&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=10"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

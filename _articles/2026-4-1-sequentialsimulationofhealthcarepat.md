@@ -4,7 +4,6 @@ layout: article
 title: "Sequential Simulation of Healthcare Pathways at Imperial College London"
 description: "A demonstration at Imperial’s White City campus shows how sequential simulation makes the patient journey visible, revealing communication, handover, and organizational challenges with lessons transferable beyond healthcare."
 type: "Interview"
-tags: ["Healthcare Simulation", "Patient Pathways", "Experiential Learning", "Interprofessional Communication", "Systems Thinking", "Organizational Learning"]
 original: "https://www.youtube.com/watch?v=YST1T9uR9DI&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=20"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

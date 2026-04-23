@@ -4,7 +4,6 @@ layout: article
 title: "Forensic Accounting Education at WVU: Dr. Riley and Alumni on the FAFI Certification"
 description: "A profile of WVU’s hands-on Forensic Accounting and Fraud Investigation certification led by Dr. Riley, detailing search-warrant simulations, real-case data mining, and courtroom evidence training that prepare graduates to prevent, detect, and prosecute fraud."
 type: "Interview"
-tags: ["Forensic Accounting", "Fraud Examination", "Data Mining", "Evidence Presentation", "Experiential Learning", "WVU"]
 original: "https://www.youtube.com/watch?v=nD59QLTLIUA&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=52"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

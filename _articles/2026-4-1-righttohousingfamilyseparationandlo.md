@@ -4,7 +4,6 @@ layout: article
 title: "Right to Housing, Family Separation, and Lockout Rules in Temporary Emergency Accommodation under South Africa’s Constitution"
 description: "A moot-court exchange examines whether lockout and family-separation rules in temporary emergency shelters unreasonably limit South Africans’ constitutional rights to housing, dignity, and security."
 type: "Interview"
-tags: ["Constitutional Law", "Socioeconomic Rights", "Housing Policy", "South Africa", "Human Dignity", "Emergency Accommodation"]
 original: "https://www.youtube.com/watch?v=EcmunVPLGyQ&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=13"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

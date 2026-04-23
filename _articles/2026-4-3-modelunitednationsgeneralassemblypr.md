@@ -4,7 +4,6 @@ layout: article
 title: "Model United Nations General Assembly: Proceedings on Child Soldiers and Nuclear Proliferation"
 description: "A detailed record of a Model United Nations general assembly session focusing on the procedural debates and policy stances regarding child soldiers and nuclear non-proliferation."
 type: "Interview"
-tags: ["Model United Nations", "International Relations", "Child Soldiers", "Nuclear Proliferation", "Diplomatic Procedure"]
 original: "https://www.youtube.com/watch?v=5zoibkTpG6M"
 created_on: "April 3, 2026"
 contributor_id: alexandre-gain

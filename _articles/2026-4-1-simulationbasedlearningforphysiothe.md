@@ -4,7 +4,6 @@ layout: article
 title: "Simulation-Based Learning for Physiotherapy Students: Integrating Theory and Practice"
 description: "Physiotherapy students describe how scripted, actor-led clinical simulations, feedback, and debriefing translate theory into patient-centered practice while reducing anxiety and improving communication."
 type: "Interview"
-tags: ["Physiotherapy", "Simulation Based Education", "Clinical Training", "Health Education", "Communication Skills", "Experiential Learning"]
 original: "https://www.youtube.com/watch?v=PgPIjR_AEOE&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=68"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

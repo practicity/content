@@ -4,7 +4,6 @@ layout: article
 title: "Learning Business–IT Alignment via an Experiential ITSM Simulation"
 description: "A facilitated ITSM simulation demonstrates how integrated processes, metrics, and cross-functional collaboration move a business from loss to profit across iterative rounds."
 type: "Interview"
-tags: ["ITSM", "Business Alignment", "Simulation Training", "Process Integration", "Performance Metrics", "Service Reliability"]
 original: "https://www.youtube.com/watch?v=yiHwRyBVW-s&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=93"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

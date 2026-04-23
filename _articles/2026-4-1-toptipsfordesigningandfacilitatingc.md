@@ -4,7 +4,6 @@ layout: article
 title: "Top Tips for Designing and Facilitating Classroom Simulations"
 description: "A concise, research-informed primer on designing, running, and debriefing classroom simulations that foster student creativity, focus, and curricular integration."
 type: "Interview"
-tags: ["Active Learning", "Classroom Simulation", "Pedagogy", "Feedback", "Social Science"]
 original: "https://www.youtube.com/watch?v=bUtr-MLIR7s&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=3"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

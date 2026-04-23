@@ -4,7 +4,6 @@ layout: article
 title: "Crowd Management Simulation : reaching the edge of what can be possibly simulated ?"
 description: "Crowd Control Simulation Exercise in National Police Academy, Maharajgunj, Kathmandu"
 type: "Video Coverage"
-tags: [Simulation, Outdoor, Crisis, Fire, Police, Riot]
 original: "https://www.youtube.com/watch?v=e6GpIlVUQeU"
 created_on: "March 24, 2026"
 contributor_id: alexandre-gain

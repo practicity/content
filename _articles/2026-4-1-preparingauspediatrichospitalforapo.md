@@ -4,7 +4,6 @@ layout: article
 title: "Preparing a U.S. Pediatric Hospital for a Potential Ebola Patient: A Simulation-Based Readiness Exercise"
 description: "A hospital-led simulation demonstrates Ebola preparedness through PPE training, isolation workflows, spill containment, transport protocols, and debrief-driven process improvements."
 type: "Interview"
-tags: ["Ebola Preparedness", "Healthcare Simulation", "Infection Control", "PPE", "Emergency Medicine", "Hospital Operations"]
 original: "https://www.youtube.com/watch?v=x50SzazSjoY&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=32"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

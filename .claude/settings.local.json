@@ -11,7 +11,9 @@
       "Bash(wc -l \"C:\\\\Users\\\\AlexandreGAINEDMV\\\\OneDrive - RAMPART.CLOUD\\\\Documents\\\\DEVELOPMENT PROJECTS\\\\practicity-content\\\\_articles\"/*.md)",
       "Bash(wc -l \"C:\\\\Users\\\\AlexandreGAINEDMV\\\\OneDrive - RAMPART.CLOUD\\\\Documents\\\\DEVELOPMENT PROJECTS\\\\practicity-content\\\\_solutions\"/*.md)",
       "Bash(xargs grep *)",
-      "Bash(bundle exec *)"
+      "Bash(bundle exec *)",
+      "Bash(sed -i 's/^locationds:/locationids:/' _solutions/ASALI.md)",
+      "Bash(sed -i 's/^locationdis:/locationids:/' _solutions/Fritzing.md)"
     ]
   }
 }

@@ -4,7 +4,6 @@ layout: article
 title: "Global Virtual Teams at Yale: Student Reflections on a Cross-Border Operations Simulation"
 description: "Students describe a Global Virtual Teams course integrating a week-long factory simulation with cross-cultural, technology-mediated collaboration between U.S. and French teammates."
 type: "Interview"
-tags: ["Global Teams", "Virtual Collaboration", "Operations Simulation", "Cross-Cultural Communication", "Management Education", "Team Dynamics"]
 original: "https://www.youtube.com/watch?v=UqPy4CzHxJU&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=56"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain

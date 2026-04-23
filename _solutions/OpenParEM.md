@@ -7,7 +7,6 @@ type: "Simulation Software"
 category: "Electromagnetics / Radio Frequency"
 complexity: "★★★★☆"
 activity: "★★★★☆"
-tags: [Simulation, Electromagnetic, FEM, 3D Modeling, Antenna Design, Cpp]
 website: "https://openparem.org/"
 github: "https://github.com/OpenParEM/OpenParEM"
 license: "GPL 3"

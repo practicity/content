@@ -4,7 +4,6 @@ layout: article
 title: "Immersive In-Room Simulations for Enterprise IT Service Management Maturity"
 description: "An immersive, facilitator-led in-room simulation approach that mirrors enterprise IT environments to build service management maturity and organizational buy-in from CxO strategy to operations."
 type: "Interview"
-tags: ["Simulation Learning", "Service Management", "Enterprise IT", "IT Governance", "Change Management", "Business Continuity"]
 original: "https://www.youtube.com/watch?v=icG0Mzun-w0&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=8"
 created_on: "April 3, 2026"
 contributor_id: alexandre-gain

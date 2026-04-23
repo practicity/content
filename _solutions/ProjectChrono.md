@@ -7,7 +7,6 @@ type: "Simulation Software"
 category: "Multi-Physics / Dynamics"
 complexity: "★★★★★"
 activity: "★★★★★"
-tags: [Simulation, Physics, Robotics, Vehicles, FSI, Cpp, Python]
 website: "https://projectchrono.org/"
 github: "https://github.com/projectchrono/chrono"
 license: "BSD 3-Clause"

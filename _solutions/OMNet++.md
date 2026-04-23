@@ -7,7 +7,6 @@ type: "Simulation Software"
 category: "Telecommunications / Networking"
 complexity: "★★★★★"
 activity: "★★★★★"
-tags: [Simulation, Networking, Telecommunications, Discrete-Event, Cpp]
 website: "https://omnetpp.org/"
 github: "https://github.com/omnetpp/omnetpp"
 license: "Academic Public License"

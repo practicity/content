@@ -4,7 +4,6 @@ layout: article
 title: "Veronica Kitchen on Teaching World Politics Through Simulations and Games"
 description: "An interview with Dr. Veronica Kitchen on designing, facilitating, and debriefing simulations and games to teach world politics, emphasizing experiential learning, emotional engagement, and decision-making under pressure."
 type: "Interview"
-tags: ["Pedagogy", "Simulations", "Experiential", "Politics", "Roleplay", "Debriefing"]
 original: "https://www.youtube.com/watch?v=MUIxeNIgBUg&list=PLutfNpLVH4UsP22uL3SbOJMCHiAn4-hLP&index=2"
 created_on: "April 1, 2026"
 contributor_id: alexandre-gain
