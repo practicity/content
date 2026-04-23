@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "ERICSSON"
 name:  "ERICSSON Social Center"

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "OpenRocket"
 description: "OpenRocket is a free, fully featured model rocket simulator that allows you to design and simulate your rockets before building them. It features a full 6-degree-of-freedom simulation, real-time altitude, velocity, and acceleration calculations, and CAD-like design tools."

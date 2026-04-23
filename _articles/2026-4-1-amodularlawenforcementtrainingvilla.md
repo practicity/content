@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "A Modular Law-Enforcement Training Village: Design, Scenarios, and Preparedness"
 description: "This video presents a modular training village that recreates urban settings to deliver scenario-based instruction across incident management, command, investigations, custody operations, and security preparedness."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "SAP Transactions for Distribution Simulation Round 1: Pricing, Marketing, and Reporting"
 description: "This training video guides participants through SAP ERP reports and transactions needed to manage pricing and marketing in the first round of a distribution simulation, using a job aid and hands-on demonstrations."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "OpenSimply"
 description: "OpenSimply is an open-source simulation software based on Free Pascal and Lazarus. It allows for the creation of discrete-event simulations, including queuing systems, traffic, and logistics, using block-based models and visual simulation capabilities."

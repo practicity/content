@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Reproducing an entire plant. Learning by doing in the manufacturing, IoT and Safety domains"
 description: "A video showing the Emerson Process simulated plant with all its equipments, tanks, pipes, sensors, controllers, etc"

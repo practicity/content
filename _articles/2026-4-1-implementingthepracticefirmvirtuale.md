@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Implementing the Practice Firm (Virtual Enterprise) Model at Coleg Morgannwg (Coleg Morgannwg)"
 description: "This video presents how a UK further education college implements a national practice firm franchise to deliver work-based business qualifications through a safe, simulated enterprise with international trading and clear employability outcomes."

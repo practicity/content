@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "FIREST"
 name:  "Gary Klein Fire Station"

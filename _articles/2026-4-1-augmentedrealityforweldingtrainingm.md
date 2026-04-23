@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Augmented Reality for Welding Training: Miller Electric's Augmented Arc"
 description: "This video presents Miller Electric's Augmented Arc, an augmented reality welding training system that overlays computer-generated welds onto real workpieces to deliver safe, cost-effective, and data-driven instruction across multiple processes and joint types."

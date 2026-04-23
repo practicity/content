@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "CITYHALL"
 name:  "PractiCity City Hall"

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "BioSTEAM"
 description: "BioSTEAM (Biorefinery Simulation and Techno-Economic Analysis Modules) is an open-source Python package for the design, simulation, and techno-economic analysis of biorefineries. It enables fast, flexible evaluation of processes under uncertainty and integrates seamlessly with thermodynamic property packages."

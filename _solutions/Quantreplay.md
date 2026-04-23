@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "QuantReplay"
 description: "QuantReplay is a tool for backtesting and simulating trading strategies with high-fidelity historical market data. It allows quantitative researchers to replay market events and evaluate the performance of automated trading algorithms."

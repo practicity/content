@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "ARTWATC"
 name:  "ARTWICK Air Traffic Control"

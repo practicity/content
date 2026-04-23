@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Experiential Diplomacy: Negotiation Simulation in International Relations Education"
 description: "A university course uses a diplomatic negotiation simulation to connect theory with practice, develop collaboration and communication skills, and prepare students for real-world challenges on topics like immigration and refugees."

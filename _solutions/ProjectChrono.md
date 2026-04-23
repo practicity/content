@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Project Chrono"
 description: "Project Chrono is a physics-based modelling and simulation infrastructure based on a platform-independent, open-source design. It excels in simulating very large multi-body systems, robotics, vehicle dynamics, fluid-solid interaction, and granular materials."

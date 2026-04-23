@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Bridge Command"
 description: "Bridge Command is an interactive, open-source ship simulator program. It is designed to be used as a training tool for navigation, radar, and ship handling, featuring realistic ship dynamics, weather modeling, and multi-player capabilities for joint training exercises."

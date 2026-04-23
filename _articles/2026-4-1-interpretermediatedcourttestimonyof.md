@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Interpreter-Mediated Court Testimony of Kit Manville on Ashgate Farm Incidents"
 description: "In this courtroom examination, farrier Kit Manville testifies via interpreters about an alleged firearm incident, interpersonal dynamics at Ashgate Farm, and his subsequent termination, with cross-examination addressing credibility and record clarification."

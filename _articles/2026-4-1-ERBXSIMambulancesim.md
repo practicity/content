@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "ERBXSIM simulation Real-World EMT Immersive Training"
 description: "A first-person account of a high-fidelity, pilot-scale carbon capture lab simulating offshore control-room operations to examine decision-making, failure, and team cohesion under pressure."

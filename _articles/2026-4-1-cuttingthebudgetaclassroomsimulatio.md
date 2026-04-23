@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Cutting the Budget: A Classroom Simulation of Federal Spending Trade-offs"
 description: "A classroom simulation uses tangible tokens and real-world data to explore the human impacts and policy trade-offs of cutting and reallocating federal spending."

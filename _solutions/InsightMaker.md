@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Insight Maker"
 description: "Insight Maker is a free, web-based tool for System Dynamics and Agent-Based Modeling. It runs directly in the browser and provides an intuitive drag-and-drop interface for building complex causal loop diagrams, simulation models, and sharing them with a community."

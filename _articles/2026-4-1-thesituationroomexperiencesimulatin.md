@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "The Situation Room Experience: Simulating Foreign Policy Decision-Making"
 description: "An overview of The Situation Room Experience, a 40-role, technology-enabled foreign policy crisis simulation that uses primary sources to cultivate collaborative decision-making under pressure."

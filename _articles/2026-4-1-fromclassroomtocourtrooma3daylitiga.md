@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "From Classroom to Courtroom: A 3-Day Litigation Skills Workshop with Practitioners"
 description: "A three-day, practice-oriented law school workshop where experienced attorneys coach students on real-world litigation and expert-witness skills, highlighting rigorous preparation and professional readiness."

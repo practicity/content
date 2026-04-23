@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Interprofessional Emergency Simulation: Domestic Violence Scenario at a Homeland Security Education Center"
 description: "This video documents an interprofessional simulation in which EMS, nursing, and allied health students manage a high-fidelity domestic-violence emergency, emphasizing realistic patient interaction, teamwork, and clinical decision-making."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Principles of Building Evacuation Planning and Communication Systems"
 description: "This video outlines the core components and organizational requirements for effective building evacuation, including control centers, assembly points, and emergency communication and alarm systems."

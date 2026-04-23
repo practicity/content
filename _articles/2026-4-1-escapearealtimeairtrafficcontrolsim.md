@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "ESCAPE: A Real-Time Air Traffic Control Simulation Platform (EUROCONTROL)"
 description: "This video presents EUROCONTROL’s ESCAPE real-time air traffic control simulator, highlighting its configurable architecture, interoperability, and training-supported deployment for assessing new tools, procedures, and airspace designs."

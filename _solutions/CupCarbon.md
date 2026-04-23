@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "CupCarbon"
 description: "CupCarbon is an open-source Smart City and Internet of Things (IoT) Wireless Sensor Network (WSN) simulator. It provides a visual environment to design, simulate, and analyze urban networks, mobility models, and smart city scenarios on real maps."

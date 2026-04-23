@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Situated Learning and Communities of Practice: Insights from Etienne Wenger"
 description: "A short scholarly video introduces situated learning and communities of practice, featuring Etienne Wenger’s clarification of core concepts, applications, and implications across education and organizations."

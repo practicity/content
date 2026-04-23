@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Preparing a U.S. Pediatric Hospital for a Potential Ebola Patient: A Simulation-Based Readiness Exercise"
 description: "A hospital-led simulation demonstrates Ebola preparedness through PPE training, isolation workflows, spill containment, transport protocols, and debrief-driven process improvements."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Global Virtual Teams at Yale: Student Reflections on a Cross-Border Operations Simulation"
 description: "Students describe a Global Virtual Teams course integrating a week-long factory simulation with cross-cultural, technology-mediated collaboration between U.S. and French teammates."

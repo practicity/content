@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Sequential Simulation: Reenacting Patient Journeys to Engage Stakeholders in Healthcare"
 description: "This video introduces sequential simulation, a method that uses real patient stories, clinicians, and actors to reenact care journeys and generate rich stakeholder feedback for healthcare improvement."

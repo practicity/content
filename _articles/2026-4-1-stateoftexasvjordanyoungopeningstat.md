@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "State of Texas v. Jordan Young: Opening Statements and Initial Testimony in a Manslaughter Trial"
 description: "A courtroom proceeding captures opening statements and the first witness testimony in a Texas manslaughter case involving alleged texting-while-driving and a fatal motorcycle collision."

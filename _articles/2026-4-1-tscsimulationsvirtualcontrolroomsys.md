@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "TSC Simulation's Virtual Control Room System for Operator Training and Assessment"
 description: "This video presents TSC Simulation's Virtual Control Room system, a standards-compliant, office-deployable platform for realistic operator training, emergency response drills, and performance assessment."

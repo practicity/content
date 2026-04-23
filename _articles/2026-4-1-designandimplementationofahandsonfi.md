@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Design and Implementation of a Hands-On Fire Protection Training Center — Randy Corson, CORSON Fire & Security"
 description: "A practitioner narrative detailing how CORSON Fire & Security built a comprehensive, hands-on training center to standardize technician education across fire protection disciplines and improve field performance."

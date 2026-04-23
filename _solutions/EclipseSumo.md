@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Eclipse SUMO"
 description: "SUMO (Simulation of Urban MObility) is a highly portable, microscopic, and continuous traffic simulation package designed to handle large road networks. It is widely used by researchers to simulate public transit, pedestrians, traffic lights, and autonomous vehicle interactions."

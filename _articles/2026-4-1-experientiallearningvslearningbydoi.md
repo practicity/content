@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Experiential Learning vs. Learning by Doing — Mark Koloff"
 description: "Mark Koloff defines experiential learning as reflective practice rather than mere doing, illustrating with a bicycle learning case and offering facilitation guidance and resources for educators."

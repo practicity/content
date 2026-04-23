@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: post
 title: Ideas for New Locations
 tags: [PractiCity]

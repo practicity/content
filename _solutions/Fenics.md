@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "FEniCS Project"
 description: "The FEniCS Project is a popular open-source computing platform for solving partial differential equations (PDEs). It enables users to quickly translate scientific models into efficient finite element code, commonly used in solid mechanics, fluid dynamics, and electromagnetics."

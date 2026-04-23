@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "From Learning Objectives to Gameplay: Designing a Crisis Negotiation Simulation"
 description: "The video explains how to design a minimal-preparation crisis game to teach negotiation, covering objectives, scenario design, group logistics, procedures, assessment options, and feedback."

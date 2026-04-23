@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "TRUMAN"
 name:  "TRUMAN Venues"

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "GSE Systems: High-Fidelity Power Plant Operator Training Simulators"
 description: "An overview of how GSE Systems builds data-driven, high-fidelity simulators with real-world controls to train power plant operators across multiple technologies and meet growing workforce demands."

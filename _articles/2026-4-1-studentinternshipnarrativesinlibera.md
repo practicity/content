@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Student Internship Narratives in Liberal Arts: Bennett-Guzman, Shah, and Abdi at the University of Minnesota"
 description: "Three University of Minnesota College of Liberal Arts students—Ricardo Bennett-Guzman, Pooja Shah, and Jamal Abdi—detail internships in arts, public relations, and community engagement, highlighting methods, deliverables, and career trajectories."

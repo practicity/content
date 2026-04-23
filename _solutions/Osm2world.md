@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "OSM2World"
 description: "OSM2World is a converter that creates 3D models from OpenStreetMap data. It can be used to generate realistic 3D urban environments for use in simulations, games, or architectural visualization with support for textures and terrain."

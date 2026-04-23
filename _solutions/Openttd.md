@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "OpenTTD"
 description: "OpenTTD is an open-source simulation game based upon the popular Microprose game Transport Tycoon Deluxe. It simulates transport systems including roads, rails, air, and sea, challenging the player to build a profitable transportation empire."

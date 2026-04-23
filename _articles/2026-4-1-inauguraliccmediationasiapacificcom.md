@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Inaugural ICC Mediation Asia-Pacific Competition Final: Remarks by James Pearson (ACCI) and Live Simulated Commercial Mediation"
 description: "This video presents opening remarks and acknowledgments for the inaugural ICC Mediation Asia-Pacific Competition in Melbourne, followed by the final round’s live, simulated commercial mediation between student teams under professional facilitation and judging."

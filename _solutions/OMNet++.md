@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "OMNeT++"
 description: "OMNeT++ is an extensible, modular, component-based C++ simulation library and framework, primarily used for building network simulators. It is widely applied in simulating wired and wireless communication networks, on-chip networks, queueing networks, and other distributed systems."

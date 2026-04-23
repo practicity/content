@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Simulation to Support Adult Learners: Theoretical Foundations and Practice"
 description: "An overview of how simulation-based education, grounded in adult learning theories, can be designed and delivered to motivate learners and achieve targeted outcomes."

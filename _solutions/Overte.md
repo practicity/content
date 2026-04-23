@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Overte"
 description: "Overte is an open-source virtual worlds and social VR software platform. Originally a fork of High Fidelity, it allows users to host their own highly scalable, distributed 3D environments with physics, spatial audio, and user-scripted interactions using JavaScript."

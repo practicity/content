@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "QBlade"
 description: "QBlade is an open-source wind turbine calculation software. It provides a comprehensive feature set for the design and simulation of wind turbine rotors and includes tools for airfoil analysis, rotor blade design, and aeroelastic multi-body simulation."

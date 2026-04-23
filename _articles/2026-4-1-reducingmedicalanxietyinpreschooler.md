@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Reducing Medical Anxiety in Preschoolers Through Hospital Simulation Workshops in Northern Portugal"
 description: "A Northern Portugal hospital’s simulation-based outreach engages nursery children in hands-on medical role-play and games to alleviate fear of healthcare encounters and improve attitudes toward treatment."

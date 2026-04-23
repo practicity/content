@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "HELICS"
 description: "HELICS (Hierarchical Engine for Large-scale Infrastructure Co-simulation) is an open-source co-simulation framework designed to bridge multiple simulation tools from different domains, such as power systems, communication networks, and transportation."

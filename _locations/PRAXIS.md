@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "PRAXIS"
 name:  "PRAXIS Art Center"

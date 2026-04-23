@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "DrillSIM 6000 Drilling and Well Control Simulator at Robert Gordon University"
 description: "Overview of Robert Gordon University's DrillSIM 6000 simulator, showcasing immersive drilling and well control training, human factors evaluation, and research applications to enhance operational readiness."

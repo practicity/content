@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Simulation-Based Training for Delivering Bad News in Medicine (Dr. Satchford)"
 description: "A simulation-based program led by Dr. Satchford trains resident and senior physicians to deliver bad news compassionately using actors, video review, and structured feedback."

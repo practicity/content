@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "SVGnest"
 description: "SVGnest is a free and open-source browser-based vector nesting tool. While not a physics simulator, it computationally simulates part-packing to optimize material usage for CNC routers, lasers, and plasma cutters by arranging SVG shapes into the tightest possible configuration."

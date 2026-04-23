@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Bridging Classroom and Industry: Simulation-Based Learning in Media Education by Myra Evans"
 description: "This video explores how professional simulation environments in higher education prepare journalism and media students for industry demands through scaffolded experiential learning."

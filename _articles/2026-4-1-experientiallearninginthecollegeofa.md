@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Experiential Learning in the College of Arts and Sciences: The Dean's Summer Fellowship at the University of Dayton"
 description: "This video showcases how the Dean's Summer Fellowship fosters faculty-mentored, hands-on undergraduate research in the College of Arts and Sciences at the University of Dayton, highlighting methods, resources, and career-focused outcomes across disciplines."

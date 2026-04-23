@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Right to Housing, Family Separation, and Lockout Rules in Temporary Emergency Accommodation under South Africa’s Constitution"
 description: "A moot-court exchange examines whether lockout and family-separation rules in temporary emergency shelters unreasonably limit South Africans’ constitutional rights to housing, dignity, and security."

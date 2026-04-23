@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "MURPHY"
 name:  "MURPHY's Law Boroughs"

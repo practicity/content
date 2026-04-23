@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Crowd Management Simulation : reaching the edge of what can be possibly simulated ?"
 description: "Crowd Control Simulation Exercise in National Police Academy, Maharajgunj, Kathmandu"

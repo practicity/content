@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "ARTWAPT"
 name:  "ARTWICK International Aiport"

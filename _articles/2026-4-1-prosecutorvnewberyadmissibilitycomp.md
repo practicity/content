@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Prosecutor v. Newbery: Admissibility, Complementarity, and Torture Evidence before the ICC (Anastasia Malenko)"
 description: "A 2017 moot court final oral argument analyzes ICC admissibility under Article 17, gravity, and the admissibility of evidence allegedly obtained by torture in Prosecutor v. Newbery."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Fritzing"
 description: "Fritzing is an open-source hardware initiative that makes electronics accessible as a creative material. It offers a software tool that supports designers, artists, and hobbyists in visually designing circuits, routing PCBs, and simulating basic electronic configurations."

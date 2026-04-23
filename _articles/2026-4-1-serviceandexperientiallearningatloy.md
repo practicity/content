@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Service and Experiential Learning at Loyola University Chicago (Loyola University Chicago)"
 description: "A multidisciplinary overview of Loyola University Chicago’s service- and experiential-learning models that connect students with community partners to conduct research, create deliverables, and achieve measurable impact."

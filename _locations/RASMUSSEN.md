@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "RASMUSSEN"
 name:  "RASMUSSEN Space Center"

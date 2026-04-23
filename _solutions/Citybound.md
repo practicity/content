@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Citybound"
 description: "Citybound is an open-source, microscopic city simulation game and tool. It aims to simulate the complex dynamics of urban environments by modeling the individual behaviors of thousands of citizens, vehicles, and businesses using a highly concurrent architecture."

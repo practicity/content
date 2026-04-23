@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Simulated Press Conference in Crisis Planning and Communication: Student Reflections"
 description: "Students reflect on a mock press conference in a crisis planning and communication course, highlighting role-play methods, real-time pressures, and learning outcomes."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Inside Air Canada's Flight Attendant Training Program at the Montreal Centre"
 description: "A field-based overview of Air Canada’s eight-week flight attendant training in Montreal, emphasizing safety-first instruction, emergency procedures, and full-cabin simulation."

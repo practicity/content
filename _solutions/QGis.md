@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "QGIS"
 description: "QGIS is a professional Desktop GIS application that supports creating, editing, visualizing, and analyzing geospatial information. It includes extensive plugins for simulating hydrological processes, urban growth, and network analysis."

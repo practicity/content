@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Elmer FEM"
 description: "Elmer is an open-source multiphysical simulation software developed by CSC - IT Center for Science (Finland). It utilizes the Finite Element Method (FEM) to solve complex, coupled problems in fluid dynamics, structural mechanics, electromagnetics, heat transfer, and acoustics."

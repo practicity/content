@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Campus Active-Shooter Crisis Response Simulation and Media Management"
 description: "A video documents a campus active-shooter crisis simulation emphasizing coordinated response across people and plans, emergency calls, and media management to mitigate operational and reputational risk."

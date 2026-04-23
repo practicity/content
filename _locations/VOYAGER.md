@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "VOYAGER"
 name:  "Research Vessel VOYAGER"

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Simulating large scale disaster and crisis management simulation involving multiple disciplines"
 description: "The video shows sequences of crisis management situation as an aftermath of chemical accident. Participants of the medical domain are interviewed."

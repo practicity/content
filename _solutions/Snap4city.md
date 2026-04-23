@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Snap4City"
 description: "Snap4City is an open-source, IOT-enabled smart city platform. It provides simulation and analysis tools for urban management, mobility modeling, environmental monitoring, and social media analysis on a geographical scale."

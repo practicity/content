@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Immersive Enterprise IT Simulations for Service Management Maturity"
 description: "The video outlines how in-room enterprise IT simulations translate theory into practice to build service-management maturity, align stakeholders from CxO to operations, and deliver actionable pathways to improved service delivery."

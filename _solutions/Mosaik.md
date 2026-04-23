@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Mosaik"
 description: "mosaik is a flexible Smart Grid co-simulation framework that allows for the integration of various simulators (power grids, control strategies, PV systems) into a single, coordinated simulation environment to study cyber-physical systems."

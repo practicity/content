@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "DERRICK"
 name:  "DERRICK Oil Well"

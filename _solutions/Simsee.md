@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "SimSEE"
 description: "SimSEE (Simulation of Electric Energy Systems) is a platform for the simulation and optimization of complex power systems. It is primarily used for long-term expansion planning and operation of hydrothermal systems, particularly in Latin American energy markets."

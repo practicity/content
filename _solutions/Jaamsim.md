@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "JAAMSIM"
 description: "A comprehensive simulation designed to teach situational leadership in high-pressure environments. This long-form text explains the core pedagogical goals and the experiential learning outcomes expected from the session."

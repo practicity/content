@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "How does the SIF-400, the training system for Industry 4.0, work?"
 description: "The SIF-400 training system simulates a smart factory using Industry 4.0 technologies to prepare learners with practical skills for the future of digitalized manufacturing."

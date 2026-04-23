@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "ASALI"
 description: "ASALI is an open-source tool for the modeling of chemical reactors and the calculation of thermodynamic and transport properties of gas mixtures. It provides a user-friendly Graphical User Interface (GUI) to set up and solve complex catalytic and gas-phase reactor models without needing to write code."

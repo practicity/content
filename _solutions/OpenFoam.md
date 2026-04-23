@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "OpenFOAM"
 description: "OpenFOAM is the leading free, open-source software for computational fluid dynamics (CFD). Developed and distributed by the OpenFOAM Foundation, it has an extensive range of features to solve anything from complex fluid flows involving chemical reactions, turbulence, and heat transfer, to acoustics and solid mechanics."

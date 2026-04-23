@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Experiential Earthquake Training: Kobe 1995 Simulation and Predicted Hanshin Scenario"
 description: "An instructor-led earthquake simulator session reproduces the 1995 Kobe earthquake and a predicted Hanshin scenario, emphasizing hands-on safety protocols and experiential disaster preparedness."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "MFEM"
 description: "MFEM is a free, lightweight, scalable Cpp library for finite element methods. It enables researchers and engineers to develop highly scalable, parallel simulations for complex physics problems across a wide variety of hardware architectures."

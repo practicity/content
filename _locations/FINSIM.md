@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "FINSIM"
 name:  "FINSIM Bank"

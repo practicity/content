@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "gprMax"
 description: "gprMax is an open-source software that simulates electromagnetic wave propagation. It solves Maxwell's equations in 3D using the Finite-Difference Time-Domain (FDTD) method. Originally designed for modelling Ground Penetrating Radar (GPR), it is now widely adopted for broader computational electromagnetics research, including geophysics, medical imaging, and antenna design."

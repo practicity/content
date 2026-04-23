@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "PANSIM"
 name:  "PANSIM World Organisation"

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Mock Municipal Board Meeting Training — Sumner Davis and Janet Baird (MSU Extension)"
 description: "A scripted mock board meeting used to train newly elected Mississippi municipal officials on ethics, open meetings, and procurement law through real-world cases and post-skit critique."

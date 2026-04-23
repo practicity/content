@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Employment Tribunal Simulation: Bulldog v Cumber Futures on Political Expression and Fair Dismissal"
 description: "A mock UK employment tribunal examines whether dismissal for Scottish Defence League affiliation was fair, weighing employee conduct, reputational risk, and third-party funding pressure."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Sfctools"
 description: "sfctools is a Python framework for Stock-Flow Consistent (SFC) modeling and Agent-Based Modeling (ABM) in economics. It helps researchers build complex macroeconomic models while ensuring accounting consistency across sectors."

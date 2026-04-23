@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Immersive Poverty Simulation in Undergraduate Nursing and Nutrition Education (School of Nursing and Health Sciences)"
 description: "A School of Nursing and Health Sciences uses an immersive poverty simulation to prepare undergraduate nursing and nutrition students to deliver equitable, individualized care informed by social determinants."

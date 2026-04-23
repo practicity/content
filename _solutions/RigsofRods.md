@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Rigs of Rods"
 description: "Rigs of Rods is an open-source vehicle simulator based on soft-body physics. By simulating a network of interconnected nodes and beams, it realistically models the deformation and physical behavior of trucks, cars, airplanes, and boats in real-time."

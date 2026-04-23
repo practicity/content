@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "A Student-Led Simulation of the UNFCCC Paris Climate Negotiations (COP21)"
 description: "Students participate in a UNFCCC-style policy simulation of the Paris climate negotiations, developing negotiation skills and drafting pledges aimed at meeting the 2°C target by 2100."

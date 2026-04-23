@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "FreeFEM"
 description: "FreeFEM is a highly flexible, open-source partial differential equation solver using the finite element method. It features its own high-level programming language oriented towards mathematical formulation, making it highly effective for multi-physics simulations."

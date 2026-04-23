@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "KOLBLIB"
 name:  "The KOLB Library"

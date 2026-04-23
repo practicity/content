@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "DGHOSP"
 name:  "David Gaba Hospital"

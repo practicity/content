@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Protocol for Managing Financial Fraud: A Case Study in Banking Security Assistance"
 description: "This video details the standard operating procedures for financial institutions when handling customer reports of stolen payment cards and compromised account credentials."

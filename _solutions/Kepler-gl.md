@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Kepler.gl"
 description: "Kepler.gl is a powerful open-source geospatial analysis tool for large-scale data sets. Built on top of deck.gl, it allows users to create high-performance, data-driven visualizations and animations of moving objects or temporal changes."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Demonstrating the Arc of Mediation: Live Training Session on a Sibling Estate Dispute"
 description: "An instructor-led demonstration and observation-based training session presents the full flow of a two-hour family inheritance mediation and a post-session debrief."

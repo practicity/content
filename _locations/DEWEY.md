@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "DEWEY"
 name:  "DEWEY K12 School"

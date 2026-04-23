@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Role-Play Simulations in Business Education: Undergraduate and Master’s-Level Implementation and Assessment"
 description: "The video outlines how role-play simulations are designed and assessed in undergraduate and master’s business courses to foster real-world decision-making under ambiguity."

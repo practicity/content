@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "13THFL"
 name:  "Hanon Fuller's Appartment"

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Principles of Crisis Resource Management in Healthcare"
 description: "A concise overview of why crises occur in healthcare and how crisis resource management, grounded in simulation-based training, enhances communication, leadership, and patient safety."

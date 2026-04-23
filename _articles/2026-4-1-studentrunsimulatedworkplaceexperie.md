@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Student-Run Simulated Workplace: Experiential Learning and Workforce Preparation in High School"
 description: "This video documents a high school simulated workplace where student-run companies adopt real-world processes—applications, interviews, handbooks, and timekeeping—to cultivate soft skills, academic transfer, certifications, and community impact."

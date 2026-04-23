@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Using mock trials as critical learning tool for experience"
 description: "Dispute between shareholders of a mining company in Sweden and Finland"

@@ -12,4 +12,5 @@ Abstract: "[Summarized b AI] The video follows a drilling crew as they encounter
 Proper training [ndlr : in a high fidelity simulator] and adherence to procedures, even in the face of unexpected problems, are crucial for safely managing these high-stakes situations. The goal is to recognize indications of trouble, take timely and effective action, and ultimately achieve a successful well kill."
 tags: ["Crisis-Management", "Emergency-Response", "Energy", "Simulator", "Teamwork"]
 locationids: ["DERRICK"]
+comments: true
 ---

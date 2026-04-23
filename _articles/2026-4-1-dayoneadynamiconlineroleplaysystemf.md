@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Day One: A Dynamic Online Role-Play System for Scalable Call Center Training and Analytics"
 description: "An overview of the Day One platform, which uses dynamic role-play, immediate feedback, and analytics to accelerate call center competency, reduce attrition, and scale consistent customer service training."

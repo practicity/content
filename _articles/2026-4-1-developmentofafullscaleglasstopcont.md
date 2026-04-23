@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Development of a Full-Scale Glass-Top Control Room Simulator for Operator Training"
 description: "This video outlines the design, scaling, and benefits of a cost-effective, full-scale glass-top control room simulator that replicates plant operations for high-fidelity operator training and rapid change validation."

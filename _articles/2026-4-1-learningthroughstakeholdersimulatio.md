@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Learning Through Stakeholder Simulations: Student Reflections on Collaborative Decision-Making"
 description: "A participant explains how small-group stakeholder simulations and role-play foster deep engagement, multi-perspective debate, collaborative decisions, and tangible learning outcomes beyond textbooks or news."

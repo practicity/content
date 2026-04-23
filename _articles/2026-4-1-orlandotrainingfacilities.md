@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Real Life Trauma Simulation Training by Orlando Medical Institute"
 description: "Orlando Medical Institute provides advanced simulation-based training across diverse clinical settings to enhance healthcare professionals’ skills and improve patient outcomes through both on-site and in-hospital education programs."

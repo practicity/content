@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "KEMSYM"
 name:  "KEMSYM Chemicals"

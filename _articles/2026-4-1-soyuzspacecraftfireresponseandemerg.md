@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Soyuz Spacecraft Fire Response and Emergency Descent Procedures: Simulator Training Insights"
 description: "A trainee astronaut demonstrates Soyuz simulator procedures for onboard fire response, depressurization, and a time-critical emergency descent to Earth."

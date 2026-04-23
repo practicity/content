@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Mooting and Advocacy Training in the Victoria University Law Degree"
 description: "An overview of how Victoria University’s law program leverages court-based experiences and mooting to build practical advocacy skills and enhance student employability through exposure to senior legal professionals."

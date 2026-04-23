@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "CINEMATRIX"
 name:  "CINEMATRIX Theater"

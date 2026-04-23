@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "HOMERNPP"
 name:  "Homer Simson Nuclear Plant"

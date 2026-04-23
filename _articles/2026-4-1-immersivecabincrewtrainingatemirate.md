@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Immersive Cabin Crew Training at Emirates: Simulation-Driven Safety and Service"
 description: "This video presents Emirates’ immersive, simulator-based cabin crew training that replicates A380 and 777 operations to produce operationally ready staff and uphold industry-leading safety and service standards."

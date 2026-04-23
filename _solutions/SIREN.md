@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "SIREN"
 description: "Sustainable Energy Now provides modeling tools and simulations to analyze energy transition scenarios. Their tools focus on visualizing the impact of renewable energy penetration on the grid and calculating the economic feasibility of sustainable power systems."

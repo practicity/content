@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "From Training to Learning: Social and Informal, Learner-Centric Workplace Development"
 description: "The video argues for shifting from trainer-centric, classroom-heavy programs to a learner-centric model that leverages social and informal networks to improve performance and knowledge sharing at work."

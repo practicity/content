@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Georgetown Law’s National Security Crisis Simulation: Integrating Law and Policy"
 description: "This video presents Georgetown Law’s immersive national security crisis simulation that integrates legal analysis and policy decision-making across federal, state, congressional, and media actors under real-time pressure and expert evaluation."

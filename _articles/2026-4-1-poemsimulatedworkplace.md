@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Empowerment"
 description: "A poem to Simulated Worplaces"

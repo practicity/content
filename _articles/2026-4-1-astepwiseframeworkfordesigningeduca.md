@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "A Stepwise Framework for Designing Educational Simulations"
 description: "This video presents a flexible, discipline-agnostic framework for designing and assessing teaching simulations, from clarifying objectives to logistics and outputs."

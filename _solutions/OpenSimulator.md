@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "OpenSimulator"
 description: "OpenSimulator is an open-source multi-platform, multi-user 3D application server. It can be used to create a virtual environment (or world) which can be accessed through a variety of clients, using protocols compatible with Second Life."

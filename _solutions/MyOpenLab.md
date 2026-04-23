@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "MyOpenLab"
 description: "MyOpenLab is an open-source platform for physical simulations, electronics, and modeling. It uses a graphical block-based programming environment, similar to LabVIEW, to simulate processes, connect hardware like Arduino, and design interactive user interfaces."

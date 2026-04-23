@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Ten-Year Forecast 2014: Global Simulation Corps"
 description: "Advances in computing and collective participation are reviving ambitious efforts to build large-scale simulations that model complex global systems to better anticipate the future."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Cantera"
 description: "Cantera is an open-source suite of object-oriented software tools for problems involving chemical kinetics, thermodynamics, and transport processes. It can be used from Python, Cpp, Fortran, and MATLAB to simulate steady-state and transient reactor networks, 1D flames, and electrochemical energy conversion systems."

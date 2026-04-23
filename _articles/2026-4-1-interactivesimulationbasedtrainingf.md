@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Interactive Simulation-Based Training for Australia's Construction Sector: The Building Leadership Simulation Center"
 description: "This video presents the Building Leadership Simulation Center, an immersive, scenario-based training facility that accelerates safety, leadership, and productivity learning for Australia’s construction workforce."

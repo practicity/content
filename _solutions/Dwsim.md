@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "DWSIM"
 description: "DWSIM is a  CAPE-OPEN compliant Chemical Process Simulator and has an easy-to-use graphical interface with many features previously available only in commercial chemical process simulators."

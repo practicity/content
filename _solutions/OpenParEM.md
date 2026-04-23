@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "OpenParEM"
 description: "OpenParEM is a free, open-source suite of 2D and 3D electromagnetic simulators solving Maxwell's Equations in the frequency domain. It utilizes an advanced finite-element method (FEM) and parallel processing (MPI) to compute electromagnetic fields, multi-port S-parameters, characteristic impedances, and antenna performance metrics."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Mock Accreditation in an Indian Call Centre: Preparing Trainees for Live Customer Calls"
 description: "An inside look at an Indian call centre’s mock accreditation process, highlighting scripted role-plays, support from experienced coaches, and the performance challenges trainees must overcome before going live."

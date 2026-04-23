@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "STEELRISE"
 name:  "STEELRISE Construction Site"

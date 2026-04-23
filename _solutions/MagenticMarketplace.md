@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Magentic-Marketplace"
 description: "Magentic-Marketplace is an open-source simulation environment for studying agentic markets. It enables the exploration of how AI agents interact in economic environments, focusing on negotiation, pricing, and market equilibrium."

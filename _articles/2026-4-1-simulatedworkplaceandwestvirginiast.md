@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Simulated Workplace and West Virginia State Parks: Student-Built Picnic Tables for Watoga State Park (Interview with Mark Odell)"
 description: "A field report on the I Heart WV Parks collaboration in which Nicholas County Career and Technical Center students design, fabricate, and deliver 20 picnic tables for Watoga State Park using a simulated workplace model."

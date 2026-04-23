@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "MapServer"
 description: "MapServer is an open-source platform for publishing spatial data and interactive mapping applications to the web. It is capable of high-performance rendering of geospatial data formats and serves as a backbone for many GIS simulations."

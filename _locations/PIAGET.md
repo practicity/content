@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: location
 locationid: "PIAGET"
 name:  "JEAN PIAGET Reasearch Center"

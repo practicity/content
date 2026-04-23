@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Top Tips for Designing and Facilitating Classroom Simulations"
 description: "A concise, research-informed primer on designing, running, and debriefing classroom simulations that foster student creativity, focus, and curricular integration."

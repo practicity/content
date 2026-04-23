@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Model United Nations General Assembly: Proceedings on Child Soldiers and Nuclear Proliferation"
 description: "A detailed record of a Model United Nations general assembly session focusing on the procedural debates and policy stances regarding child soldiers and nuclear non-proliferation."

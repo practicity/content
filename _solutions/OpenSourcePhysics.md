@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Open Source Physics (OSP)"
 description: "The Open Source Physics (OSP) project provides curriculum resources and tools, including Easy Java/JavaScript Simulations (EJS), to engage students in physics, computation, and computer modeling. It allows users to quickly create interactive simulations for education and research."

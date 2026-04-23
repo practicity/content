@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Reproducing an entire manufacturing line and work environment for expriential learning"
 description: "This video shows an ELPHINSTONE simulated work environment (USA)"

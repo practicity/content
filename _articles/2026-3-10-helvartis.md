@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "HELVARTIS – 20 years of hands-on training"
 description: "Helvartis, a non-profit founded in 1994, provides practical, adaptable commercial training programs and connects skilled participants with recruiting companies through its network of practice enterprises."

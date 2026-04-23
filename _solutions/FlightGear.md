@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "FlightGear"
 description: "FlightGear is a highly realistic, open-source flight simulator used globally in academic environments, pilot training, and by aviation enthusiasts. It boasts an incredibly detailed physics engine, worldwide scenery data, and an extensive fleet of highly accurate aircraft models."

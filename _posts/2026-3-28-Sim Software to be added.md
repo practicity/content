@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: post
 title: A list of simulation open source software to be added
 tags: [Simulation, Community]

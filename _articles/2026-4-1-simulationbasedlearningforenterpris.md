@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Simulation-Based Learning for Enterprise IT Service Management"
 description: "An overview of in-room enterprise IT simulations that translate theory into practice, build service-management maturity across iterative rounds, and drive stakeholder alignment for improvement programs."

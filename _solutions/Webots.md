@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Webots"
 description: "Webots is an open-source 3D robot simulator that provides a complete development environment to model, program, and simulate robots. It includes a large library of sensors, actuators, and pre-built robotic models, and supports multiple programming languages including C, Cpp, Python, and Java."

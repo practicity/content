@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Mock VC Term Sheet Negotiation: Serial Entrepreneur Dane and VC Brad (High Peaks Venture Partners)"
 description: "A staged yet realistic pitch meeting and negotiation models early-stage venture financing dynamics, including diligence, milestone tranches, CEO hiring contingencies, and best practices for founder–investor engagement."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Learning Business–IT Alignment via an Experiential ITSM Simulation"
 description: "A facilitated ITSM simulation demonstrates how integrated processes, metrics, and cross-functional collaboration move a business from loss to profit across iterative rounds."

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "OpenModelica"
 description: "OpenModelica is an open-source Modelica-based modeling and simulation environment intended for industrial and academic usage. Its comprehensive multi-domain capabilities allow users to model and simulate complex systems involving mechanical, electrical, electronic, hydraulic, thermal, and control subcomponents."

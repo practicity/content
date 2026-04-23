@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Full-Scale Active Shooter Response Drill at Fargo’s Davies High School — Report by Amy Unruh (WDAY 6 News)"
 description: "A WDAY 6 News field report documents a multi-agency, full-scale active shooter training at Fargo’s Davies High School, highlighting methods, challenges, and planned after-action improvements."

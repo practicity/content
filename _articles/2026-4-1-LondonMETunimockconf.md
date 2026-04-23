@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Mock Conference - 25/10/16 - Transport in London"
 description: "This is an event organised by MA Conference Interpreting students at London Metropolitan University."

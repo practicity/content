@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "CNC Web Simulator"
 description: "CNC Web Simulator is an open-source, browser-based tool for simulating CNC milling machines. It allows users to write or upload G-code and instantly visualize the toolpath execution in a 3D environment, making it a great lightweight tool for learning and verifying CNC programs."

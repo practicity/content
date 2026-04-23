@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "TU Delft Open Simulation Suite"
 description: "A collection of open-source Python packages developed by the TU Delft Ports & Waterways Digitalization Lab for analyzing and simulating maritime and logistics operations. The suite includes OpenTNSim (Transport Network Simulation), OpenCLSim (Cycle Logistics Simulation), OpenTISim (Terminal Investment Simulation), and OpenQTSim (Queueing Theory Simulation)."

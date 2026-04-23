@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Sequential Simulation of Healthcare Pathways at Imperial College London"
 description: "A demonstration at Imperial’s White City campus shows how sequential simulation makes the patient journey visible, revealing communication, handover, and organizational challenges with lessons transferable beyond healthcare."

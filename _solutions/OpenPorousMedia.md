@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "Open Porous Media (OPM)"
 description: "The Open Porous Media (OPM) initiative is a set of open-source tools centered around the simulation of flow and transport of fluids in porous media. It is widely used in reservoir engineering, CO2 storage simulation, and enhanced oil recovery."

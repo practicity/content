@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "U.S. Navy Flooding Damage-Control Training in Sasebo (Petty Officer Zach Kreitzer)"
 description: "A Yokosuka-based mobile training team uses a simulated ship environment in Sasebo, Japan to teach and time U.S. Navy Sailors’ flooding and damage-control responses in a controlled, hands-on setting."

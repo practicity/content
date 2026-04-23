@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: post
 title: Understanding PractiCity blog
 tags: [Simulation, PractiCity]

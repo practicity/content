@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Learn by doing at the Building Leadership Simulation Centre"
 description: "A video showing the Building Leadership Simulation Centre with all its equipments and some training scenes in progress"

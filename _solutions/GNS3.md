@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: solution
 title: "GNS3"
 description: "GNS3 (Graphical Network Simulator-3) is a powerful, open-source network software emulator used by hundreds of thousands of network engineers worldwide. It allows you to simulate, configure, test, and troubleshoot complex virtual and real networks."

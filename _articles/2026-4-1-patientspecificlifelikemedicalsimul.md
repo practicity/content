@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Patient-Specific Lifelike Medical Simulation for Safer Surgery (Peter Weinstock)"
 description: "An ICU physician at Boston Children's Hospital presents patient-specific, lifelike medical simulations—built from imaging, 3D printing, and Hollywood effects—as preoperative rehearsals that enhance team performance and improve outcomes in rare pediatric surgeries."

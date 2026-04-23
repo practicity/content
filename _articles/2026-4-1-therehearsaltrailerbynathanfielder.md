@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "The Rehearsal Trailer by Nathan Fielder"
 description: "A trailer for Nathan Fielder’s The Rehearsal introducing a method of full-scale social simulations to pre-plan difficult interactions, raising ethical questions about control, authenticity, and reality television."

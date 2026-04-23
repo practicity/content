@@ -36,9 +36,24 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
-# Enter your Disqus shortname (not your username) to enable commenting on posts
-# You can find your shortname on the Settings page of your Disqus account
-disqus:
+# Giscus comments (GitHub Discussions)
+# Get repo_id and category_id from https://giscus.app — enter your repo and copy the values.
+# repo: GitHub repo where Discussions are enabled, in "owner/repo" format
+# mapping: how pages map to discussions — "pathname" is recommended
+# reactions_enabled: 1 to show emoji reactions on the discussion post, 0 to hide
+# theme: preferred_color_scheme | light | dark | transparent_dark | ...
+giscus:
+  repo: "practicity/discussions"
+  repo_id: "R_kgDOSKCFzw"
+  category: "General"
+  category_id: "DIC_kwDOSKCFz84C7doT"
+  mapping: "pathname"
+  strict: "0"
+  reactions_enabled: "1"
+  emit_metadata: "0"
+  input_position: "bottom"
+  theme: "light"
+  lang: "en"
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:

@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Pilot-Scale Carbon Capture Training Under Pressure: Human Factors in an Offshore-Analog Control Room"
 description: "A first-person account of a high-fidelity, pilot-scale carbon capture lab simulating offshore control-room operations to examine decision-making, failure, and team cohesion under pressure."

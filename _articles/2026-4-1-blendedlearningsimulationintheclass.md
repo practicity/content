@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Blended Learning Simulation in the Classroom: Building Decision-Making Capacity (Ken, NexLearn Webinar)"
 description: "This NexLearn webinar advocates a blended approach that integrates classroom and virtual simulations, role plays, and targeted instruction to strengthen decision-making and problem-solving skills amid uncertainty."

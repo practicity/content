@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: article
 title: "Learning by doing and not teaching :)"
 description: "A nice and inspirational short movie about a kid learning business from her mum and much more"
