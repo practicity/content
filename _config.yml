@@ -88,15 +88,15 @@ hero:
     
     - image: /images/hero/hero2.png
       title: "High Definition Simulation Environments"
-      subtitle: "Bring complex systems to life with simulators"
+      subtitle: "Bring complex systems to life with open-source simulation software"
       link: /solutions/
       cta: "Find Open Source Digital Solutions"
     
     - image: /images/hero/hero3.png
-      title: "Let's imagine PractiCity together"
-      subtitle: "PractiCity Microverse is a Global Community of Experiential Learning Practitioners"
-      link: 
-      cta: "Navigate into PractiCity Microverse"
+      title: "Promoting Cross Experiential Simulations"
+      subtitle: "PractiCity Microverse : where all experiential simulations are virtually gathered"
+      link: /microverse/
+      cta: "Understanding PractiCity Microverse"
 
 
 # If you're hosting your site at a Project repository on GitHub pages
