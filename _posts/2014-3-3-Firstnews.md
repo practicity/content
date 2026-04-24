@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Your contributions are welcomed !
-tags: [Community]
-screenshot1: "/images/posts/news.jpg"
 contributor_id: alexandre-gain
+screenshot1: /images/posts/news.jpg
+tags:
+  - Community
 comments: true
 ---
 
@@ -15,5 +16,4 @@ Do you want to add a location or extend the MICROVERSE ? => Locations
 
 You are most welcomed to contribute to our community web site !
 
-We will implement a user based access asap.
-In the meantime, enjoy !
+Simply contact us via linkedin and we'll explain you how to contribute.
