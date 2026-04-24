@@ -18,21 +18,21 @@ layout: default
 
   <!-- LEFT COLUMN: Location Facts -->
   <div class="quick-facts">
-    <h3 style="margin-top: 0;">📊 Quick Facts</h3>
+    <h3>📊 Quick Facts</h3>
     <table>
       <tr>
-        <td style="padding-right: 30px;"><strong>Name</strong></td>
+        <td><strong>Name</strong></td>
         <td>{{ page.name }}</td>
       </tr>
       {% if page.locationid %}
       <tr>
-        <td style="padding-right: 30px;"><strong>Location ID</strong></td>
+        <td><strong>Location ID</strong></td>
         <td>{{ page.locationid }}</td>
       </tr>
       {% endif %}
       {% if page.contributor_id %}
       <tr>
-        <td style="padding-right: 30px;"><strong>Author</strong></td>
+        <td><strong>Author</strong></td>
         <td>{% include author-pill.html author=page.contributor_id %}</td>
       </tr>
       {% endif %}
@@ -40,11 +40,11 @@ layout: default
 
     {% if page.locationid %}
     {% if site.microverse_url contains '?' %}{% assign mv_sep = '&' %}{% else %}{% assign mv_sep = '?' %}{% endif %}
-    <div style="margin-top: 16px;">
+    <div class="microverse-links">
     <a id="microverse-link"
         href="{{ site.microverse_url }}{{ mv_sep }}locationid={{ page.locationid }}&popautoopen=true{% if site.microverse_urlparams %}&{{ site.microverse_urlparams | join: "&" }}{% endif %}{% if page.microverse_urlparams %}&{{ page.microverse_urlparams }}{% endif %}"
         target="microverse-tab"
-        style="display:inline-block; padding:8px 14px; background:#333; color:#fff; border-radius:6px; text-decoration:none; font-size:0.9em;">
+        class="btn-standard">
         🌐 Navigate in Microverse
     </a>
     </div>
@@ -53,19 +53,19 @@ layout: default
   <!-- RIGHT COLUMN: Illustrations -->
   <div class="illustrations">
     {% if page.screenshot1 or page.screenshot2 %}
-      <h3 style="margin-top: 0;">🖼️ Illustrations</h3>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+      <h3>🖼️ Illustrations</h3>
+      <div class="illustrations-grid">
 
         {% if page.screenshot1 %}
           <img src="{{ page.screenshot1 | relative_url }}"
                alt="Screenshot 1"
-               style="border-radius:8px; border:1px solid #eee; width:100%;">
+               class="screenshot-img">
         {% endif %}
 
         {% if page.screenshot2 != "" and page.screenshot2 != nil %}
           <img src="{{ page.screenshot2 | relative_url }}"
                alt="Screenshot 2"
-               style="border-radius:8px; border:1px solid #eee; width:100%;">
+               class="screenshot-img">
         {% endif %}
 
       </div>
@@ -77,14 +77,14 @@ layout: default
 {% assign related = site.articles | where_exp: "item", "item.locationids contains page.locationid" %}
 {% if related.size > 0 %}
 <hr>
-<h3>📰 Articles <span style="font-weight: normal; color: #888; font-size: 0.85em;">({{ related.size }})</span></h3>
-<ul style="list-style: disc; padding-left: 20px; margin: 0;">
+<h3>📰 Articles <span class="section-count">({{ related.size }})</span></h3>
+<ul class="related-list">
   {% assign sorted_related = related | sort: "date" %}
   {% for article in sorted_related %}
-  <li style="margin-bottom: 6px;">
-    <a href="{{ site.baseurl }}{{ article.url }}" style="color: #4a6fa5; text-decoration: none;">{{ article.title }}</a>
-    {% if article.type %}<span style="color: #888; font-size: 0.85em;"> · {{ article.type }}</span>{% endif %}
-    {% if article.date %}<span style="color: #888; font-size: 0.85em;"> · {{ article.date | date: "%b %d, %Y" }}</span>{% endif %}
+  <li>
+    <a href="{{ site.baseurl }}{{ article.url }}">{{ article.title }}</a>
+    {% if article.type %}<span class="related-meta"> · {{ article.type }}</span>{% endif %}
+    {% if article.date %}<span class="related-meta"> · {{ article.date | date: "%b %d, %Y" }}</span>{% endif %}
   </li>
   {% endfor %}
 </ul>
@@ -94,12 +94,12 @@ layout: default
 {% if solutions.size > 0 %}
 <hr>
 
-<h3>🌐 Solutions <span style="font-weight: normal; color: #888; font-size: 0.85em;">({{ solutions.size }})</span></h3>
-<ul style="list-style: disc; padding-left: 20px; margin: 0;">
+<h3>🌐 Solutions <span class="section-count">({{ solutions.size }})</span></h3>
+<ul class="related-list">
   {% for sol in solutions %}
-  <li style="margin-bottom: 6px;">
-    <a href="{{ site.baseurl }}{{ sol.url }}" style="color: #4a6fa5; text-decoration: none;">{{ sol.title }}</a>
-    {% if sol.type %}<span style="color: #888; font-size: 0.85em;"> · {{ sol.type }}</span>{% endif %}
+  <li>
+    <a href="{{ site.baseurl }}{{ sol.url }}">{{ sol.title }}</a>
+    {% if sol.type %}<span class="related-meta"> · {{ sol.type }}</span>{% endif %}
   </li>
   {% endfor %}
 </ul>
@@ -107,7 +107,7 @@ layout: default
 
 {% if page.tags %}
 <hr>
-<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+<div class="tag-list">
   {% for tag in page.tags %}
     <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">
       {{ tag }}

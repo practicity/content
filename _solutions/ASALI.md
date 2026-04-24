@@ -6,7 +6,7 @@ description: "ASALI is an open-source tool for the modeling of chemical reactors
 type: "Simulation Software"
 category: "Chemical Engineering"
 complexity: "★★★☆☆"
-activity: "★★★☆☆"
+activity: "★★★★☆"
 website: "https://srebughini.github.io/ASALI/"
 github: "https://github.com/srebughini/ASALI"
 license: "GPL 3.0"

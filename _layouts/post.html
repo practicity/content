@@ -5,7 +5,7 @@ layout: default
 <article class="post">
   <h1>{{ page.title }}</h1>
 
-  <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 1em; font-size: 0.9em; color: #666;">
+  <div class="post-meta">
     <span>{{ page.date | date: "%B %e, %Y" }}</span>
     {% if page.contributor_id %}
       <span>·</span>
@@ -21,7 +21,7 @@ layout: default
 </article>
 
 {% if page.tags %}
-<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 1em;">
+<div class="tag-list">
   {% for tag in page.tags %}
     <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">
       {{ tag }}

@@ -34,17 +34,15 @@
 
             <div class="masthead-cta">
               {% if site.microverse_url contains '?' %}{% assign mv_sep = '&' %}{% else %}{% assign mv_sep = '?' %}{% endif %}
-              <a href="{{ site.microverse_url }}{{ mv_sep }}locationid=PRACTICITY" target="microverse-tab"
-                 style="display:inline-block; padding:8px 14px; background:#333; color:#fff; border-radius:6px; text-decoration:none; font-size:0.9em; white-space:nowrap;">
-                🌐 Practicity Microverse
+              <a href="{{ site.microverse_url }}{{ mv_sep }}locationid=PRACTICITY" target="microverse-tab" class="btn-standard">
+                 🏬 Practicity Microverse
               </a>
             </div>
           </div>
 
           <nav>
-            <a href="{{ site.baseurl }}/posts">Posts</a>
             <a href="{{ site.baseurl }}/articles">Articles</a>
-            <a href="{{ site.baseurl }}/solutions">Digital Solutions</a>
+            <a href="{{ site.baseurl }}/solutions">Solutions</a>
             <a href="{{ site.baseurl }}/contributors">Contributors</a>
           </nav>
         </header>
@@ -62,8 +60,7 @@
           <nav class="footer-nav">
             <a href="{{ site.baseurl }}/about">About</a>
             <a href="{{ site.baseurl }}/disclaimer">Disclaimer</a>
-            <a href="{{ site.baseurl }}/ease-npo">EASE NPO</a>
-            <a href="{{ site.baseurl }}/how-to-contribute">How to Contribute</a>
+            <a href="{{ site.baseurl }}/microverse">Disclaimer</a>
           </nav>
         </footer>
       </div>

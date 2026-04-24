@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<div class="page-hero" style="display: flex; align-items: center; gap: 2em; margin-bottom: 2em; padding: 1.5em; background: #f9f9f9; border-radius: 12px;">
-  <div style="font-size: 3em;">👥</div>
+<div class="page-hero">
+  <div class="page-hero-icon">👥</div>
   <div>
-    <h1 style="margin: 0 0 0.3em;">Contributors</h1>
-    <p style="margin: 0; color: #555;">
+    <h1>Contributors</h1>
+    <p class="page-hero-desc">
       The people behind Practi.City — curators, authors, and learning architects from around the world.
     </p>
-    <p style="margin: 0.5em 0 0; color: #888; font-size: 0.9em;">
+    <p class="page-hero-count">
       {{ site.contributors | size }} contributor(s)
     </p>
   </div>
@@ -26,22 +26,22 @@ layout: default
               <img src="{{ item.headshot | relative_url }}" alt="{{ item.title }}">
             </a>
           {% else %}
-            <a href="{{ item.url | relative_url }}" class="contributor-headshot-placeholder" style="display:flex; align-items:center; justify-content:center; height:100%; font-size:2.5em; font-weight:700; color:#999; background:linear-gradient(135deg,#e0e8f8,#c8d8f0); text-decoration:none;">
+            <a href="{{ item.url | relative_url }}" class="contributor-headshot-placeholder">
               {{ item.title | slice: 0 }}
             </a>
           {% endif %}
         </div>
 
         <div class="item-content">
-          <h2 style="margin-top:0;"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
-          {% if item.byline %}<p style="color:#555; margin-bottom:0.4em;">{{ item.byline }}</p>{% endif %}
+          <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+          {% if item.byline %}<p class="item-byline">{{ item.byline }}</p>{% endif %}
           {% if item.city or item.country %}
-            <p style="font-size:0.85em; color:#888; margin-bottom:0.4em;">
+            <p class="item-location-line">
               {% if item.city %}{{ item.city }}{% endif %}{% if item.city and item.country %}, {% endif %}{% if item.country %}{{ item.country }}{% endif %}
             </p>
           {% endif %}
           {% if item.social %}
-            <div style="display:flex; flex-wrap:wrap; gap:0.4em; margin-top:0.5em;">
+            <div class="item-social">
               {% if item.social.linkedin  and item.social.linkedin  != "" %}<a href="{{ item.social.linkedin }}"  target="_blank" rel="noopener" class="svg-icon linkedin"></a>{% endif %}
               {% if item.social.twitter   and item.social.twitter   != "" %}<a href="{{ item.social.twitter }}"   target="_blank" rel="noopener" class="svg-icon twitter"></a>{% endif %}
               {% if item.social.github    and item.social.github    != "" %}<a href="{{ item.social.github }}"    target="_blank" rel="noopener" class="svg-icon github"></a>{% endif %}
@@ -50,7 +50,7 @@ layout: default
             </div>
           {% endif %}
           {% if item.tags %}
-            <div style="display:flex; flex-wrap:wrap; gap:0.4em; margin-top:0.5em;">
+            <div class="item-tag-list">
               {% for tag in item.tags %}
                 <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">
                   {{ tag }}

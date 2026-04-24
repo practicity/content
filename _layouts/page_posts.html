@@ -3,23 +3,23 @@ layout: default
 permalink: /posts/
 ---
 
-<div class="page-hero" style="display: flex; align-items: center; gap: 2em; margin-bottom: 2em; padding: 1.5em; background: #f9f9f9; border-radius: 12px;">
-  <div style="font-size: 3em;">📝</div>
+<div class="page-hero">
+  <div class="page-hero-icon">📝</div>
   <div>
-    <h1 style="margin: 0 0 0.3em;">Posts</h1>
-    <p style="margin: 0; color: #555;">
+    <h1>Posts</h1>
+    <p class="page-hero-desc">
       News, updates, and announcements from the Practi.city project.
       Browse by tag or scroll through all.
     </p>
-    <p style="margin: 0.5em 0 0; color: #888; font-size: 0.9em;">
+    <p class="page-hero-count">
       {{ site.posts | size }} posts available
     </p>
   </div>
 </div>
 
-<div style="margin-bottom: 2em;">
+<div class="tag-filter">
   <strong>Browse by tag:</strong>
-  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.5em;">
+  <div class="tag-filter-list">
 
     {% assign post_tags = "" | split: "" %}
     {% for item in site.posts %}
@@ -74,7 +74,7 @@ permalink: /posts/
           <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
           {% if item.description %}<p>{{ item.description }}</p>{% endif %}
           {% if item.date %}
-            <p style="font-size: 0.85em; color: #888;">{{ item.date | date: "%b %d, %Y" }}</p>
+            <p class="item-meta">{{ item.date | date: "%b %d, %Y" }}</p>
           {% endif %}
           {% if item.tags %}
             <div class="item-tags">

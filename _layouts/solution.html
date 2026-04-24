@@ -8,12 +8,12 @@ layout: default
 <div class="detail-grid">
 
   <div class="quick-facts">
-    <h3 style="margin-top: 0;">📊 Quick Facts</h3>
+    <h3>📊 Quick Facts</h3>
     <table>
       <tr><td><strong>Type</strong></td><td>{{ page.type }}</td></tr>
       <tr><td><strong>Category</strong></td><td>{{ page.category }}</td></tr>
-      <tr><td><strong>Complexity</strong></td><td><span style="color:#f1c40f;">{{ page.complexity }}</span></td></tr>
-      <tr><td><strong>Activity</strong></td><td><span style="color:#3498db;">{{ page.activity }}</span></td></tr>
+      <tr><td><strong>Complexity</strong></td><td><span class="complexity-stars">{{ page.complexity }}</span></td></tr>
+      <tr><td><strong>Activity</strong></td><td><span class="activity-stars">{{ page.activity }}</span></td></tr>
       <tr><td><strong>License</strong></td><td>{{ page.license }}</td></tr>
       <tr><td><strong>Last Survey</strong></td><td>{{ page.last_survey }}</td></tr>
       {% if page.contributor_id %}<tr><td><strong>Author</strong></td><td>{% include author-pill.html author=page.contributor_id %}</td></tr>{% endif %}
@@ -21,10 +21,9 @@ layout: default
 
     {% if page.locationids %}
     {% if site.microverse_url contains '?' %}{% assign mv_sep = '&' %}{% else %}{% assign mv_sep = '?' %}{% endif %}
-    <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px;">
+    <div class="microverse-links">
       {% for lid in page.locationids %}
-      <a href="{{ site.microverse_url }}{{ mv_sep }}locationid={{ lid }}{% if site.microverse_urlparams %}&{{ site.microverse_urlparams | join: "&" }}{% endif %}{% if page.microverse_urlparams %}&{{ page.microverse_urlparams }}{% endif %}" target="microverse-tab"
-         style="display:inline-block; padding:8px 14px; background:#333; color:#fff; border-radius:6px; text-decoration:none; font-size:0.9em;">
+      <a href="{{ site.microverse_url }}{{ mv_sep }}locationid={{ lid }}{% if site.microverse_urlparams %}&{{ site.microverse_urlparams | join: "&" }}{% endif %}{% if page.microverse_urlparams %}&{{ page.microverse_urlparams }}{% endif %}" target="microverse-tab" class="btn-standard">
         🌐 Microverse — {{ lid }}
       </a>
       {% endfor %}
@@ -34,30 +33,30 @@ layout: default
 
   <div class="illustrations">
     {% if page.screenshot1 or page.screenshot2 or page.screenshot3 %}
-      <h3 style="margin-top: 0;">🖼️ Illustrations</h3>
-      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+      <h3>🖼️ Illustrations</h3>
+      <div class="illustrations-grid-3">
         {% if page.screenshot1 %}
           <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot1 | relative_url }}">
-            <img src="{{ page.screenshot1 | relative_url }}" style="border-radius:8px; border:1px solid #eee; width:100%; cursor:zoom-in;">
+            <img src="{{ page.screenshot1 | relative_url }}" class="screenshot-img">
           </a>
         {% endif %}
         {% if page.screenshot2 %}
           <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot2 | relative_url }}">
-            <img src="{{ page.screenshot2 | relative_url }}" style="border-radius:8px; border:1px solid #eee; width:100%; cursor:zoom-in;">
+            <img src="{{ page.screenshot2 | relative_url }}" class="screenshot-img">
           </a>
         {% endif %}
         {% if page.screenshot3 %}
           <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot3 | relative_url }}">
-            <img src="{{ page.screenshot3 | relative_url }}" style="border-radius:8px; border:1px solid #eee; width:100%; cursor:zoom-in;">
+            <img src="{{ page.screenshot3 | relative_url }}" class="screenshot-img">
           </a>
         {% endif %}
       </div>
     {% endif %}
   </div>
 
-<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center;">
-  <img id="lightbox-img" src="" style="max-width:90vw; max-height:90vh; border-radius:6px; box-shadow:0 8px 40px rgba(0,0,0,0.6);">
-  <button onclick="closeLightbox()" style="position:absolute; top:18px; right:24px; background:none; border:none; color:#fff; font-size:2em; cursor:pointer; line-height:1;" aria-label="Close">&times;</button>
+<div id="lightbox">
+  <img id="lightbox-img" src="">
+  <button id="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
 </div>
 
 <script>
@@ -98,7 +97,7 @@ layout: default
 </ul>
 
 <hr>
-<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+<div class="tag-list">
   {% for tag in page.tags %}
     <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">
       {{ tag }}

@@ -3,23 +3,23 @@ layout: default
 permalink: /articles/
 ---
 
-<div class="page-hero" style="display: flex; align-items: center; gap: 2em; margin-bottom: 2em; padding: 1.5em; background: #f9f9f9; border-radius: 12px;">
-  <div style="font-size: 3em;">📄</div>
+<div class="page-hero">
+  <div class="page-hero-icon">📄</div>
   <div>
-    <h1 style="margin: 0 0 0.3em;">Articles</h1>
-    <p style="margin: 0; color: #555;">
+    <h1>Articles</h1>
+    <p class="page-hero-desc">
       A curated collection of guides, write-ups, and resources we found useful or essential.
       Browse by tag or scroll through all.
     </p>
-    <p style="margin: 0.5em 0 0; color: #888; font-size: 0.9em;">
+    <p class="page-hero-count">
       {{ site.articles | size }} articles available
     </p>
   </div>
 </div>
 
-<div style="margin-bottom: 2em;">
+<div class="tag-filter">
   <strong>Browse by tag:</strong>
-  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.5em;">
+  <div class="tag-filter-list">
 
     {% assign art_tags = "" | split: "" %}
     {% for item in site.articles %}

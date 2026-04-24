@@ -27,11 +27,11 @@ layout: default
         </p>
       {% endif %}
 
-      <div class="contributor-stats" style="display:flex; flex-wrap:wrap; gap:0.6em; margin: 0.6em 0; font-size:0.85em;">
-        {% if contrib_posts.size     > 0 %}<span style="background:#eef2ff; padding:3px 9px; border-radius:12px; color:#444;">📰 {{ contrib_posts.size }} post{% if contrib_posts.size != 1 %}s{% endif %}</span>{% endif %}
-        {% if contrib_articles.size  > 0 %}<span style="background:#eef2ff; padding:3px 9px; border-radius:12px; color:#444;">📄 {{ contrib_articles.size }} article{% if contrib_articles.size != 1 %}s{% endif %}</span>{% endif %}
-        {% if contrib_solutions.size > 0 %}<span style="background:#eef2ff; padding:3px 9px; border-radius:12px; color:#444;">🌐 {{ contrib_solutions.size }} solution{% if contrib_solutions.size != 1 %}s{% endif %}</span>{% endif %}
-        {% if contrib_locations.size > 0 %}<span style="background:#eef2ff; padding:3px 9px; border-radius:12px; color:#444;">📍 {{ contrib_locations.size }} location{% if contrib_locations.size != 1 %}s{% endif %}</span>{% endif %}
+      <div class="contributor-stats">
+        {% if contrib_posts.size     > 0 %}<span class="contrib-stat-badge">📰 {{ contrib_posts.size }} post{% if contrib_posts.size != 1 %}s{% endif %}</span>{% endif %}
+        {% if contrib_articles.size  > 0 %}<span class="contrib-stat-badge">📄 {{ contrib_articles.size }} article{% if contrib_articles.size != 1 %}s{% endif %}</span>{% endif %}
+        {% if contrib_solutions.size > 0 %}<span class="contrib-stat-badge">🌐 {{ contrib_solutions.size }} solution{% if contrib_solutions.size != 1 %}s{% endif %}</span>{% endif %}
+        {% if contrib_locations.size > 0 %}<span class="contrib-stat-badge">📍 {{ contrib_locations.size }} location{% if contrib_locations.size != 1 %}s{% endif %}</span>{% endif %}
       </div>
 
       {% if page.social %}
@@ -52,7 +52,7 @@ layout: default
   </div>
 
   {% if page.tags %}
-  <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 1em;">
+  <div class="tag-list">
     {% for tag in page.tags %}
       <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">
         {{ tag }}
@@ -67,7 +67,7 @@ layout: default
 
 {% if contrib_total > 0 %}
 <hr>
-<h2 class="contributor-contributions-title">Contributions <span style="font-size:0.7em; color:#999; font-weight:normal;">({{ contrib_total }})</span></h2>
+<h2 class="contributor-contributions-title">Contributions <span class="section-count">({{ contrib_total }})</span></h2>
 
 {% if contrib_posts.size > 0 %}
 <h3 class="contrib-section-title">News</h3>
@@ -120,7 +120,7 @@ layout: default
   {% for item in contrib_locations limit: 4 %}
   <a class="hp-card" href="{{ item.url | relative_url }}">
     <div class="hp-card-thumb">
-      {% if item.screenshot1 %}<img src="{{ item.screenshot1 | relative_url }}" alt="{{ item.title | default: item.name }}">
+      {% if item.screenshot1 %}<img src="{{ item.screenshot1 | relative_url }}" alt="{{ item.name | default: item.title }}">
       {% else %}<div class="hp-card-placeholder"></div>{% endif %}
     </div>
     <p class="hp-card-title">{{ item.name | default: item.title }}</p>

@@ -31,7 +31,7 @@ layout: default
 </p>
 
 {% if tagged_posts.size > 0 %}
-  <h2>📝 Posts <span style="font-size:0.8em; color:#666;">({{ tagged_posts.size }})</span></h2>
+  <h2>📝 Posts <span class="section-count">({{ tagged_posts.size }})</span></h2>
   {% for item in tagged_posts %}
     <article class="item">
       <div class="item-grid">
@@ -45,7 +45,7 @@ layout: default
         <div class="item-content">
           <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
           {% if item.date %}
-            <p style="font-size:0.85em; color:#666;">{{ item.date | date: "%b %d, %Y" }}</p>
+            <p class="item-meta">{{ item.date | date: "%b %d, %Y" }}</p>
           {% endif %}
         </div>
       </div>
@@ -54,7 +54,7 @@ layout: default
 {% endif %}
 
 {% if tagged_articles.size > 0 %}
-  <h2>📰 Articles <span style="font-size:0.8em; color:#666;">({{ tagged_articles.size }})</span></h2>
+  <h2>📰 Articles <span class="section-count">({{ tagged_articles.size }})</span></h2>
   {% for item in tagged_articles %}
     <article class="item">
       <div class="item-grid">
@@ -68,7 +68,7 @@ layout: default
         <div class="item-content">
           <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
           {% if item.type or item.date %}
-            <p style="font-size:0.85em; color:#666;">
+            <p class="item-meta">
               {% if item.type %}{{ item.type }}{% endif %}
               {% if item.type and item.date %} · {% endif %}
               {% if item.date %}{{ item.date | date: "%b %d, %Y" }}{% endif %}
@@ -81,7 +81,7 @@ layout: default
 {% endif %}
 
 {% if tagged_solutions.size > 0 %}
-  <h2>🔧 Solutions <span style="font-size:0.8em; color:#666;">({{ tagged_solutions.size }})</span></h2>
+  <h2>🔧 Solutions <span class="section-count">({{ tagged_solutions.size }})</span></h2>
   {% for item in tagged_solutions %}
     <article class="item">
       <div class="item-grid">
@@ -95,7 +95,7 @@ layout: default
         <div class="item-content">
           <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
           {% if item.type or item.category or item.date %}
-            <p style="font-size:0.85em; color:#666;">
+            <p class="item-meta">
               {% if item.type %}{{ item.type }}{% endif %}
               {% if item.type and item.category %} · {% endif %}
               {% if item.category %}{{ item.category }}{% endif %}

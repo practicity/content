@@ -2,21 +2,21 @@
 layout: default
 ---
 
-<div class="page-hero" style="display: flex; align-items: center; gap: 2em; margin-bottom: 2em; padding: 1.5em; background: #f9f9f9; border-radius: 12px;">
-  <div style="font-size: 3em;">🔧</div>
+<div class="page-hero">
+  <div class="page-hero-icon">🔧</div>
   <div>
-    <h1 style="margin: 0 0 0.3em;">Solutions</h1>
-    <p style="margin: 0; color: #555;">A curated collection of digital tools we found useful or essential. Browse by tag or scroll through all.</p>
-    <p style="margin: 0.5em 0 0; color: #888; font-size: 0.9em;">
+    <h1>Solutions</h1>
+    <p class="page-hero-desc">A curated collection of digital tools we found useful or essential. Browse by tag or scroll through all.</p>
+    <p class="page-hero-count">
       {{ site.solutions | size }} solutions available
     </p>
   </div>
 </div>
 
 
-<div style="margin-bottom: 2em;">
+<div class="tag-filter">
   <strong>Browse by tag:</strong>
-  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.5em;">
+  <div class="tag-filter-list">
 
     {% assign sol_tags = "" | split: "" %}
     {% for item in site.solutions %}

@@ -1,0 +1,247 @@
+@use "sass:color";
+@use "variables" as *;
+
+// ===== Standard button =====
+.btn-standard {
+  display: inline-block;
+  padding: 0.65em 1.8em;
+  background: $blue;
+  color: #fff !important;
+  border-radius: 3px;
+  font-size: 0.95em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.15s;
+
+  &:hover, &:active {
+    background: color.adjust($blue, $lightness: -12%);
+    transform: translateY(-1px);
+    color: #fff !important;
+  }
+}
+
+// ===== Microverse links row =====
+.microverse-links {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+// ===== Tag row =====
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.contributor-profile .tag-list,
+.post .tag-list {
+  margin-top: 1em;
+}
+
+// ===== Quick facts table =====
+.quick-facts {
+  h3 { margin-top: 0; }
+  td:first-child { padding-right: 30px; }
+}
+
+// ===== Illustrations panel =====
+.illustrations {
+  h3 { margin-top: 0; }
+}
+
+.illustrations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.illustrations-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.screenshot-img {
+  border-radius: 8px;
+  border: 1px solid #eee;
+  width: 100%;
+}
+
+.lightbox-trigger img {
+  cursor: zoom-in;
+}
+
+// ===== Solution specifics =====
+.complexity-stars { color: #f1c40f; }
+.activity-stars   { color: #3498db; }
+
+// ===== Lightbox =====
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+  line-height: 1;
+}
+
+// ===== Related lists (location page) =====
+.related-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+
+  li { margin-bottom: 6px; }
+  a  { color: #4a6fa5; text-decoration: none; }
+}
+
+.related-meta {
+  color: #888;
+  font-size: 0.85em;
+}
+
+// ===== Section count badge =====
+.section-count {
+  font-weight: normal;
+  color: #888;
+  font-size: 0.8em;
+}
+
+// ===== Contributor stats =====
+.contributor-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  margin: 0.6em 0;
+  font-size: 0.85em;
+}
+
+.contrib-stat-badge {
+  background: #eef2ff;
+  padding: 3px 9px;
+  border-radius: 12px;
+  color: #444;
+}
+
+// ===== Post meta row =====
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+  color: #666;
+}
+
+// ===== Item meta (dates, types in lists) =====
+.item-meta {
+  font-size: 0.85em;
+  color: #888;
+  margin: 0;
+}
+
+// ===== Page hero =====
+.page-hero {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 2em;
+  padding: 1.5em;
+  background: #f9f9f9;
+  border-radius: 12px;
+
+  h1 { margin: 0 0 0.3em; }
+}
+
+.page-hero-icon {
+  font-size: 3em;
+}
+
+.page-hero-desc {
+  margin: 0;
+  color: #555;
+}
+
+.page-hero-count {
+  margin: 0.5em 0 0;
+  color: #888;
+  font-size: 0.9em;
+}
+
+// ===== Tag filter =====
+.tag-filter {
+  margin-bottom: 2em;
+}
+
+.tag-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0.5em;
+}
+
+// ===== Giscus comments =====
+.giscus-comments {
+  margin-top: 2em;
+}
+
+// ===== Contributor headshot placeholder as link =====
+a.contributor-headshot-placeholder {
+  text-decoration: none;
+}
+
+// ===== Item content fields (contributor listing) =====
+.item-byline {
+  color: #555;
+  margin-bottom: 0.4em;
+}
+
+.item-location-line {
+  font-size: 0.85em;
+  color: #888;
+  margin-bottom: 0.4em;
+}
+
+.item-social,
+.item-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-top: 0.5em;
+}
+
+// ===== Utilities =====
+.text-center { text-align: center; }
+
+// ===== Location ID badge =====
+.location-id-badge {
+  font-size: 0.6em;
+  color: #999;
+  font-weight: normal;
+}

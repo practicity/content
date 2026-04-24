@@ -10,23 +10,23 @@ layout: default
 
   <!-- LEFT COLUMN: Quick Facts -->
   <div class="quick-facts">
-    <h3 style="margin-top: 0;">📊 Quick Facts</h3>
+    <h3>📊 Quick Facts</h3>
     <table>
       <tr>
-        <td style="padding-right: 30px;"><strong>Type</strong></td>
+        <td><strong>Type</strong></td>
         <td>{{ page.type }}</td>
       </tr>
       <tr>
-        <td style="padding-right: 30px;"><strong>Author</strong></td>
+        <td><strong>Author</strong></td>
         <td>{% include author-pill.html author=page.contributor_id %}</td>
       </tr>
       <tr>
-        <td style="padding-right: 30px;"><strong>Published</strong></td>
+        <td><strong>Published</strong></td>
         <td>{{ page.created_on }}</td>
       </tr>
       {% if page.original %}
       <tr>
-        <td style="padding-right: 30px;"><strong>Source</strong></td>
+        <td><strong>Source</strong></td>
         <td><a href="{{ page.original }}" target="_blank" rel="noopener">Visit Source</a></td>
       </tr>
       {% endif %}
@@ -34,10 +34,9 @@ layout: default
 
     {% if page.locationids %}
     {% if site.microverse_url contains '?' %}{% assign mv_sep = '&' %}{% else %}{% assign mv_sep = '?' %}{% endif %}
-    <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px;">
+    <div class="microverse-links">
       {% for lid in page.locationids %}
-      <a href="{{ site.microverse_url }}{{ mv_sep }}locationid={{ lid }}{% if site.microverse_urlparams %}&{{ site.microverse_urlparams | join: "&" }}{% endif %}{% if page.microverse_urlparams %}&{{ page.microverse_urlparams }}{% endif %}" target="microverse-tab"
-         style="display:inline-block; padding:8px 14px; background:#333; color:#fff; border-radius:6px; text-decoration:none; font-size:0.9em;">
+      <a href="{{ site.microverse_url }}{{ mv_sep }}locationid={{ lid }}{% if site.microverse_urlparams %}&{{ site.microverse_urlparams | join: "&" }}{% endif %}{% if page.microverse_urlparams %}&{{ page.microverse_urlparams }}{% endif %}" target="microverse-tab" class="btn-standard">
         🌐 Microverse — {{ lid }}
       </a>
       {% endfor %}
@@ -48,8 +47,8 @@ layout: default
   <!-- RIGHT COLUMN: Illustrations -->
   <div class="illustrations">
     {% if page.screenshot1 or page.screenshot2 %}
-      <h3 style="margin-top: 0;">🖼️ Illustrations</h3>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+      <h3>🖼️ Illustrations</h3>
+      <div class="illustrations-grid">
 
         {% if page.screenshot1 %}
           {% if page.original %}
@@ -57,7 +56,7 @@ layout: default
           {% endif %}
             <img src="{{ page.screenshot1 | relative_url }}"
                  alt="Screenshot 1"
-                 style="border-radius:8px; border:1px solid #eee; width:100%;">
+                 class="screenshot-img">
           {% if page.original %}
             </a>
           {% endif %}
@@ -69,7 +68,7 @@ layout: default
           {% endif %}
             <img src="{{ page.screenshot2 | relative_url }}"
                  alt="Screenshot 2"
-                 style="border-radius:8px; border:1px solid #eee; width:100%;">
+                 class="screenshot-img">
           {% if page.original %}
             </a>
           {% endif %}
@@ -85,7 +84,7 @@ layout: default
 <p>{{ page.Abstract }}</p>
 
 <hr>
-<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+<div class="tag-list">
   {% for tag in page.tags %}
     <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">
       {{ tag }}

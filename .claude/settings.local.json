@@ -14,7 +14,9 @@
       "Bash(bundle exec *)",
       "Bash(sed -i 's/^locationds:/locationids:/' _solutions/ASALI.md)",
       "Bash(sed -i 's/^locationdis:/locationids:/' _solutions/Fritzing.md)",
-      "WebFetch(domain:decapcms.org)"
+      "WebFetch(domain:decapcms.org)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:sveltiacms.app)"
     ]
   }
 }
