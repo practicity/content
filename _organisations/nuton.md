@@ -1,8 +1,8 @@
 ---
 layout: organisation
-title: "ADC Well Control Simulation | Mastering Control with Simulator"
-description: "The video demonstrates a complex, simulated oil rig well control operation where a crew overcomes multiple equipment failures and complications to safely kill an influx and prevent a potential disaster."
-type: "Tutorial"
+title: "Nuton Hotel & Resorts"
+description: ""
+type: "Private Company"
 original: "https://www.youtube.com/watch?v=2HINmpjL6aY"
 created_on: "March 24, 2026"
 contributor_id: alexandre-gain
