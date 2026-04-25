@@ -74,13 +74,12 @@ async function handleCallback(url, env) {
 
   // Send token back to Decap CMS via postMessage
   const payload = JSON.stringify({ token, provider: 'github' });
+  // JSON.stringify again to get a JS-safe string literal (handles inner quotes)
+  const payloadLiteral = JSON.stringify('authorization:github:success:' + payload);
   const html = `<!DOCTYPE html><html><body><script>
 (function () {
   function receiveMessage(e) {
-    window.opener.postMessage(
-      'authorization:github:success:${payload}',
-      e.origin
-    );
+    window.opener.postMessage(${payloadLiteral}, e.origin);
   }
   window.addEventListener('message', receiveMessage, false);
   window.opener.postMessage('authorizing:github', '*');
