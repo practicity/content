@@ -1,14 +1,17 @@
-#for local testing use this backend
-#backend:
-#    name: proxy
-#    branch: main
-#    proxy_url: http://localhost:8081/api/v1
+---
+layout: null
+---
 
-#for production use this backend
+{% if site.cms_local %} #if the cms_local flag is set in _config.local.yml, use the local proxy backend for testing, otherwise use the production github backend
+# LOCAL DEVELOPMENT CONFIG
+local_backend: true
+{% endif %}
+
 backend:
-    name: github
-    branch: main
-    repo: practicity/content
+    name: {{ site.cms_backend.name }}
+    branch: {{ site.cms_backend.branch }}
+    repo: {{ site.cms_backend.repo }}
+    base_url: {{ site.cms_backend.oauth_base_url }}
 
 
 media_folder: "/images"
@@ -21,6 +24,7 @@ collections:
     folder: "_articles"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "articles/{{slug}}"
     media_folder: "/images/articles"
     public_folder: "/images/articles"
     fields:
@@ -53,6 +57,7 @@ collections:
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "{{slug}}"
     media_folder: "/images/posts"
     public_folder: "/images/posts"
     fields:
@@ -72,6 +77,7 @@ collections:
     folder: "_solutions"
     create: true
     slug: "{{slug}}"
+    preview_path: "solutions/{{slug}}"
     media_folder: "/images/solutions"
     public_folder: "/images/solutions"
     fields:
@@ -107,6 +113,7 @@ collections:
     create: true
     slug: "{{fields.locationid}}"
     identifier_field: name
+    preview_path: "locations/{{slug}}"
     media_folder: "/images/locations"
     public_folder: "/images/locations"
     fields:

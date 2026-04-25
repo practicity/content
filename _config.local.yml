@@ -69,8 +69,12 @@ giscus:
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
-
-
+# CMS backend (referenced by admin/config.yml via Liquid)
+local_backend: true #for local testing use this flag to switch to the local proxy backend
+cms_backend:
+  name: github
+  branch: main
+  repo: practicity/content
 
 #low level settings for development server
 webrick:

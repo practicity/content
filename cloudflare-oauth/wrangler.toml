@@ -1,0 +1,7 @@
+name = "practicity-cms-oauth"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# CLIENT_ID and CLIENT_SECRET must be set as encrypted secrets — never commit them:
+#   wrangler secret put CLIENT_ID
+#   wrangler secret put CLIENT_SECRET

@@ -64,6 +64,14 @@ url: "https://practi.city"
 # Microverse base URL
 microverse_url: "https://microverse.practi.city"
 
+# CMS backend (referenced by admin/config.yml via Liquid)
+cms_backend:
+  name: github
+  branch: main
+  repo: practicity/content
+  # OAuth proxy — deploy cloudflare-oauth/worker.js then set this to your Worker URL
+  oauth_base_url: "https://practicity-cms-oauth.alexandre-gain.workers.dev"
+
 # Homepage display counts
 homepage:
   news_count: 4
