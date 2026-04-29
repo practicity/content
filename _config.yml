@@ -79,33 +79,6 @@ homepage:
   solutions_count: 2
   locations_count: 2
 
-# Hero banner carousel — add/remove/reorder slides freely
-# image: path relative to site root (or absolute URL)
-# title: large headline
-# subtitle: supporting line
-# link: where the CTA button points (optional)
-# cta: button label (optional, defaults to "Learn more")
-hero:
-  autoplay_ms: 5000   # milliseconds between slides (0 = no autoplay)
-  slides:
-    - image: /images/hero/hero1.png
-      title: "Experiential Learning at Scale"
-      subtitle: "Real-scale experiences for real-world skill development"
-      link: /articles/
-      cta: "Browse our Experiential Learning Articles Database"
-    
-    - image: /images/hero/hero2.png
-      title: "High Definition Simulation Environments"
-      subtitle: "Bring complex systems to life with open-source simulation software"
-      link: /solutions/
-      cta: "Find Open Source Digital Solutions"
-    
-    - image: /images/hero/hero3.png
-      title: "Promoting Cross Experiential Simulations"
-      subtitle: "PractiCity Microverse : where all experiential simulations are virtually gathered"
-      link: /microverse/
-      cta: "Understanding PractiCity Microverse"
-
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)

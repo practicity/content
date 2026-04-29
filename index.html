@@ -1,15 +1,43 @@
 ---
 layout: default
+hero:
+  autoplay_ms: 5000
+  slides:
+    - image: /images/hero/hero1.png
+      title: "Experiential Learning at Scale"
+      subtitle: "Find Real-scale experiences for real-world skill development"
+      link: /articles/
+      cta: "Dive into our Experiential Learning Knowledge Database"
+
+    - image: /images/hero/hero2.png
+      title: "High Definition Simulation Environments for learning and research"
+      subtitle: "Build complex systems to life with open-source simulation software"
+      link: /solutions/
+      cta: "Find Open Source Digital Solutions"
+
+    - image: /images/hero/hero3.png
+      title: "Cross Experiential Simulations"
+      subtitle: "Visualize Experiential Simulations into one Place"
+      link: /microverse/
+      cta: "Dive into PractiCity Microverse"
+
+    - image: /images/hero/hero4.png
+      title: "PractiCity Universal Live Simulation Event-Drivent Schema "
+      subtitle: "Discover PULSES, the new interoperability simulation standard (release 1.0 : 26 may 2026)"
+      link: /developers/
+      cta: "I am a developer, what's up ?"
+
+
 ---
 
-{% if site.hero.slides and site.hero.slides.size > 0 %}
+{% if page.hero.slides and page.hero.slides.size > 0 %}
 <!-- ===== Hero Banner Carousel ===== -->
 <div class="hero-carousel" id="heroCarousel"
      aria-label="Hero banner"
      aria-roledescription="carousel">
 
   <div class="hero-track" id="heroTrack">
-    {% for slide in site.hero.slides %}
+    {% for slide in page.hero.slides %}
     <div class="hero-slide{% if forloop.first %} active{% endif %}"
          role="group"
          aria-roledescription="slide"
@@ -31,7 +59,7 @@ layout: default
 
   <!-- Dot indicators -->
   <div class="hero-dots" role="tablist" aria-label="Slides">
-    {% for slide in site.hero.slides %}
+    {% for slide in page.hero.slides %}
     <button class="hero-dot{% if forloop.first %} active{% endif %}"
             role="tab"
             aria-label="Go to slide {{ forloop.index }}"
@@ -42,10 +70,10 @@ layout: default
 
 <script>
 (function () {
-  var total   = {{ site.hero.slides.size }};
+  var total   = {{ page.hero.slides.size }};
   var current = 0;
   var timer   = null;
-  var ms      = {{ site.hero.autoplay_ms | default: 5000 }};
+  var ms      = {{ page.hero.autoplay_ms | default: 5000 }};
 
   function update(next) {
     var slides = document.querySelectorAll('.hero-slide');
