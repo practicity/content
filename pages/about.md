@@ -26,7 +26,14 @@ Practi.City serves as a collaborative, open-contribution community, knowledge hu
 
 It is animated by a team of enthusiasts volunteers Alexandre, Eric and Thierry who dedicate some of their (precious) free time to contribute by managing the Association (representation, accounting, IT,...)
 
+### Important Disclaimer
+Though we share certain common educational values, our community has no connection to the "Practicity" (or https://practicity.app) educational project aimed at teaching children life skills like finance and nutrition. While both share a name derived from "practicality," practi.city is a volunteer community aiming at promoting experiential and simulation based learning.
+
 
 ### Contact us
 
 Simply contact the founders via private message on Linkedin [See Contributors Page](https://practi.city/contributors/)
+
+
+
+
