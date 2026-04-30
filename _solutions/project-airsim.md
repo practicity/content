@@ -14,7 +14,7 @@ screenshot1: /images/solutions/airsim.jpg
 tags:
   - Aerospace
 locationids:
-  - ARTAPT
+  - ARTWAPT
 contributor_id: alexandre-gain
 comments: true
 ---
