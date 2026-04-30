@@ -10,7 +10,7 @@ complexity: ★★★
 activity: ★★★★
 github: https://github.com/iamaisim/ProjectAirSim
 last_survey: 30/04/2026
-screenshot1: https://github.com/iamaisim/ProjectAirSim/blob/main/docs/images/airtaxi_in_dynamic_city.jpg
+screenshot1: /images/solutions/airsim.jpg
 tags:
   - Aerospace
 locationids:
