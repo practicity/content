@@ -12,7 +12,7 @@ github: https://github.com/GridSpace/grid-apps
 last_survey: 10/04/2026
 screenshot1: https://docs.grid.space/assets/images/main-bdde8fb2bdcfdfb10cf1204ac796fda6.png
 screenshot2: https://www.3dnatives.com/en/wp-content/uploads/sites/2/2025/10/Kirimoto-cover.jpg
-screenshot3: https://camo.githubusercontent.com/54c65c6611deadf0ec7311171ce726a84c9a3df6d9fab0af194e0d7f64cc1282/68747470733a2f2f7374617469632e677269642e73706163652f67726964626f742f322e352f66726f6e742e6a7067
+screenshot3: https://docs.grid.space/assets/images/GridBot-Two-Right-a256eb7b00a37bed6cb648db573cb02e.png
 tags:
   - CNC
 locationids:
