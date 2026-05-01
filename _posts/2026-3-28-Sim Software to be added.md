@@ -1,16 +1,16 @@
 ---
-comments: true
 layout: post
-title: A list of simulation open source software to be added
-tags: [Simulation, Community]
-screenshot1: "/images/posts/news.jpg"
+title: A list of simulation open source software to be added (03/2026)
 contributor_id: alexandre-gain
-
+screenshot1: /images/posts/news.jpg
+tags:
+  - Simulation
+  - Community
+comments: true
 ---
-
 This post simply lists simulation software to be added to the 'Simsoftware' catalog.
 
-https://fmi-standard.org/
+
 Not a software but a standard
 
 https://calculix.de/
@@ -28,7 +28,6 @@ https://lcgamboa.github.io/picsimlab_docs/stable/
 https://www.gridlabd.org/
 
 https://github.com/newton-physics/newton
-
 
 https://pyams.sourceforge.io/
 
