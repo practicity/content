@@ -5,7 +5,7 @@ contributor_id: chriss-costa
 byline: Developping solutions for Practi.City community
 country: Cyprus
 city: Limasol
-headshot: /images/contributors/alexandre-gain.png
+headshot: /images/contributors/chriss-costa.jpg
 social:
   linkedin:
   twitter:

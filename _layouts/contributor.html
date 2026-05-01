@@ -12,7 +12,10 @@ layout: default
   <div class="contributor-header">
     <div class="contributor-headshot">
       {% if page.headshot %}
-        <img src="{{ page.headshot | relative_url }}" alt="{{ page.title }}">
+        <figure class="screenshot-figure">
+          <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_description | default: page.title }}">
+          {% if page.headshot_credit %}<figcaption><span class="img-credit">{{ page.headshot_credit }}</span></figcaption>{% endif %}
+        </figure>
       {% else %}
         <div class="contributor-headshot-placeholder">{{ page.title | slice: 0 }}</div>
       {% endif %}

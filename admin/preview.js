@@ -178,11 +178,43 @@ var LocationPreview = createClass({
   }
 });
 
+// ── Contributor ───────────────────────────────────────────────────────────────
+
+var ContributorPreview = createClass({
+  render: function() {
+    var e   = this.props.entry;
+    var get = function(k) { return e.getIn(['data', k]); };
+
+    var city    = get('city');
+    var country = get('country');
+    var location = [city, country].filter(Boolean).join(', ');
+
+    return h('div', { style: { maxWidth: '960px', margin: '0 auto', padding: '20px' } },
+      h('div', { className: 'contributor-profile' },
+        h('div', { className: 'contributor-header' },
+          get('headshot') && h('div', { className: 'contributor-headshot' },
+            h('img', { src: get('headshot'), alt: get('headshot_description') || get('title') || '',
+                       style: { width: '100%', borderRadius: '50%' } })
+          ),
+          h('div', { className: 'contributor-meta' },
+            h('h1', { className: 'contributor-name' }, get('title')),
+            get('byline')  && h('p', { className: 'contributor-byline' },   get('byline')),
+            location       && h('p', { className: 'contributor-location' }, location)
+          )
+        ),
+        h('div', { className: 'contributor-bio' }, this.props.widgetFor('body')),
+        TagList(get('tags'))
+      )
+    );
+  }
+});
+
 // ── Register ──────────────────────────────────────────────────────────────────
 
-CMS.registerPreviewTemplate('articles',  ArticlePreview);
-CMS.registerPreviewTemplate('solutions', SolutionPreview);
-CMS.registerPreviewTemplate('posts',     PostPreview);
-CMS.registerPreviewTemplate('locations', LocationPreview);
+CMS.registerPreviewTemplate('articles',     ArticlePreview);
+CMS.registerPreviewTemplate('solutions',    SolutionPreview);
+CMS.registerPreviewTemplate('posts',        PostPreview);
+CMS.registerPreviewTemplate('locations',    LocationPreview);
+CMS.registerPreviewTemplate('contributors', ContributorPreview);
 
 CMS.registerPreviewStyle('/style.css');

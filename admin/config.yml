@@ -52,6 +52,7 @@ collections:
         widget: "select"
         options:
           - {label: "Alexandre Gain", value: "alexandre-gain"}
+          - {label: "Chriss Costa", value: "chriss-costa"}
           - {label: "Practi Citizen", value: "practi-citizen"}
       - {label: "Screenshot 1", name: "screenshot1", widget: "image", required: false}
       - {label: "Screenshot 1 – Description", name: "screenshot1_description", widget: "string", required: false, hint: "Caption / alt text for the image"}
@@ -94,6 +95,7 @@ collections:
         widget: "select"
         options:
           - {label: "Alexandre Gain", value: "alexandre-gain"}
+          - {label: "Chriss Costa", value: "chriss-costa"}
           - {label: "Practi Citizen", value: "practi-citizen"}
       - {label: "Screenshot 1", name: "screenshot1", widget: "image", required: false}
       - {label: "Screenshot 1 – Description", name: "screenshot1_description", widget: "string", required: false, hint: "Caption / alt text for the image"}
@@ -162,6 +164,7 @@ collections:
         widget: "select"
         options:
           - {label: "Alexandre Gain", value: "alexandre-gain"}
+          - {label: "Chriss Costa", value: "chriss-costa"}
           - {label: "Practi Citizen", value: "practi-citizen"}
       - {label: "Comments", name: "comments", widget: "boolean", default: true}
       - {label: "Body", name: "body", widget: "markdown", required: false}
@@ -197,6 +200,49 @@ collections:
         widget: "select"
         options:
           - {label: "Alexandre Gain", value: "alexandre-gain"}
+          - {label: "Chriss Costa", value: "chriss-costa"}
           - {label: "Practi Citizen", value: "practi-citizen"}
       - {label: "Comments", name: "comments", widget: "boolean", default: true}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  # ─────────────────────────────────────────────
+  # CONTRIBUTORS
+  # ─────────────────────────────────────────────
+  - name: "contributors"
+    label: "Contributors"
+    folder: "_contributors"
+    create: true
+    identifier_field: title
+    slug: "{{fields.contributor_id}}"
+    preview_path: "contributors/{{slug}}"
+    media_folder: "/images/contributors"
+    public_folder: "/images/contributors"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "contributor"}
+      - {label: "Full Name", name: "title", widget: "string"}
+      - {label: "Contributor ID", name: "contributor_id", widget: "string", required: true, hint: "Lowercase, hyphens only — used as filename and referenced site-wide (e.g. chriss-costa)"}
+      - {label: "Byline", name: "byline", widget: "string", required: false, hint: "Short tagline displayed under the name"}
+      - {label: "Country", name: "country", widget: "string", required: false}
+      - {label: "City", name: "city", widget: "string", required: false}
+      - {label: "Headshot", name: "headshot", widget: "image", required: false}
+      - {label: "Headshot – Description", name: "headshot_description", widget: "string", required: false, hint: "Alt text for the photo"}
+      - {label: "Headshot – Credit", name: "headshot_credit", widget: "string", required: false, hint: "Attribution (e.g. © Photographer Name)"}
+      - label: "Social Links"
+        name: "social"
+        widget: "object"
+        required: false
+        collapsed: true
+        fields:
+          - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
+          - {label: "GitHub", name: "github", widget: "string", required: false}
+          - {label: "Twitter / X", name: "twitter", widget: "string", required: false}
+          - {label: "Instagram", name: "instagram", widget: "string", required: false}
+          - {label: "YouTube", name: "youtube", widget: "string", required: false}
+          - {label: "Website", name: "website", widget: "string", required: false}
+      - label: "Tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["3D-Modeling", "Active-Learning", "Aerospace", "AI", "Assessment", "Aviation", "Big-Data", "Blended-Learning", "Business-Administration", "C#", "C++", "CAD/CAM", "Chemistry", "Cloud-Computing", "CNC", "Communication", "Community", "Conflict-Resolution", "Construction", "Corporate-Training", "Creativity", "Criminal-Justice", "Crisis-Management", "Curriculum-Design", "Customer-Service", "Data-Analytics", "Debriefing", "Decision-Making", "De-escalation", "Delphi", "Digital-Twin", "Economics", "Emergency-Response", "Energy", "Experiential-Learning", "FEM", "Fluid-Dynamics", "Fortran", "Game-Based", "GIS", "Healthcare", "Information-Systems", "Instructional-Design", "IoT", "Java", "JavaScript", "Law", "Leadership", "Logistics", "Manufacturing", "Maritime", "Mathematics", "Medical", "Negotiation", "Networking", "Nursing", "Pascal", "Patient-Safety", "PHP", "Physics", "Police-Training", "Policy", "Python", "Reflective-Practice", "Robotics", "Roleplay", "Simulated-Workplace", "Simulation", "Simulator", "Teamwork", "Thermodynamics", "Urban-Planning", "Visualization", "VR/AR", "Workforce-Development"]
+      - {label: "Bio", name: "body", widget: "markdown"}
