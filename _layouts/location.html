@@ -45,7 +45,7 @@ layout: default
         href="{{ site.microverse_url }}{{ mv_sep }}locationid={{ page.locationid }}&popautoopen=true{% if site.microverse_urlparams %}&{{ site.microverse_urlparams | join: "&" }}{% endif %}{% if page.microverse_urlparams %}&{{ page.microverse_urlparams }}{% endif %}"
         target="microverse-tab"
         class="btn-standard">
-        🌐 Navigate in Microverse
+        🌐 Find it in the Microverse at {{ page.name }}
     </a>
     </div>
     {% endif %}

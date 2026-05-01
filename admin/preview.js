@@ -54,7 +54,7 @@ var ArticlePreview = createClass({
             get('original') ? FactRow('Source', h('a', { href: get('original'), target: '_blank' }, 'Visit Source')) : null
           )),
           h('div', { className: 'microverse-links' },
-            h('span', { className: 'btn-standard' }, '🌐 Microverse')
+            h('span', { className: 'btn-standard' }, '🌐 Find it in the Microverse at [location]')
           )
         ),
         h('div', { className: 'illustrations' },
@@ -96,7 +96,7 @@ var SolutionPreview = createClass({
             FactRow('Contributor', get('contributor_id'))
           )),
           h('div', { className: 'microverse-links' },
-            h('span', { className: 'btn-standard' }, '🌐 Microverse')
+            h('span', { className: 'btn-standard' }, '🌐 Find it in the Microverse at [location]')
           )
         ),
         h('div', { className: 'illustrations' },
@@ -163,7 +163,7 @@ var LocationPreview = createClass({
             FactRow('Contributor', get('contributor_id'))
           )),
           get('locationid') && h('div', { className: 'microverse-links' },
-            h('span', { className: 'btn-standard' }, '🌐 Microverse — ' + get('locationid'))
+            h('span', { className: 'btn-standard' }, '🌐 Find it in the Microverse at ' + (get('name') || get('locationid')))
           )
         ),
         h('div', { className: 'illustrations' },

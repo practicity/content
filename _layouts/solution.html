@@ -23,8 +23,9 @@ layout: default
     {% if site.microverse_url contains '?' %}{% assign mv_sep = '&' %}{% else %}{% assign mv_sep = '?' %}{% endif %}
     <div class="microverse-links">
       {% for lid in page.locationids %}
+      {% assign _mv_loc = site.locations | where: "locationid", lid | first %}
       <a href="{{ site.microverse_url }}{{ mv_sep }}locationid={{ lid }}{% if site.microverse_urlparams %}&{{ site.microverse_urlparams | join: "&" }}{% endif %}{% if page.microverse_urlparams %}&{{ page.microverse_urlparams }}{% endif %}" target="microverse-tab" class="btn-standard">
-        🌐 Microverse — {{ lid }}
+        🌐 Find it in the Microverse at {{ _mv_loc.name | default: lid }}
       </a>
       {% endfor %}
     </div>
