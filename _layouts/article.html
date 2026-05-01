@@ -51,27 +51,43 @@ layout: default
       <div class="illustrations-grid">
 
         {% if page.screenshot1 %}
-          {% if page.original %}
-            <a href="{{ page.original }}" target="_blank" rel="noopener">
-          {% endif %}
-            <img src="{{ page.screenshot1 | relative_url }}"
-                 alt="Screenshot 1"
-                 class="screenshot-img">
-          {% if page.original %}
-            </a>
-          {% endif %}
+          <figure class="screenshot-figure">
+            {% if page.original %}
+              <a href="{{ page.original }}" target="_blank" rel="noopener">
+            {% endif %}
+              <img src="{{ page.screenshot1 | relative_url }}"
+                   alt="{{ page.screenshot1_description | default: '' }}"
+                   class="screenshot-img">
+            {% if page.original %}
+              </a>
+            {% endif %}
+            {% if page.screenshot1_description or page.screenshot1_credit %}
+            <figcaption>
+              {% if page.screenshot1_description %}{{ page.screenshot1_description }}{% endif %}
+              {% if page.screenshot1_credit %}<span class="img-credit">{{ page.screenshot1_credit }}</span>{% endif %}
+            </figcaption>
+            {% endif %}
+          </figure>
         {% endif %}
 
         {% if page.screenshot2 != "" and page.screenshot2 != nil %}
-          {% if page.original %}
-            <a href="{{ page.original }}" target="_blank" rel="noopener">
-          {% endif %}
-            <img src="{{ page.screenshot2 | relative_url }}"
-                 alt="Screenshot 2"
-                 class="screenshot-img">
-          {% if page.original %}
-            </a>
-          {% endif %}
+          <figure class="screenshot-figure">
+            {% if page.original %}
+              <a href="{{ page.original }}" target="_blank" rel="noopener">
+            {% endif %}
+              <img src="{{ page.screenshot2 | relative_url }}"
+                   alt="{{ page.screenshot2_description | default: '' }}"
+                   class="screenshot-img">
+            {% if page.original %}
+              </a>
+            {% endif %}
+            {% if page.screenshot2_description or page.screenshot2_credit %}
+            <figcaption>
+              {% if page.screenshot2_description %}{{ page.screenshot2_description }}{% endif %}
+              {% if page.screenshot2_credit %}<span class="img-credit">{{ page.screenshot2_credit }}</span>{% endif %}
+            </figcaption>
+            {% endif %}
+          </figure>
         {% endif %}
 
       </div>
@@ -81,7 +97,7 @@ layout: default
 </div>
 
 <h3>📝 Abstract</h3>
-<p>{{ page.Abstract }}</p>
+{{ page.Abstract | markdownify }}
 
 <hr>
 <div class="tag-list">

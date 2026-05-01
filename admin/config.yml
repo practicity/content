@@ -19,43 +19,69 @@ public_folder: "/images"
 
 
 collections:
+
+  # ─────────────────────────────────────────────
+  # ARTICLES
+  # ─────────────────────────────────────────────
   - name: "articles"
     label: "Articles"
     folder: "_articles"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: title
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.slug}}"
     preview_path: "articles/{{slug}}"
     media_folder: "/images/articles"
     public_folder: "/images/articles"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string", required: true, hint: "Lowercase, hyphens only — sets the filename and URL (e.g. my-article-title)"}
       - {label: "Description", name: "description", widget: "text"}
       - label: "Type"
         name: "type"
         widget: "select"
-        options: ["Interview", "Tutorial", "Showcase", "Commercial Showcase", "Video Coverage", "Uncommented Video Coverage", "Short Movie", "Seminar", "Article", "Case Study", "Research", "Other"]
+        options: ["Article", "Case Study", "Commercial Showcase", "Interview", "Other", "Research", "Seminar", "Short Movie", "Showcase", "Tutorial", "Uncommented Video Coverage", "Video Coverage"]
       - {label: "Original URL", name: "original", widget: "string", required: false}
-      - {label: "Created On", name: "created_on", widget: "string", hint: "e.g. April 1, 2026"}
-      - {label: "Contributor ID", name: "contributor_id", widget: "string"}
+      - label: "Created On"
+        name: "created_on"
+        widget: "date"
+        format: "MMMM D, YYYY"
+        picker_utc: false
+      - label: "Contributor"
+        name: "contributor_id"
+        widget: "select"
+        options:
+          - {label: "Alexandre Gain", value: "alexandre-gain"}
+          - {label: "Practi Citizen", value: "practi-citizen"}
       - {label: "Screenshot 1", name: "screenshot1", widget: "image", required: false}
+      - {label: "Screenshot 1 – Description", name: "screenshot1_description", widget: "string", required: false, hint: "Caption / alt text for the image"}
+      - {label: "Screenshot 1 – Credit", name: "screenshot1_credit", widget: "string", required: false, hint: "Attribution (e.g. © Author, CC BY 4.0)"}
       - {label: "Screenshot 2", name: "screenshot2", widget: "image", required: false}
-      - {label: "Abstract", name: "Abstract", widget: "text", required: false}
+      - {label: "Screenshot 2 – Description", name: "screenshot2_description", widget: "string", required: false, hint: "Caption / alt text for the image"}
+      - {label: "Screenshot 2 – Credit", name: "screenshot2_credit", widget: "string", required: false, hint: "Attribution (e.g. © Author, CC BY 4.0)"}
+      - {label: "Abstract", name: "Abstract", widget: "markdown", required: false}
       - label: "Tags"
         name: "tags"
-        widget: "list"
-        allow_add: true
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["3D-Modeling", "Active-Learning", "Aerospace", "AI", "Assessment", "Aviation", "Big-Data", "Blended-Learning", "Business-Administration", "C#", "C++", "CAD/CAM", "Chemistry", "Cloud-Computing", "CNC", "Communication", "Community", "Conflict-Resolution", "Construction", "Corporate-Training", "Creativity", "Criminal-Justice", "Crisis-Management", "Curriculum-Design", "Customer-Service", "Data-Analytics", "Debriefing", "Decision-Making", "De-escalation", "Delphi", "Digital-Twin", "Economics", "Emergency-Response", "Energy", "Experiential-Learning", "FEM", "Fluid-Dynamics", "Fortran", "Game-Based", "GIS", "Healthcare", "Information-Systems", "Instructional-Design", "IoT", "Java", "JavaScript", "Law", "Leadership", "Logistics", "Manufacturing", "Maritime", "Mathematics", "Medical", "Negotiation", "Networking", "Nursing", "Pascal", "Patient-Safety", "PHP", "Physics", "Police-Training", "Policy", "Python", "Reflective-Practice", "Robotics", "Roleplay", "Simulated-Workplace", "Simulation", "Simulator", "Teamwork", "Thermodynamics", "Urban-Planning", "Visualization", "VR/AR", "Workforce-Development"]
       - label: "Location IDs"
         name: "locationids"
-        widget: "list"
-        allow_add: true
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["13THFL", "ARTWAPT", "ARTWATC", "CINEMATRIX", "CITYHALL", "COURT", "DEBRIEF", "DERRICK", "DEWEY", "DGHOSP", "ENDER", "ERICSSON", "FINSIM", "FIREST", "HOMERNPP", "KEMSYM", "KOLBLIB", "MATHESIS", "MURPHY", "PANSIM", "PIAGET", "POLICEST", "PRACTIPORT", "PRAXIS", "RASMUSSEN", "SIMFAC", "SMOGSIDE", "STEELRISE", "TRUMAN", "WBUSC"]
       - {label: "Comments", name: "comments", widget: "boolean", default: true}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
 
+  # ─────────────────────────────────────────────
+  # POSTS
+  # ─────────────────────────────────────────────
   - name: "posts"
     label: "Posts"
     folder: "_posts"
     create: true
+    identifier_field: title
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     preview_path: "{{slug}}"
     media_folder: "/images/posts"
@@ -63,19 +89,32 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Contributor ID", name: "contributor_id", widget: "string"}
+      - label: "Contributor"
+        name: "contributor_id"
+        widget: "select"
+        options:
+          - {label: "Alexandre Gain", value: "alexandre-gain"}
+          - {label: "Practi Citizen", value: "practi-citizen"}
       - {label: "Screenshot 1", name: "screenshot1", widget: "image", required: false}
+      - {label: "Screenshot 1 – Description", name: "screenshot1_description", widget: "string", required: false, hint: "Caption / alt text for the image"}
+      - {label: "Screenshot 1 – Credit", name: "screenshot1_credit", widget: "string", required: false, hint: "Attribution (e.g. © Author, CC BY 4.0)"}
       - label: "Tags"
         name: "tags"
-        widget: "list"
-        allow_add: true
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["3D-Modeling", "Active-Learning", "Aerospace", "AI", "Assessment", "Aviation", "Big-Data", "Blended-Learning", "Business-Administration", "C#", "C++", "CAD/CAM", "Chemistry", "Cloud-Computing", "CNC", "Communication", "Community", "Conflict-Resolution", "Construction", "Corporate-Training", "Creativity", "Criminal-Justice", "Crisis-Management", "Curriculum-Design", "Customer-Service", "Data-Analytics", "Debriefing", "Decision-Making", "De-escalation", "Delphi", "Digital-Twin", "Economics", "Emergency-Response", "Energy", "Experiential-Learning", "FEM", "Fluid-Dynamics", "Fortran", "Game-Based", "GIS", "Healthcare", "Information-Systems", "Instructional-Design", "IoT", "Java", "JavaScript", "Law", "Leadership", "Logistics", "Manufacturing", "Maritime", "Mathematics", "Medical", "Negotiation", "Networking", "Nursing", "Pascal", "Patient-Safety", "PHP", "Physics", "Police-Training", "Policy", "Python", "Reflective-Practice", "Robotics", "Roleplay", "Simulated-Workplace", "Simulation", "Simulator", "Teamwork", "Thermodynamics", "Urban-Planning", "Visualization", "VR/AR", "Workforce-Development"]
       - {label: "Comments", name: "comments", widget: "boolean", default: true}
       - {label: "Body", name: "body", widget: "markdown"}
 
+  # ─────────────────────────────────────────────
+  # SOLUTIONS
+  # ─────────────────────────────────────────────
   - name: "solutions"
     label: "Solutions"
     folder: "_solutions"
     create: true
+    identifier_field: title
     slug: "{{slug}}"
     preview_path: "solutions/{{slug}}"
     media_folder: "/images/solutions"
@@ -91,22 +130,44 @@ collections:
       - {label: "Website", name: "website", widget: "string", required: false}
       - {label: "GitHub / Source", name: "github", widget: "string", required: false}
       - {label: "License", name: "license", widget: "string", required: false}
-      - {label: "Last Survey", name: "last_survey", widget: "string", hint: "e.g. March 24, 2026"}
+      - label: "Last Survey"
+        name: "last_survey"
+        widget: "date"
+        format: "MMMM D, YYYY"
+        picker_utc: false
       - {label: "Screenshot 1", name: "screenshot1", widget: "image", required: false}
+      - {label: "Screenshot 1 – Description", name: "screenshot1_description", widget: "string", required: false, hint: "Caption / alt text for the image"}
+      - {label: "Screenshot 1 – Credit", name: "screenshot1_credit", widget: "string", required: false, hint: "Attribution (e.g. © Author, CC BY 4.0)"}
       - {label: "Screenshot 2", name: "screenshot2", widget: "image", required: false}
+      - {label: "Screenshot 2 – Description", name: "screenshot2_description", widget: "string", required: false, hint: "Caption / alt text for the image"}
+      - {label: "Screenshot 2 – Credit", name: "screenshot2_credit", widget: "string", required: false, hint: "Attribution (e.g. © Author, CC BY 4.0)"}
       - {label: "Screenshot 3", name: "screenshot3", widget: "image", required: false}
+      - {label: "Screenshot 3 – Description", name: "screenshot3_description", widget: "string", required: false, hint: "Caption / alt text for the image"}
+      - {label: "Screenshot 3 – Credit", name: "screenshot3_credit", widget: "string", required: false, hint: "Attribution (e.g. © Author, CC BY 4.0)"}
       - label: "Tags"
         name: "tags"
-        widget: "list"
-        allow_add: true
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["3D-Modeling", "Active-Learning", "Aerospace", "AI", "Assessment", "Aviation", "Big-Data", "Blended-Learning", "Business-Administration", "C#", "C++", "CAD/CAM", "Chemistry", "Cloud-Computing", "CNC", "Communication", "Community", "Conflict-Resolution", "Construction", "Corporate-Training", "Creativity", "Criminal-Justice", "Crisis-Management", "Curriculum-Design", "Customer-Service", "Data-Analytics", "Debriefing", "Decision-Making", "De-escalation", "Delphi", "Digital-Twin", "Economics", "Emergency-Response", "Energy", "Experiential-Learning", "FEM", "Fluid-Dynamics", "Fortran", "Game-Based", "GIS", "Healthcare", "Information-Systems", "Instructional-Design", "IoT", "Java", "JavaScript", "Law", "Leadership", "Logistics", "Manufacturing", "Maritime", "Mathematics", "Medical", "Negotiation", "Networking", "Nursing", "Pascal", "Patient-Safety", "PHP", "Physics", "Police-Training", "Policy", "Python", "Reflective-Practice", "Robotics", "Roleplay", "Simulated-Workplace", "Simulation", "Simulator", "Teamwork", "Thermodynamics", "Urban-Planning", "Visualization", "VR/AR", "Workforce-Development"]
       - label: "Location IDs"
         name: "locationids"
-        widget: "list"
-        allow_add: true
-      - {label: "Contributor ID", name: "contributor_id", widget: "string"}
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["13THFL", "ARTWAPT", "ARTWATC", "CINEMATRIX", "CITYHALL", "COURT", "DEBRIEF", "DERRICK", "DEWEY", "DGHOSP", "ENDER", "ERICSSON", "FINSIM", "FIREST", "HOMERNPP", "KEMSYM", "KOLBLIB", "MATHESIS", "MURPHY", "PANSIM", "PIAGET", "POLICEST", "PRACTIPORT", "PRAXIS", "RASMUSSEN", "SIMFAC", "SMOGSIDE", "STEELRISE", "TRUMAN", "WBUSC"]
+      - label: "Contributor"
+        name: "contributor_id"
+        widget: "select"
+        options:
+          - {label: "Alexandre Gain", value: "alexandre-gain"}
+          - {label: "Practi Citizen", value: "practi-citizen"}
       - {label: "Comments", name: "comments", widget: "boolean", default: true}
       - {label: "Body", name: "body", widget: "markdown", required: false}
 
+  # ─────────────────────────────────────────────
+  # LOCATIONS
+  # ─────────────────────────────────────────────
   - name: "locations"
     label: "Locations"
     folder: "_locations"
@@ -118,14 +179,23 @@ collections:
     public_folder: "/images/locations"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "location"}
-      - {label: "Location ID", name: "locationid", widget: "string"}
+      - {label: "Location ID", name: "locationid", widget: "string", hint: "Uppercase, no spaces (e.g. CITYHALL)"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Screenshot", name: "screenshot1", widget: "image", required: false}
+      - {label: "Screenshot – Description", name: "screenshot1_description", widget: "string", required: false, hint: "Caption / alt text for the image"}
+      - {label: "Screenshot – Credit", name: "screenshot1_credit", widget: "string", required: false, hint: "Attribution (e.g. © Author, CC BY 4.0)"}
       - label: "Tags"
         name: "tags"
-        widget: "list"
-        allow_add: true
-      - {label: "Contributor ID", name: "contributor_id", widget: "string"}
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["3D-Modeling", "Active-Learning", "Aerospace", "AI", "Assessment", "Aviation", "Big-Data", "Blended-Learning", "Business-Administration", "C#", "C++", "CAD/CAM", "Chemistry", "Cloud-Computing", "CNC", "Communication", "Community", "Conflict-Resolution", "Construction", "Corporate-Training", "Creativity", "Criminal-Justice", "Crisis-Management", "Curriculum-Design", "Customer-Service", "Data-Analytics", "Debriefing", "Decision-Making", "De-escalation", "Delphi", "Digital-Twin", "Economics", "Emergency-Response", "Energy", "Experiential-Learning", "FEM", "Fluid-Dynamics", "Fortran", "Game-Based", "GIS", "Healthcare", "Information-Systems", "Instructional-Design", "IoT", "Java", "JavaScript", "Law", "Leadership", "Logistics", "Manufacturing", "Maritime", "Mathematics", "Medical", "Negotiation", "Networking", "Nursing", "Pascal", "Patient-Safety", "PHP", "Physics", "Police-Training", "Policy", "Python", "Reflective-Practice", "Robotics", "Roleplay", "Simulated-Workplace", "Simulation", "Simulator", "Teamwork", "Thermodynamics", "Urban-Planning", "Visualization", "VR/AR", "Workforce-Development"]
+      - label: "Contributor"
+        name: "contributor_id"
+        widget: "select"
+        options:
+          - {label: "Alexandre Gain", value: "alexandre-gain"}
+          - {label: "Practi Citizen", value: "practi-citizen"}
       - {label: "Comments", name: "comments", widget: "boolean", default: true}
       - {label: "Body", name: "body", widget: "markdown", required: false}

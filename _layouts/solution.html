@@ -36,19 +36,49 @@ layout: default
       <h3>🖼️ Illustrations</h3>
       <div class="illustrations-grid-3">
         {% if page.screenshot1 %}
-          <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot1 | relative_url }}">
-            <img src="{{ page.screenshot1 | relative_url }}" class="screenshot-img">
-          </a>
+          <figure class="screenshot-figure">
+            <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot1 | relative_url }}">
+              <img src="{{ page.screenshot1 | relative_url }}"
+                   alt="{{ page.screenshot1_description | default: '' }}"
+                   class="screenshot-img">
+            </a>
+            {% if page.screenshot1_description or page.screenshot1_credit %}
+            <figcaption>
+              {% if page.screenshot1_description %}{{ page.screenshot1_description }}{% endif %}
+              {% if page.screenshot1_credit %}<span class="img-credit">{{ page.screenshot1_credit }}</span>{% endif %}
+            </figcaption>
+            {% endif %}
+          </figure>
         {% endif %}
         {% if page.screenshot2 %}
-          <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot2 | relative_url }}">
-            <img src="{{ page.screenshot2 | relative_url }}" class="screenshot-img">
-          </a>
+          <figure class="screenshot-figure">
+            <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot2 | relative_url }}">
+              <img src="{{ page.screenshot2 | relative_url }}"
+                   alt="{{ page.screenshot2_description | default: '' }}"
+                   class="screenshot-img">
+            </a>
+            {% if page.screenshot2_description or page.screenshot2_credit %}
+            <figcaption>
+              {% if page.screenshot2_description %}{{ page.screenshot2_description }}{% endif %}
+              {% if page.screenshot2_credit %}<span class="img-credit">{{ page.screenshot2_credit }}</span>{% endif %}
+            </figcaption>
+            {% endif %}
+          </figure>
         {% endif %}
         {% if page.screenshot3 %}
-          <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot3 | relative_url }}">
-            <img src="{{ page.screenshot3 | relative_url }}" class="screenshot-img">
-          </a>
+          <figure class="screenshot-figure">
+            <a href="#" class="lightbox-trigger" data-src="{{ page.screenshot3 | relative_url }}">
+              <img src="{{ page.screenshot3 | relative_url }}"
+                   alt="{{ page.screenshot3_description | default: '' }}"
+                   class="screenshot-img">
+            </a>
+            {% if page.screenshot3_description or page.screenshot3_credit %}
+            <figcaption>
+              {% if page.screenshot3_description %}{{ page.screenshot3_description }}{% endif %}
+              {% if page.screenshot3_credit %}<span class="img-credit">{{ page.screenshot3_credit }}</span>{% endif %}
+            </figcaption>
+            {% endif %}
+          </figure>
         {% endif %}
       </div>
     {% endif %}
