@@ -44,8 +44,9 @@ collections:
       - {label: "Original URL", name: "original", widget: "string", required: false}
       - label: "Created On"
         name: "created_on"
-        widget: "date"
-        format: "MMMM D, YYYY"
+        widget: "datetime"
+        date_format: "MMMM D, YYYY"
+        time_format: false
         picker_utc: false
       - label: "Contributor"
         name: "contributor_id"
@@ -132,8 +133,9 @@ collections:
       - {label: "License", name: "license", widget: "string", required: false}
       - label: "Last Survey"
         name: "last_survey"
-        widget: "date"
-        format: "MMMM D, YYYY"
+        widget: "datetime"
+        date_format: "MMMM D, YYYY"
+        time_format: false
         picker_utc: false
       - {label: "Screenshot 1", name: "screenshot1", widget: "image", required: false}
       - {label: "Screenshot 1 – Description", name: "screenshot1_description", widget: "string", required: false, hint: "Caption / alt text for the image"}

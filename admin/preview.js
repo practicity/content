@@ -62,11 +62,10 @@ var ArticlePreview = createClass({
           ScreenshotsGrid([get('screenshot1'), get('screenshot2')], 'illustrations-grid')
         )
       ),
-      get('Abstract') && h('div', null,
+      this.props.widgetFor('Abstract') && h('div', null,
         h('h3', null, '📝 Abstract'),
-        h('p',  null, get('Abstract'))
+        this.props.widgetFor('Abstract')
       ),
-      this.props.widgetFor('body') && h('div', null, this.props.widgetFor('body')),
       HR,
       TagList(get('tags'))
     );
