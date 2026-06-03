@@ -18,6 +18,9 @@ collections:
   contributors:
     output: true
     permalink: /contributors/:name/
+  events:
+    output: true
+    permalink: /events/:name/
 
 
 # Includes an icon in the footer for each username you enter

@@ -25,9 +25,16 @@ layout: default
   {% endif %}
 {% endfor %}
 
-{% assign total = tagged_posts.size | plus: tagged_articles.size | plus: tagged_solutions.size %}
+{% assign tagged_events = "" | split: "" %}
+{% for item in site.events %}
+  {% if item.tags contains page.tag %}
+    {% assign tagged_events = tagged_events | push: item %}
+  {% endif %}
+{% endfor %}
+
+{% assign total = tagged_posts.size | plus: tagged_articles.size | plus: tagged_solutions.size | plus: tagged_events.size %}
 <p>
-  {{ total }} item(s) tagged with <strong>#{{ page.tag }}</strong>{% if tagged_posts.size > 0 %} · {{ tagged_posts.size }} post(s){% endif %}{% if tagged_articles.size > 0 %} · {{ tagged_articles.size }} article(s){% endif %}{% if tagged_solutions.size > 0 %} · {{ tagged_solutions.size }} solution(s){% endif %}
+  {{ total }} item(s) tagged with <strong>#{{ page.tag }}</strong>{% if tagged_posts.size > 0 %} · {{ tagged_posts.size }} post(s){% endif %}{% if tagged_articles.size > 0 %} · {{ tagged_articles.size }} article(s){% endif %}{% if tagged_solutions.size > 0 %} · {{ tagged_solutions.size }} solution(s){% endif %}{% if tagged_events.size > 0 %} · {{ tagged_events.size }} event(s){% endif %}
 </p>
 
 {% if tagged_posts.size > 0 %}
@@ -102,6 +109,34 @@ layout: default
               {% if item.date %} · {{ item.date | date: "%b %d, %Y" }}{% endif %}
             </p>
           {% endif %}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+{% endif %}
+
+{% if tagged_events.size > 0 %}
+  <h2>📅 Events <span class="section-count">({{ tagged_events.size }})</span></h2>
+  {% assign sorted_tagged_events = tagged_events | sort: "start_date" %}
+  {% for item in sorted_tagged_events %}
+    <article class="item">
+      <div class="item-grid">
+        <div class="item-image">
+          <div class="event-cal-block">
+            <span class="event-cal-month">{{ item.start_date | date: "%b" }}</span>
+            <span class="event-cal-day">{{ item.start_date | date: "%-d" }}</span>
+          </div>
+        </div>
+        <div class="item-content">
+          <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+          <p class="item-meta">
+            {% if item.end_date and item.end_date != item.start_date %}
+              {{ item.start_date | date: "%b %-d" }} – {{ item.end_date | date: "%b %-d, %Y" }}
+            {% else %}
+              {{ item.start_date | date: "%B %-d, %Y" }}
+            {% endif %}
+            {% if item.venue %} · 📍 {{ item.venue }}{% endif %}
+          </p>
         </div>
       </div>
     </article>

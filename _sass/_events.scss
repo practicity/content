@@ -1,0 +1,257 @@
+@use "variables" as *;
+
+// ===== View toggle =====
+.events-view-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.5em;
+}
+
+.events-toggle-btn {
+  padding: 0.4em 1.2em;
+  border: 2px solid $brand-navy;
+  border-radius: 20px;
+  background: #fff;
+  color: $brand-navy;
+  font-size: 0.9em;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s;
+
+  &.active, &:hover {
+    background: $brand-navy;
+    color: #fff;
+  }
+}
+
+// ===== Calendar wrapper =====
+.events-calendar-wrap {
+  margin-bottom: 2em;
+}
+
+.cal-nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 0.8em;
+
+  button {
+    background: none;
+    border: 1px solid $brand-navy;
+    color: $brand-navy;
+    border-radius: 4px;
+    width: 2em;
+    height: 2em;
+    font-size: 1.3em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, color 0.15s;
+
+    &:hover {
+      background: $brand-navy;
+      color: #fff;
+    }
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: $brand-dark;
+    min-width: 180px;
+    text-align: center;
+  }
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin-bottom: 1em;
+}
+
+.cal-header-cell {
+  text-align: center;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: #fff;
+  background: $brand-dark;
+  padding: 0.4em 0;
+  border-radius: 4px;
+}
+
+.cal-cell {
+  min-height: 54px;
+  border: 1px solid $lightGray;
+  border-radius: 4px;
+  padding: 4px 6px;
+  background: #fff;
+  cursor: default;
+
+  &.cal-cell-empty {
+    background: #fafafa;
+    border-color: transparent;
+  }
+
+  &.cal-today {
+    border-color: $brand-teal;
+    background: rgba(49,183,188,0.07);
+
+    .cal-day-num {
+      color: $brand-teal;
+      font-weight: 700;
+    }
+  }
+
+  &.cal-has-events {
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(33,79,108,0.07);
+    }
+  }
+}
+
+.cal-day-num {
+  font-size: 0.85em;
+  color: $brand-dark;
+  display: block;
+}
+
+.cal-dot {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $brand-rose;
+  margin: 3px auto 0;
+}
+
+.cal-day-events {
+  background: rgba(33,79,108,0.06);
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  margin-top: 0.5em;
+  min-height: 0;
+
+  &:empty { display: none; }
+}
+
+.cal-day-title {
+  margin: 0 0 0.5em;
+  color: $brand-dark;
+  font-size: 1em;
+}
+
+.cal-day-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li { margin: 0 0 0.4em; font-size: 0.95em; }
+
+  a {
+    color: $brand-navy;
+    &:hover { color: $brand-teal; }
+  }
+}
+
+.cal-venue {
+  font-size: 0.82em;
+  color: #888;
+  margin-left: 0.5em;
+}
+
+// ===== Event detail page =====
+.event-detail-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em 2em;
+  align-items: center;
+  margin-bottom: 1.2em;
+  padding: 1em 1.4em;
+  background: rgba(33,79,108,0.07);
+  border-radius: 8px;
+}
+
+.event-date-badge {
+  font-size: 1.05em;
+  font-weight: 600;
+  color: $brand-dark;
+}
+
+.event-venue {
+  color: $brand-navy;
+  font-size: 0.95em;
+}
+
+.event-venue-link {
+  color: $brand-navy;
+  text-decoration: underline;
+  text-decoration-color: rgba(33,79,108,0.35);
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: $brand-teal;
+    text-decoration-color: $brand-teal;
+  }
+}
+
+.event-ext-link {
+  a {
+    color: $brand-teal;
+    font-size: 0.9em;
+    &:hover { color: $brand-dark; }
+  }
+}
+
+// ===== Event image — detail page =====
+.event-detail-image {
+  margin: 1em 0 1.4em;
+  border-radius: 10px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+// ===== Event image — list view =====
+.event-list-img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+// ===== Date block used in list view =====
+.event-cal-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 64px;
+  border-radius: 8px;
+  background: $brand-dark;
+  color: #fff;
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+
+.event-cal-month {
+  font-size: 0.68em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+}
+
+.event-cal-day {
+  font-size: 1.8em;
+  font-weight: 700;
+}

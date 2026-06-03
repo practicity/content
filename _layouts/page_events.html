@@ -1,0 +1,203 @@
+---
+layout: default
+---
+
+<div class="page-hero">
+  <div class="page-hero-icon">📅</div>
+  <div>
+    <h1>Events</h1>
+    <p class="page-hero-desc">Upcoming and past events from the Practi.city community.</p>
+    <p class="page-hero-count">{{ site.events | size }} events</p>
+  </div>
+</div>
+
+<div class="events-view-toggle">
+  <button class="events-toggle-btn active" id="btn-calendar" onclick="eventsSetView('calendar')">📅 Calendar</button>
+  <button class="events-toggle-btn" id="btn-list" onclick="eventsSetView('list')">☰ List</button>
+</div>
+
+<!-- ===== Calendar view ===== -->
+<div id="events-calendar-view" class="events-calendar-wrap">
+  <div class="cal-nav">
+    <button onclick="calMove(-1)" aria-label="Previous month">&#8249;</button>
+    <span id="cal-month-label"></span>
+    <button onclick="calMove(1)" aria-label="Next month">&#8250;</button>
+  </div>
+  <div class="cal-grid" id="cal-grid"></div>
+  <div class="cal-day-events" id="cal-day-events"></div>
+</div>
+
+<!-- ===== List view ===== -->
+<div id="events-list-view" class="items-list" style="display:none">
+  {% assign sorted_events = site.events | sort: "start_date" %}
+  {% for item in sorted_events %}
+    <article class="item">
+      <div class="item-grid">
+
+        <div class="item-image">
+          {% if item.image %}
+            <a href="{{ item.url | relative_url }}">
+              <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" class="event-list-img">
+            </a>
+          {% else %}
+            <div class="event-cal-block">
+              <span class="event-cal-month">{{ item.start_date | date: "%b" }}</span>
+              <span class="event-cal-day">{{ item.start_date | date: "%-d" }}</span>
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="item-content">
+          <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+          <p class="item-meta">
+            {% if item.end_date and item.end_date != item.start_date %}
+              {{ item.start_date | date: "%b %-d" }} – {{ item.end_date | date: "%b %-d, %Y" }}
+            {% else %}
+              {{ item.start_date | date: "%B %-d, %Y" }}
+            {% endif %}
+            {% if item.country %} · {{ item.country }}{% endif %}
+            {% if item.venue %} ·
+              <a href="https://www.openstreetmap.org/search?query={{ item.venue | append: ', ' | append: item.country | url_encode }}"
+                 target="_blank" rel="noopener" class="event-venue-link">📍 {{ item.venue }}</a>
+            {% endif %}
+            {% if item.website %} · <a href="{{ item.website }}" target="_blank" rel="noopener" class="event-venue-link">🔗 Event page</a>{% endif %}
+          </p>
+          {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+          {% if item.tags %}
+            <div class="item-tags">
+              {% for tag in item.tags %}
+                <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">{{ tag }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+<!-- ===== Event data for calendar JS ===== -->
+<script>
+var EVENTS = [
+  {% for item in site.events %}
+  {
+    title:   {{ item.title | jsonify }},
+    pageurl: {{ item.url | relative_url | jsonify }},
+    start:   {{ item.start_date | jsonify }},
+    end:     {{ item.end_date | default: item.start_date | jsonify }},
+    venue:   {{ item.venue | default: "" | jsonify }},
+    country: {{ item.country | default: "" | jsonify }},
+    exturl:  {{ item.website | default: "" | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
+
+var calYear, calMonth;
+var MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function calInit() {
+  var now = new Date();
+  var todayStr = now.toISOString().slice(0, 10);
+  var upcoming = EVENTS.filter(function(e) { return e.end >= todayStr; });
+  if (upcoming.length > 0) {
+    upcoming.sort(function(a, b) { return a.start < b.start ? -1 : 1; });
+    var d = new Date(upcoming[0].start + 'T00:00:00');
+    calYear  = d.getFullYear();
+    calMonth = d.getMonth();
+  } else {
+    calYear  = now.getFullYear();
+    calMonth = now.getMonth();
+  }
+  calRender();
+}
+
+function calMove(dir) {
+  calMonth += dir;
+  if (calMonth > 11) { calMonth = 0; calYear++; }
+  if (calMonth < 0)  { calMonth = 11; calYear--; }
+  calRender();
+  document.getElementById('cal-day-events').innerHTML = '';
+}
+
+function calRender() {
+  document.getElementById('cal-month-label').textContent = MONTH_NAMES[calMonth] + ' ' + calYear;
+
+  var grid = document.getElementById('cal-grid');
+  grid.innerHTML = '';
+
+  ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].forEach(function(d) {
+    var cell = document.createElement('div');
+    cell.className = 'cal-header-cell';
+    cell.textContent = d;
+    grid.appendChild(cell);
+  });
+
+  var firstDay = new Date(calYear, calMonth, 1).getDay();
+  var offset   = firstDay === 0 ? 6 : firstDay - 1;
+  var daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+  var todayStr = new Date().toISOString().slice(0, 10);
+
+  for (var i = 0; i < offset; i++) {
+    var empty = document.createElement('div');
+    empty.className = 'cal-cell cal-cell-empty';
+    grid.appendChild(empty);
+  }
+
+  for (var day = 1; day <= daysInMonth; day++) {
+    var dateStr = calYear + '-'
+      + String(calMonth + 1).padStart(2, '0') + '-'
+      + String(day).padStart(2, '0');
+    var dayEvents = EVENTS.filter(function(e) {
+      return e.start <= dateStr && (e.end || e.start) >= dateStr;
+    });
+
+    var cell = document.createElement('div');
+    cell.className = 'cal-cell';
+    if (dateStr === todayStr)   cell.classList.add('cal-today');
+    if (dayEvents.length > 0)  cell.classList.add('cal-has-events');
+
+    var num = document.createElement('span');
+    num.className = 'cal-day-num';
+    num.textContent = day;
+    cell.appendChild(num);
+
+    if (dayEvents.length > 0) {
+      var dot = document.createElement('span');
+      dot.className = 'cal-dot';
+      cell.appendChild(dot);
+      (function(evs, ds) {
+        cell.addEventListener('click', function() { calShowDay(ds, evs); });
+      })(dayEvents, dateStr);
+    }
+
+    grid.appendChild(cell);
+  }
+}
+
+function calShowDay(dateStr, evs) {
+  var d = new Date(dateStr + 'T00:00:00');
+  var label = MONTH_NAMES[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+  var html = '<h4 class="cal-day-title">📅 ' + label + '</h4><ul class="cal-day-list">';
+  evs.forEach(function(e) {
+    html += '<li><a href="' + e.pageurl + '">' + e.title + '</a>';
+    if (e.venue) {
+      var q = encodeURIComponent(e.venue + (e.country ? ', ' + e.country : ''));
+      html += ' <a href="https://www.openstreetmap.org/search?query=' + q + '" target="_blank" rel="noopener" class="cal-venue">📍 ' + e.venue + '</a>';
+    }
+    if (e.exturl) html += ' <a href="' + e.exturl + '" target="_blank" rel="noopener" class="cal-venue">🔗</a>';
+    html += '</li>';
+  });
+  html += '</ul>';
+  document.getElementById('cal-day-events').innerHTML = html;
+}
+
+function eventsSetView(view) {
+  document.getElementById('events-calendar-view').style.display = view === 'calendar' ? '' : 'none';
+  document.getElementById('events-list-view').style.display     = view === 'list'     ? '' : 'none';
+  document.getElementById('btn-calendar').classList.toggle('active', view === 'calendar');
+  document.getElementById('btn-list').classList.toggle('active',     view === 'list');
+}
+
+calInit();
+</script>

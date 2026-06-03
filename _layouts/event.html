@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<article class="event-detail">
+
+  <div class="event-detail-header">
+    <span class="event-date-badge">
+      📅
+      {{ page.start_date | date: "%B %-d, %Y" }}{% if page.end_date and page.end_date != page.start_date %} – {{ page.end_date | date: "%B %-d, %Y" }}{% endif %}
+    </span>
+
+    {% if page.venue %}
+    <span class="event-venue">
+      <a href="https://www.openstreetmap.org/search?query={{ page.venue | append: ', ' | append: page.country | url_encode }}"
+         target="_blank" rel="noopener" class="event-venue-link">
+        📍 {{ page.venue }}{% if page.country %}, {{ page.country }}{% endif %}
+      </a>
+    </span>
+    {% endif %}
+
+    {% if page.website %}
+    <span class="event-ext-link">
+      <a href="{{ page.website }}" target="_blank" rel="noopener">🔗 Event page</a>
+    </span>
+    {% endif %}
+  </div>
+
+  {% if page.image %}
+  <div class="event-detail-image">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  </div>
+  {% endif %}
+
+  {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+
+  <hr>
+
+  {{ content }}
+
+  <hr>
+
+  {% if page.tags %}
+  <div class="tag-list">
+    {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tags/{{ tag | slugify: 'latin' }}/" class="tag-pill">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <p style="margin-top:1.5em"><a href="{{ site.baseurl }}/events/" class="btn-standard">← Back to Events</a></p>
+
+  {% include giscus.html %}
+
+</article>
