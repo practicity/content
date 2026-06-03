@@ -23,7 +23,7 @@ hero:
 
     - image: /images/hero/hero4.png
       title: "PractiCity Universal Live Simulation Event-Drivent Schema "
-      subtitle: "Discover PULSES, the new interoperability simulation standard (release 1.0 : 26 may 2026)"
+      subtitle: "Discover PULSES, the new interoperability simulation standard (release 1.0 : 1st september 2026)"
       link: /developers/
       cta: "I am a developer, what's up ?"
 
@@ -146,7 +146,7 @@ hero:
       <a href="{{ site.baseurl }}/articles/">See all &rarr;</a>
     </div>
     <div class="hp-grid">
-      {% assign recent_articles = site.articles | slice: 0, 4 %}
+      {% assign recent_articles = site.articles | sort: "date" | reverse | slice: 0, 4 %}
       {% for item in recent_articles %}
       <a class="hp-card" href="{{ item.url | relative_url }}">
         <div class="hp-card-thumb">
@@ -173,7 +173,7 @@ hero:
       <a href="{{ site.baseurl }}/solutions/">See all &rarr;</a>
     </div>
     <div class="hp-grid">
-      {% assign recent_solutions = site.solutions | slice: 0, 4 %}
+      {% assign recent_solutions = site.solutions | sort: "last_survey" | reverse | slice: 0, 4 %}
       {% for item in recent_solutions %}
       <a class="hp-card" href="{{ item.url | relative_url }}">
         <div class="hp-card-thumb">

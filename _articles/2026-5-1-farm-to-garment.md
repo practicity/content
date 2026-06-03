@@ -6,7 +6,7 @@ description: By shifting to a material-first approach that traces local wool
   in the supply chain to foster sustainability, empathy, and systems-level
   design thinking.
 type: Interview
-created_on: 01/05/2026
+created_on: June 1, 2026
 contributor_id: alexandre-gain
 screenshot1: https://i.ytimg.com/vi/iugRA49eG6Y/hqdefault.jpg
 screenshot2: /images/articles/fromfarmtogarment.png

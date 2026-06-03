@@ -58,7 +58,8 @@ permalink: /articles/
 </div>
 
 <div class="items-list">
-  {% for item in site.articles %}
+  {% assign sorted_articles = site.articles | sort: "date" | reverse %}
+  {% for item in sorted_articles %}
     <article class="item">
       <div class="item-grid">
 

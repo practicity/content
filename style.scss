@@ -269,16 +269,6 @@ nav {
 // .main
 //
 
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
-}
-
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
-
 .post {
   blockquote {
     margin: 1.8em .8em;
@@ -288,27 +278,17 @@ nav {
     font-size: 22px;
     font-style: italic;
   }
-
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-  }
 }
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  background-color: $brand-dark;
 }
 
 footer {
   padding: 20px 0;
   text-align: center;
+  color: rgba(255,255,255,0.8);
 }
 
 .footer-nav {
@@ -320,11 +300,11 @@ footer {
 
   a {
     font-size: 0.85em;
-    color: #666;
+    color: rgba(255,255,255,0.65);
     text-decoration: none;
 
     &:hover {
-      color: #333;
+      color: $brand-peach;
       text-decoration: underline;
     }
   }
@@ -343,7 +323,7 @@ footer {
   height: 480px;
   overflow: hidden;
   margin-bottom: 2.5em;
-  background: #111;
+  background: $brand-dark;
 
   @include mobile {
     height: 300px;
@@ -374,8 +354,8 @@ footer {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.25) 0%,
-    rgba(0,0,0,0.65) 100%
+    rgba(37,29,62,0.3) 0%,
+    rgba(37,29,62,0.82) 100%
   );
 }
 
@@ -415,7 +395,7 @@ footer {
 .hero-cta {
   display: inline-block;
   padding: 0.65em 1.8em;
-  background: $blue;
+  background: $brand-pink;
   color: #fff !important;
   border-radius: 3px;
   font-size: 0.95em;
@@ -425,7 +405,7 @@ footer {
   transition: background 0.2s, transform 0.15s;
 
   &:hover, &:active {
-    background: color.adjust($blue, $lightness: -12%);
+    background: color.adjust($brand-pink, $lightness: -10%);
     transform: translateY(-1px);
     color: #fff !important;
   }
@@ -488,9 +468,9 @@ footer {
 
   a {
     font-size: 0.88em;
-    color: #888;
+    color: $brand-navy;
     text-decoration: none;
-    &:hover { color: $blue; }
+    &:hover { color: $brand-teal; }
   }
 }
 
@@ -542,7 +522,7 @@ footer {
 .hp-card-placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 100%);
+  background: linear-gradient(135deg, rgba(236,193,156,0.35) 0%, rgba(49,183,188,0.2) 100%);
 }
 
 .hp-card-title {
@@ -551,7 +531,7 @@ footer {
   font-size: 0.9em;
   font-weight: 600;
   line-height: 1.35;
-  color: #222;
+  color: $brand-dark;
 }
 
 .hp-card-meta {
@@ -570,8 +550,8 @@ footer {
 // ===== Author pill =====
 .author-pill {
   display: inline-block;
-  background: #e8f0fb;
-  color: #2c5fa5;
+  background: rgba(49,183,188,0.12);
+  color: $brand-navy;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.60em;
@@ -580,16 +560,16 @@ footer {
   transition: background 0.15s, color 0.15s;
 
   &:hover {
-    background: $blue;
+    background: $brand-teal;
     color: #fff;
   }
 }
 
-// ===== Author pill =====
+// ===== Tag pill =====
 .tag-pill {
   display: inline-block;
-  background: #f5feef;
-  color: #2ca54a;
+  background: rgba(204,82,118,0.1);
+  color: $brand-rose;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.60em;
@@ -598,32 +578,12 @@ footer {
   transition: background 0.15s, color 0.15s;
 
   &:hover {
-    background: $blue;
+    background: $brand-rose;
     color: #fff;
   }
 }
 
 
-
-// ===== Minimal pill button =====
-.btn-pill {
-  display: inline-block;
-  background: #f0f0f0;
-  color: #333;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.60em;
-  font-weight: normal;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  line-height: inherit;
-
-  &:hover {
-    background: #ddd;
-  }
-}
 
 // ===== Contributor profile =====
 .contributor-profile {
@@ -650,7 +610,7 @@ footer {
   height: 120px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #eee;
+  border: 3px solid rgba(49,183,188,0.3);
   background: #f0f0f0;
 
   img {
@@ -669,8 +629,8 @@ footer {
   justify-content: center;
   font-size: 2.5em;
   font-weight: 700;
-  color: #999;
-  background: linear-gradient(135deg, #e0e8f8 0%, #c8d8f0 100%);
+  color: $brand-navy;
+  background: linear-gradient(135deg, rgba(236,193,156,0.35) 0%, rgba(49,183,188,0.25) 100%);
 }
 
 .contributor-meta {
@@ -684,14 +644,14 @@ footer {
 
 .contributor-byline {
   margin: 0 0 0.3em;
-  color: #555;
+  color: $brand-navy;
   font-size: 1em;
 }
 
 .contributor-location {
   margin: 0 0 0.7em;
   font-size: 0.9em;
-  color: #888;
+  color: $brand-navy;
 }
 
 .contributor-social {
@@ -700,22 +660,6 @@ footer {
   gap: 0.5em;
 
   @include mobile { justify-content: center; }
-}
-
-.social-link {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-  font-size: 0.82em;
-  text-decoration: none;
-  color: #444;
-  transition: border-color 0.15s, color 0.15s;
-
-  &:hover {
-    border-color: $blue;
-    color: $blue;
-  }
 }
 
 .contributor-bio {
@@ -735,7 +679,7 @@ footer {
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #888;
+  color: $brand-navy;
   font-weight: 600;
 }
 
@@ -747,61 +691,3 @@ footer {
   @include mobile { grid-template-columns: repeat(2, 1fr); }
 }
 
-// ===== Contributors index =====
-.contributors-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.4em;
-  margin-top: 1.5em;
-
-  @include mobile { grid-template-columns: 1fr 1fr; }
-}
-
-.contributor-card {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  padding: 1em;
-  border: 1px solid #e8e8e8;
-  border-radius: 8px;
-  text-decoration: none;
-  color: inherit;
-  background: #fff;
-  transition: box-shadow 0.18s, transform 0.18s;
-
-  &:hover {
-    box-shadow: 0 4px 14px rgba(0,0,0,0.09);
-    transform: translateY(-2px);
-  }
-
-  .contributor-card-headshot {
-    flex-shrink: 0;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid #eee;
-    background: #f0f0f0;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .contributor-headshot-placeholder {
-      font-size: 1.4em;
-    }
-  }
-
-  .contributor-card-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1em;
-    min-width: 0;
-
-    strong { font-size: 0.95em; color: #222; }
-    span   { font-size: 0.8em;  color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  }
-}

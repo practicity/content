@@ -11,8 +11,8 @@ website: "https://omnetpp.org/"
 github: "https://github.com/omnetpp/omnetpp"
 license: "Academic Public License"
 last_survey: "March 29, 2026"
-screenshot1: ""
-screenshot2: ""
+screenshot1: "/images/solutions/omnet.png"
+screenshot2: "https://omnetpp.org/documentation/ide-overview/pictures/img1.png"
 screenshot3: ""
 tags: ["C++", "Networking", "Simulator"]
 locationids: ["WBUSC"]

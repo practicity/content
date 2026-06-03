@@ -2,7 +2,7 @@
 comments: true
 layout: solution
 title: "NS-3"
-description: "ns-3 is a widely used discrete-event network simulator targeted primarily for research and educational use. It provides highly detailed models of how packet data networks work and perform, making it a standard tool for simulating Internet protocols, Wi-Fi, LTE, 5G, and other complex communication systems."
+description: "NS-3 is a widely used discrete-event network simulator targeted primarily for research and educational use. It provides highly detailed models of how packet data networks work and perform, making it a standard tool for simulating Internet protocols, Wi-Fi, LTE, 5G, and other complex communication systems."
 type: "Simulation Software"
 category: "Telecommunications / Networking"
 complexity: "★★★★★"

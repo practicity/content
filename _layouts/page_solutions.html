@@ -58,7 +58,8 @@ layout: default
 
 
 <div class="items-list">
-  {% for item in site.solutions %}
+  {% assign sorted_solutions = site.solutions | sort: "last_survey" | reverse %}
+  {% for item in sorted_solutions %}
     <article class="item">
       <div class="item-grid">
 

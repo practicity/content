@@ -3,21 +3,29 @@
 // VARIABLES
 //
 
-// Colors
-$blue: #4183C4;
+// Brand palette
+$brand-dark:  #251d3e;   // primary — headings, dark surfaces
+$brand-navy:  #214f6c;   // secondary — body text, links subdued
+$brand-teal:  #31b7bc;   // interactive — links, buttons, active states
+$brand-rose:  #cc5276;   // accent — tags, badges
+$brand-pink:  #cc5276;   // strong accent — CTAs, highlights
+$brand-peach: #ecc19c;   // warm decoration — backgrounds, hover tints
 
-// Grays
-$black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
+// Semantic aliases used across stylesheets
+$blue:        $brand-navy;   // drop-in replacement for old $blue
+
+// Grays (neutral structural only — borders, dividers, placeholders)
+$black:       #000;
+$darkerGray:  $brand-dark;   // headings
+$darkGray:    $brand-navy;   // body text, nav
+$gray:        #666;          // subdued text
+$lightGray:   #eee;          // borders, dividers
+$white:       #fff;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
+$helvetica:    Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$georgia:      Georgia, serif;
 
 // Mobile breakpoints
 @mixin mobile {
