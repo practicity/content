@@ -61,9 +61,6 @@ giscus:
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
-# Google Tag Manager — leave blank to disable
-gtm_id: "GTM-52HKTD25"
-
 # Google Analytics 4 — leave blank to disable
 ga_id: "G-Z6MK2MB46F"
 
