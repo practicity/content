@@ -1,0 +1,17 @@
+---
+layout: event
+title: "SwissMeet 2026: International Practice Enterprise Trade Fair"
+description: "Organized by Helvartis, SwissMeet brings together over 50 Practice Enterprises for a two-day immersive trade fair focused on business transactions, networking, and hands-on professional experience."
+start_date: "2026-11-17"
+end_date: "2026-11-18"
+venue: "Uptown Hall, Schorenweg 10, 4144 Arlesheim"
+country: "Switzerland"
+website: "https://helvartis.ch/en/swissmeetEvent"
+image: "https://helvartis.ch/templates/helvartis/images/logo-helvartis.png"
+tags: ["Trade-Fair", "Practice-Enterprise", "Vocational-Training", "Networking"]
+contributor_id: alexandre-gain
+---
+
+SwissMeet is the premier annual trade fair for Practice Enterprises (PEs) in Switzerland. Organized by Helvartis, the Swiss Practice Enterprise Central Office, the event serves as a high-fidelity replica of a real-world commercial exhibition. It provides a dynamic platform for learners to manage all organizational aspects of a business space, from stall layout and business strategy to seeking sponsors and negotiating partnerships.
+
+For two days, participants from dozens of sectors and international locations gather to conduct direct transactions, enrich their professional networks, and add significant hands-on experience to their professional records. The 2026 edition, held at the Uptown Hall in Arlesheim, continues a long-standing tradition of fostering entrepreneurial spirit and practical commercial skills in a collaborative, international environment.

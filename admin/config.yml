@@ -206,6 +206,59 @@ collections:
       - {label: "Body", name: "body", widget: "markdown", required: false}
 
   # ─────────────────────────────────────────────
+  # EVENTS
+  # ─────────────────────────────────────────────
+  - name: "events"
+    label: "Events"
+    folder: "_events"
+    create: true
+    identifier_field: title
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "events/{{slug}}"
+    media_folder: "/images/events"
+    public_folder: "/images/events"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "event"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false, hint: "Short summary shown in list and calendar views"}
+      - label: "Start Date"
+        name: "start_date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: false
+      - label: "End Date"
+        name: "end_date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: false
+        required: false
+        hint: "Leave empty for single-day events"
+      - {label: "Venue", name: "venue", widget: "string", required: false, hint: "Full address used for the OpenStreetMap link (e.g. 151 Rue Montmartre, Paris)"}
+      - {label: "Country", name: "country", widget: "string", required: false}
+      - {label: "Event Website", name: "website", widget: "string", required: false, hint: "Registration page or official event URL"}
+      - {label: "Event Image", name: "image", widget: "image", required: false, hint: "Banner or cover image shown on the detail page and in the list"}
+      - label: "Tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["3D-Modeling", "Active-Learning", "Aerospace", "AI", "Assessment", "Aviation", "Big-Data", "Blended-Learning", "Business-Administration", "C#", "C++", "CAD/CAM", "Chemistry", "Cloud-Computing", "CNC", "Communication", "Community", "Conflict-Resolution", "Construction", "Corporate-Training", "Creativity", "Criminal-Justice", "Crisis-Management", "Curriculum-Design", "Customer-Service", "Data-Analytics", "Debriefing", "Decision-Making", "De-escalation", "Delphi", "Digital-Twin", "Economics", "Emergency-Response", "Energy", "Experiential-Learning", "FEM", "Fluid-Dynamics", "Fortran", "Game-Based", "GIS", "Healthcare", "Information-Systems", "Instructional-Design", "IoT", "Java", "JavaScript", "Law", "Leadership", "Logistics", "Manufacturing", "Maritime", "Mathematics", "Medical", "Negotiation", "Networking", "Nursing", "Pascal", "Patient-Safety", "PHP", "Physics", "Police-Training", "Policy", "Python", "Reflective-Practice", "Robotics", "Roleplay", "Simulated-Workplace", "Simulation", "Simulator", "Teamwork", "Thermodynamics", "Urban-Planning", "Visualization", "VR/AR", "Workforce-Development"]
+      - label: "Contributor"
+        name: "contributor_id"
+        widget: "select"
+        required: false
+        options:
+          - {label: "Alexandre Gain", value: "alexandre-gain"}
+          - {label: "Chriss Costa", value: "chriss-costa"}
+          - {label: "Practi Citizen", value: "practi-citizen"}
+      - {label: "Comments", name: "comments", widget: "boolean", default: true}
+      - {label: "Body", name: "body", widget: "markdown", required: false, hint: "Full event description, programme, etc."}
+
+  # ─────────────────────────────────────────────
   # CONTRIBUTORS
   # ─────────────────────────────────────────────
   - name: "contributors"

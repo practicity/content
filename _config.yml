@@ -61,6 +61,9 @@ giscus:
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
+# Google Tag Manager — leave blank to disable
+gtm_id: "GTM-52HKTD25"
+
 # Used for Sitemap.xml and your RSS feed
 url: "https://practi.city"
 
