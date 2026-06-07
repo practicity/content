@@ -7,8 +7,8 @@ end_date: "2027-01-29"
 venue: "Orange County Convention Center, 9800 International Dr, Orlando, FL 32819, US"
 country: "USA"
 website: "https://www.fetc.org/"
-image: "https://www.fetc.org/images/FETC25_Vertical_Logo.png"
-tags: ["CTE", "EdTech", "Workforce-Development", "Experiential-Learning"]
+image: "./images/events/fetc2027.png"
+tags: ["Experiential-Learning"]
 contributor_id: alexandre-gain
 ---
 

@@ -6,18 +6,18 @@ layout: default
   <div class="page-hero-icon">📅</div>
   <div>
     <h1>Events</h1>
-    <p class="page-hero-desc">Upcoming and past events from the Practi.city community.</p>
+    <p class="page-hero-desc">Upcoming and past events having a relation with Experiential Learning & Situational Learning as well as Open Source Simulators.</p>
     <p class="page-hero-count">{{ site.events | size }} events</p>
   </div>
 </div>
 
 <div class="events-view-toggle">
-  <button class="events-toggle-btn active" id="btn-calendar" onclick="eventsSetView('calendar')">📅 Calendar</button>
-  <button class="events-toggle-btn" id="btn-list" onclick="eventsSetView('list')">☰ List</button>
+  <button class="events-toggle-btn active" id="btn-list" onclick="eventsSetView('list')">☰ List</button>
+  <button class="events-toggle-btn" id="btn-calendar" onclick="eventsSetView('calendar')">📅 Calendar</button>
 </div>
 
 <!-- ===== Calendar view ===== -->
-<div id="events-calendar-view" class="events-calendar-wrap">
+<div id="events-calendar-view" class="events-calendar-wrap" style="display:none">
   <div class="cal-nav">
     <button onclick="calMove(-1)" aria-label="Previous month">&#8249;</button>
     <span id="cal-month-label"></span>
@@ -28,7 +28,7 @@ layout: default
 </div>
 
 <!-- ===== List view ===== -->
-<div id="events-list-view" class="items-list" style="display:none">
+<div id="events-list-view" class="items-list">
   {% assign sorted_events = site.events | sort: "start_date" %}
   {% for item in sorted_events %}
     <article class="item">

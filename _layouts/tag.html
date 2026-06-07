@@ -33,12 +33,12 @@ layout: default
 {% endfor %}
 
 {% assign total = tagged_posts.size | plus: tagged_articles.size | plus: tagged_solutions.size | plus: tagged_events.size %}
-<p>
-  {{ total }} item(s) tagged with <strong>#{{ page.tag }}</strong>{% if tagged_posts.size > 0 %} · {{ tagged_posts.size }} post(s){% endif %}{% if tagged_articles.size > 0 %} · {{ tagged_articles.size }} article(s){% endif %}{% if tagged_solutions.size > 0 %} · {{ tagged_solutions.size }} solution(s){% endif %}{% if tagged_events.size > 0 %} · {{ tagged_events.size }} event(s){% endif %}
+<p class="tag-summary">
+  {{ total }} item(s) tagged with <strong>#{{ page.tag }}</strong>{% if tagged_posts.size > 0 %} · <a href="#tag-posts" class="tag-type-link">📝 {{ tagged_posts.size }} post(s)</a>{% endif %}{% if tagged_articles.size > 0 %} · <a href="#tag-articles" class="tag-type-link">📰 {{ tagged_articles.size }} article(s)</a>{% endif %}{% if tagged_solutions.size > 0 %} · <a href="#tag-solutions" class="tag-type-link">🔧 {{ tagged_solutions.size }} solution(s)</a>{% endif %}{% if tagged_events.size > 0 %} · <a href="#tag-events" class="tag-type-link">📅 {{ tagged_events.size }} event(s)</a>{% endif %}
 </p>
 
 {% if tagged_posts.size > 0 %}
-  <h2>📝 Posts <span class="section-count">({{ tagged_posts.size }})</span></h2>
+  <h2 id="tag-posts">📝 Posts <span class="section-count">({{ tagged_posts.size }})</span></h2>
   {% for item in tagged_posts %}
     <article class="item">
       <div class="item-grid">
@@ -61,7 +61,7 @@ layout: default
 {% endif %}
 
 {% if tagged_articles.size > 0 %}
-  <h2>📰 Articles <span class="section-count">({{ tagged_articles.size }})</span></h2>
+  <h2 id="tag-articles">📰 Articles <span class="section-count">({{ tagged_articles.size }})</span></h2>
   {% for item in tagged_articles %}
     <article class="item">
       <div class="item-grid">
@@ -88,7 +88,7 @@ layout: default
 {% endif %}
 
 {% if tagged_solutions.size > 0 %}
-  <h2>🔧 Solutions <span class="section-count">({{ tagged_solutions.size }})</span></h2>
+  <h2 id="tag-solutions">🔧 Solutions <span class="section-count">({{ tagged_solutions.size }})</span></h2>
   {% for item in tagged_solutions %}
     <article class="item">
       <div class="item-grid">
@@ -116,7 +116,7 @@ layout: default
 {% endif %}
 
 {% if tagged_events.size > 0 %}
-  <h2>📅 Events <span class="section-count">({{ tagged_events.size }})</span></h2>
+  <h2 id="tag-events">📅 Events <span class="section-count">({{ tagged_events.size }})</span></h2>
   {% assign sorted_tagged_events = tagged_events | sort: "start_date" %}
   {% for item in sorted_tagged_events %}
     <article class="item">

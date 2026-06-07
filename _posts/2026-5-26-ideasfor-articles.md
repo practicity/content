@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Ideas for future Articles (05/2026-
+title: Ideas for future Articles (05/2026)
 contributor_id: alexandre-gain
+screenshot1: ./images/posts/post.jpeg
 comments: true
 ---
 teaching environment simulation
