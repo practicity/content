@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Mindmap</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- jsMind CSS -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsmind@0.9.1/style/jsmind.css" />
+
+    <!-- jsMind JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jsmind@0.9.1/es6/jsmind.js"></script>
+
+    <style>
+        #jsmind_container {
+            width: 100%;
+            height: calc(100vh - 140px);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            background-color: #fafafa;
+            position: relative;
+        }
+        /* Custom overrides to match the Bootstrap style mindmap */
+        jmnode {
+            color: #ffffff !important;
+            border: none !important;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 500 !important;
+            padding: 10px 20px !important;
+            border-radius: 9999px !important; /* Pill style nodes */
+            transition: transform 0.15s ease-in-out;
+        }
+        jmnode:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        /* Style specifically for the virtual root center node */
+        jmnode[nodeid="virtual_root"] {
+            font-size: 15px !important;
+            font-weight: 700 !important;
+            padding: 14px 28px !important;
+            border: 3px solid #ffffff !important;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+        }
+        canvas {
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen text-gray-800">
+
+    <!-- Header -->
+    <div class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between shadow-sm sticky top-0 z-50">
+        <div>
+            <h1 class="text-xl font-bold text-gray-900 tracking-tight">Organization Master Mapping</h1>
+            <p class="text-sm text-gray-500 mt-0.5">Symmetrical color-grouped branches with Entity IDs</p>
+        </div>
+        <div class="flex items-center gap-3">
+            <!-- Zoom Controls -->
+            <div class="flex items-center gap-1.5 bg-gray-100 p-1 rounded-lg border border-gray-200">
+                <button onclick="zoom('out')" class="px-2.5 py-1 bg-white hover:bg-gray-50 text-gray-700 text-xs font-semibold rounded shadow-sm border border-gray-200">Zoom -</button>
+                <button onclick="zoom('in')" class="px-2.5 py-1 bg-white hover:bg-gray-50 text-gray-700 text-xs font-semibold rounded shadow-sm border border-gray-200">Zoom +</button>
+            </div>
+            <button
+                id="refresh-btn"
+                class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-all duration-150 flex items-center gap-2 shadow-sm"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                Refresh Data
+            </button>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div id="status-bar" class="px-6 py-2 text-sm bg-indigo-50 text-indigo-700 border-b border-indigo-100 font-medium">
+        Ready. Loading data...
+    </div>
+
+    <!-- One single Symmetrical Canvas -->
+    <div class="p-6">
+        <div id="jsmind_container"></div>
+    </div>
+
+    <script>
+        // ── CONFIGURATION ──────────────────────────────
+        const SUPABASE_URL = "https://djvohbsyeoolbkhiwigz.supabase.co";
+        const SUPABASE_KEY = "sb_publishable_7_5iwLmBvAzVsnU8OdUfJA_oM6Y0g2a";
+        // ───────────────────────────────────────────────
+
+        // Color palettes where parent and child share the same distinct background color 
+        const COLOR_PALETTES = [
+            { bg: '#f97316', font: '#ffffff' }, // Orange
+            { bg: '#3b82f6', font: '#ffffff' }, // Blue
+            { bg: '#10b981', font: '#ffffff' }, // Emerald
+            { bg: '#ec4899', font: '#ffffff' }, // Pink
+            { bg: '#eab308', font: '#ffffff' }, // Yellow
+            { bg: '#8b5cf6', font: '#ffffff' }, // Purple
+            { bg: '#06b6d4', font: '#ffffff' }, // Cyan
+            { bg: '#f43f5e', font: '#ffffff' }  // Rose
+        ];
+
+        let jmInstance = null;
+
+        function setStatus(message, isError = false) {
+            const bar = document.getElementById('status-bar');
+            bar.textContent = message;
+            bar.className = isError 
+                ? 'px-6 py-2 text-sm bg-red-50 text-red-600 border-b border-red-100 font-medium'
+                : 'px-6 py-2 text-sm bg-green-50 text-green-700 border-b border-green-100 font-medium';
+        }
+
+        async function fetchAndRender() {
+            setStatus('Fetching data from Supabase...');
+            document.getElementById('refresh-btn').disabled = true;
+
+            try {
+                const response = await fetch(
+                    `${SUPABASE_URL}/rest/v1/organizations?select=id,org_name,org_children`,
+                    {
+                        method: 'GET',
+                        headers: {
+                            'apikey': SUPABASE_KEY,
+                            'Authorization': `Bearer ${SUPABASE_KEY}`,
+                            'Content-Type': 'application/json'
+                        }
+                    }
+                );
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const orgs = await response.json();
+
+                if (!orgs || orgs.length === 0) {
+                    setStatus('No organizations found in database.', true);
+                    return;
+                }
+
+                // Map child-to-parent references to find absolute roots
+                const allChildIds = new Set();
+                orgs.forEach(org => {
+                    if (org.org_children && Array.isArray(org.org_children)) {
+                        org.org_children.forEach(childId => allChildIds.add(childId.toString()));
+                    }
+                });
+
+                const roots = orgs.filter(o => !allChildIds.has(o.id.toString()));
+
+                if (roots.length === 0) {
+                    throw new Error("Could not evaluate top-level parent roots.");
+                }
+
+                const formattedNodes = [];
+                const addedNodeIds = new Set();
+
+                // 1. Centralized "Bootstrap-style" Virtual Root
+                formattedNodes.push({
+                    id: 'virtual_root',
+                    parentid: null,
+                    topic: '🏢 All Organizations',
+                    isroot: true,
+                    'background-color': '#1e293b', 
+                    'foreground-color': '#ffffff'
+                });
+
+                // Recursive function to design and style parent & child branches
+                const traverse = (currentOrg, parentId, palette) => {
+                    const currentId = currentOrg.id.toString();
+                    if (addedNodeIds.has(currentId)) return;
+                    addedNodeIds.add(currentId);
+
+                    // Display format: "[ID] Name"
+                    const formattedTopic = `[${currentId}] ${currentOrg.org_name}`;
+
+                    // Both Parent and Children use the exact same color (palette.bg)
+                    formattedNodes.push({
+                        id: currentId,
+                        parentid: parentId,
+                        topic: formattedTopic,
+                        isroot: false,
+                        'background-color': palette.bg,
+                        'foreground-color': palette.font,
+                        'leading-line-color': palette.bg // Connector lines match the group color perfectly
+                    });
+
+                    if (currentOrg.org_children && Array.isArray(currentOrg.org_children)) {
+                        currentOrg.org_children.forEach(childId => {
+                            const matchingChild = orgs.find(o => o.id.toString() === childId.toString());
+                            if (matchingChild) {
+                                traverse(matchingChild, currentId, palette);
+                            }
+                        });
+                    }
+                };
+
+                // 2. Distribute parent entities dynamically into distinct color branches
+                roots.forEach((rootOrg, index) => {
+                    const palette = COLOR_PALETTES[index % COLOR_PALETTES.length];
+                    traverse(rootOrg, 'virtual_root', palette);
+                });
+
+                // Clear layout container
+                const container = document.getElementById('jsmind_container');
+                container.innerHTML = '';
+                jmInstance = null;
+
+                // 3. Instantiate jsMind with clean curve-connection layouts
+                const options = {
+                    container: 'jsmind_container',
+                    editable: false,
+                    theme: 'primary',
+                    mode: 'full', // Spreads parent branches symmetrically around the central root node
+                    support_html: false,
+                    view: {
+                        engine: 'canvas',
+                        hmargin: 60,
+                        vmargin: 40,
+                        line_width: 3,        
+                        line_color: '#cbd5e1', 
+                        line_style: 'curved'   // Curved connections matching reference
+                    },
+                    layout: {
+                        hspace: 50, 
+                        vspace: 25
+                    }
+                };
+
+                const mindMapData = {
+                    meta: { name: 'Symmetrical Master Mindmap', author: 'Supabase' },
+                    format: 'node_array',
+                    data: formattedNodes
+                };
+
+                jmInstance = new jsMind(options);
+                jmInstance.show(mindMapData);
+
+                setStatus(`Successfully loaded ${roots.length} groups with matched branch coloring.`);
+
+            } catch (err) {
+                console.error('Failed to load map:', err);
+                setStatus(`Error: ${err.message}`, true);
+            } finally {
+                document.getElementById('refresh-btn').disabled = false;
+            }
+        }
+
+        window.zoom = function(action) {
+            if (!jmInstance) return;
+            if (action === 'in') {
+                jmInstance.view.zoomIn();
+            } else if (action === 'out') {
+                jmInstance.view.zoomOut();
+            }
+        };
+
+        document.getElementById('refresh-btn').addEventListener('click', fetchAndRender);
+        window.addEventListener('DOMContentLoaded', fetchAndRender);
+    </script>
+</body>
+</html>
