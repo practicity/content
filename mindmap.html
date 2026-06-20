@@ -3,76 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organization Mindmap</title>
+    <title>Entity Network Graph</title>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- jsMind CSS -->
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsmind@0.9.1/style/jsmind.css" />
-
-    <!-- jsMind JS -->
-    <script src="https://cdn.jsdelivr.net/npm/jsmind@0.9.1/es6/jsmind.js"></script>
+    <!-- vis-network (standalone bundle includes vis-data: DataSet/DataView) -->
+    <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/vis-network@9.1.9/styles/vis-network.min.css" />
 
     <style>
-        #jsmind_container {
-            width: 100%;
-            height: calc(100vh - 140px);
+        html, body { height: 100%; }
+        #network {
+            background-color: #fafafa;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
-            background-color: #fafafa;
-            position: relative;
         }
-        /* Custom overrides to match the Bootstrap style mindmap */
-        jmnode {
-            color: #ffffff !important;
-            border: none !important;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
-            font-family: 'Inter', sans-serif !important;
-            font-weight: 500 !important;
-            padding: 10px 20px !important;
-            border-radius: 9999px !important; /* Pill style nodes */
-            transition: transform 0.15s ease-in-out;
-        }
-        jmnode:hover {
-            transform: scale(1.05);
-            cursor: pointer;
-        }
-        /* Style specifically for the virtual root center node */
-        jmnode[nodeid="virtual_root"] {
-            font-size: 15px !important;
-            font-weight: 700 !important;
-            padding: 14px 28px !important;
-            border: 3px solid #ffffff !important;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
-        }
-        canvas {
-            z-index: 1;
-        }
+        .swatch { display:inline-block; width:12px; height:12px; border-radius:9999px; flex:0 0 auto; }
+        .filter-row { display:flex; align-items:center; gap:8px; padding:3px 0; font-size:13px; color:#334155; cursor:pointer; user-select:none; }
+        .filter-row input { height:15px; width:15px; }
+        aside::-webkit-scrollbar { width:8px; }
+        aside::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:9999px; }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen text-gray-800">
+<body class="bg-gray-50 text-gray-800 flex flex-col h-screen overflow-hidden">
 
     <!-- Header -->
-    <div class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between shadow-sm sticky top-0 z-50">
+    <div class="bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between shadow-sm z-10">
         <div>
-            <h1 class="text-xl font-bold text-gray-900 tracking-tight">Organization Master Mapping</h1>
-            <p class="text-sm text-gray-500 mt-0.5">Symmetrical color-grouped branches with Entity IDs</p>
+            <h1 class="text-xl font-bold text-gray-900 tracking-tight">Entity Network Graph</h1>
+            <p class="text-sm text-gray-500 mt-0.5">Force-directed graph of entities &amp; their <code>relationships</code> · filter by type</p>
         </div>
-        <div class="flex items-center gap-3">
-            <!-- Zoom Controls -->
-            <div class="flex items-center gap-1.5 bg-gray-100 p-1 rounded-lg border border-gray-200">
-                <button onclick="zoom('out')" class="px-2.5 py-1 bg-white hover:bg-gray-50 text-gray-700 text-xs font-semibold rounded shadow-sm border border-gray-200">Zoom -</button>
-                <button onclick="zoom('in')" class="px-2.5 py-1 bg-white hover:bg-gray-50 text-gray-700 text-xs font-semibold rounded shadow-sm border border-gray-200">Zoom +</button>
-            </div>
-            <button
-                id="refresh-btn"
-                class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-all duration-150 flex items-center gap-2 shadow-sm"
-            >
+        <div class="flex items-center gap-2">
+            <button id="fit-btn" class="px-3 py-2 bg-white hover:bg-gray-50 text-gray-700 text-sm font-medium rounded-lg border border-gray-200 shadow-sm">Fit view</button>
+            <button id="refresh-btn" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg shadow-sm flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
-                Refresh Data
+                Refresh
             </button>
         </div>
     </div>
@@ -82,9 +50,48 @@
         Ready. Loading data...
     </div>
 
-    <!-- One single Symmetrical Canvas -->
-    <div class="p-6">
-        <div id="jsmind_container"></div>
+    <!-- Main: sidebar + graph -->
+    <div class="flex flex-1 min-h-0">
+        <!-- Filter sidebar -->
+        <aside class="w-72 flex-none bg-white border-r border-gray-200 overflow-y-auto p-4 space-y-5">
+            <!-- Entity types -->
+            <div>
+                <div class="flex items-center justify-between mb-1">
+                    <h2 class="text-xs font-bold uppercase tracking-wide text-gray-500">Entity types</h2>
+                    <div class="text-xs text-indigo-600 font-medium space-x-2">
+                        <a href="#" data-all="entity" class="hover:underline">All</a>
+                        <a href="#" data-none="entity" class="hover:underline">None</a>
+                    </div>
+                </div>
+                <div id="entity-filters"></div>
+            </div>
+
+            <!-- Relationship types -->
+            <div>
+                <div class="flex items-center justify-between mb-1">
+                    <h2 class="text-xs font-bold uppercase tracking-wide text-gray-500">Relationship types</h2>
+                    <div class="text-xs text-indigo-600 font-medium space-x-2">
+                        <a href="#" data-all="rel" class="hover:underline">All</a>
+                        <a href="#" data-none="rel" class="hover:underline">None</a>
+                    </div>
+                </div>
+                <div id="rel-filters" class="max-h-72 overflow-y-auto pr-1"></div>
+            </div>
+
+            <!-- Display options -->
+            <div>
+                <h2 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-1">Display</h2>
+                <label class="filter-row">
+                    <input type="checkbox" id="show-unlinked"> Show unlinked entities
+                </label>
+                <label class="filter-row">
+                    <input type="checkbox" id="toggle-physics" checked> Physics (auto-layout)
+                </label>
+            </div>
+        </aside>
+
+        <!-- Graph canvas -->
+        <div id="network" class="flex-1 m-4 ml-3"></div>
     </div>
 
     <script>
@@ -93,175 +100,247 @@
         const SUPABASE_KEY = "sb_publishable_7_5iwLmBvAzVsnU8OdUfJA_oM6Y0g2a";
         // ───────────────────────────────────────────────
 
-        // Color palettes where parent and child share the same distinct background color 
-        const COLOR_PALETTES = [
-            { bg: '#f97316', font: '#ffffff' }, // Orange
-            { bg: '#3b82f6', font: '#ffffff' }, // Blue
-            { bg: '#10b981', font: '#ffffff' }, // Emerald
-            { bg: '#ec4899', font: '#ffffff' }, // Pink
-            { bg: '#eab308', font: '#ffffff' }, // Yellow
-            { bg: '#8b5cf6', font: '#ffffff' }, // Purple
-            { bg: '#06b6d4', font: '#ffffff' }, // Cyan
-            { bg: '#f43f5e', font: '#ffffff' }  // Rose
-        ];
+        // Colors keyed by entity.type (public.entity_types enum). Null -> "untyped".
+        const TYPE_COLORS = {
+            organization: { bg: '#3b82f6', border: '#2563eb', label: 'Organization' },
+            location:     { bg: '#10b981', border: '#059669', label: 'Location' },
+            resource:     { bg: '#f59e0b', border: '#d97706', label: 'Resource' },
+            untyped:      { bg: '#64748b', border: '#475569', label: 'Untyped' },
+        };
+        const normType = (t) => (t && TYPE_COLORS[t]) ? t : 'untyped';
 
-        let jmInstance = null;
+        // Live, filterable datasets + view state
+        const nodesDS = new vis.DataSet();
+        const edgesDS = new vis.DataSet();
+        let network = null;
+        let cache = { entities: [], relationships: [] };
+        const state = {
+            entityTypes: { organization: true, location: true, resource: true, untyped: true },
+            relTypes: {},          // populated from the data actually present
+            showUnlinked: false,
+            physics: true,
+        };
 
         function setStatus(message, isError = false) {
             const bar = document.getElementById('status-bar');
             bar.textContent = message;
-            bar.className = isError 
+            bar.className = isError
                 ? 'px-6 py-2 text-sm bg-red-50 text-red-600 border-b border-red-100 font-medium'
                 : 'px-6 py-2 text-sm bg-green-50 text-green-700 border-b border-green-100 font-medium';
         }
 
-        async function fetchAndRender() {
-            setStatus('Fetching data from Supabase...');
+        async function supabaseGet(pathAndQuery) {
+            const res = await fetch(`${SUPABASE_URL}/rest/v1/${pathAndQuery}`, {
+                headers: {
+                    'apikey': SUPABASE_KEY,
+                    'Authorization': `Bearer ${SUPABASE_KEY}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+            if (!res.ok) throw new Error(`HTTP ${res.status} on ${pathAndQuery.split('?')[0]}`);
+            return res.json();
+        }
+
+        async function fetchAndBuild() {
+            setStatus('Fetching entities and relationships from Supabase...');
             document.getElementById('refresh-btn').disabled = true;
-
             try {
-                const response = await fetch(
-                    `${SUPABASE_URL}/rest/v1/entities?select=id,name,children`,
-                    {
-                        method: 'GET',
-                        headers: {
-                            'apikey': SUPABASE_KEY,
-                            'Authorization': `Bearer ${SUPABASE_KEY}`,
-                            'Content-Type': 'application/json'
-                        }
-                    }
-                );
-
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}`);
-                }
-
-                const orgs = await response.json();
-
-                if (!orgs || orgs.length === 0) {
-                    setStatus('No organizations found in database.', true);
-                    return;
-                }
-
-                // Map child-to-parent references to find absolute roots
-                const allChildIds = new Set();
-                orgs.forEach(org => {
-                    if (org.org_children && Array.isArray(org.org_children)) {
-                        org.org_children.forEach(childId => allChildIds.add(childId.toString()));
-                    }
-                });
-
-                const roots = orgs.filter(o => !allChildIds.has(o.id.toString()));
-
-                if (roots.length === 0) {
-                    throw new Error("Could not evaluate top-level parent roots.");
-                }
-
-                const formattedNodes = [];
-                const addedNodeIds = new Set();
-
-                // 1. Centralized "Bootstrap-style" Virtual Root
-                formattedNodes.push({
-                    id: 'virtual_root',
-                    parentid: null,
-                    topic: '🏢 All Organizations',
-                    isroot: true,
-                    'background-color': '#1e293b', 
-                    'foreground-color': '#ffffff'
-                });
-
-                // Recursive function to design and style parent & child branches
-                const traverse = (currentOrg, parentId, palette) => {
-                    const currentId = currentOrg.id.toString();
-                    if (addedNodeIds.has(currentId)) return;
-                    addedNodeIds.add(currentId);
-
-                    // Display format: "[ID] Name"
-                    const formattedTopic = `[${currentId}] ${currentOrg.org_name}`;
-
-                    // Both Parent and Children use the exact same color (palette.bg)
-                    formattedNodes.push({
-                        id: currentId,
-                        parentid: parentId,
-                        topic: formattedTopic,
-                        isroot: false,
-                        'background-color': palette.bg,
-                        'foreground-color': palette.font,
-                        'leading-line-color': palette.bg // Connector lines match the group color perfectly
-                    });
-
-                    if (currentOrg.org_children && Array.isArray(currentOrg.org_children)) {
-                        currentOrg.org_children.forEach(childId => {
-                            const matchingChild = orgs.find(o => o.id.toString() === childId.toString());
-                            if (matchingChild) {
-                                traverse(matchingChild, currentId, palette);
-                            }
-                        });
-                    }
-                };
-
-                // 2. Distribute parent entities dynamically into distinct color branches
-                roots.forEach((rootOrg, index) => {
-                    const palette = COLOR_PALETTES[index % COLOR_PALETTES.length];
-                    traverse(rootOrg, 'virtual_root', palette);
-                });
-
-                // Clear layout container
-                const container = document.getElementById('jsmind_container');
-                container.innerHTML = '';
-                jmInstance = null;
-
-                // 3. Instantiate jsMind with clean curve-connection layouts
-                const options = {
-                    container: 'jsmind_container',
-                    editable: false,
-                    theme: 'primary',
-                    mode: 'full', // Spreads parent branches symmetrically around the central root node
-                    support_html: false,
-                    view: {
-                        engine: 'canvas',
-                        hmargin: 60,
-                        vmargin: 40,
-                        line_width: 3,        
-                        line_color: '#cbd5e1', 
-                        line_style: 'curved'   // Curved connections matching reference
-                    },
-                    layout: {
-                        hspace: 50, 
-                        vspace: 25
-                    }
-                };
-
-                const mindMapData = {
-                    meta: { name: 'Symmetrical Master Mindmap', author: 'Supabase' },
-                    format: 'node_array',
-                    data: formattedNodes
-                };
-
-                jmInstance = new jsMind(options);
-                jmInstance.show(mindMapData);
-
-                setStatus(`Successfully loaded ${roots.length} groups with matched branch coloring.`);
-
+                const [entities, relationships] = await Promise.all([
+                    supabaseGet('entities?select=uuid,name,code,type,description'),
+                    supabaseGet('relationships?select=id,left_entity_uuid,right_entity_uuid,type')
+                ]);
+                cache = { entities, relationships };
+                buildGraph();
             } catch (err) {
-                console.error('Failed to load map:', err);
+                console.error('Failed to load graph:', err);
                 setStatus(`Error: ${err.message}`, true);
             } finally {
                 document.getElementById('refresh-btn').disabled = false;
             }
         }
 
-        window.zoom = function(action) {
-            if (!jmInstance) return;
-            if (action === 'in') {
-                jmInstance.view.zoomIn();
-            } else if (action === 'out') {
-                jmInstance.view.zoomOut();
-            }
-        };
+        // Transform Supabase rows into vis nodes/edges and (re)create the network.
+        function buildGraph() {
+            const { entities, relationships } = cache;
+            const byUuid = new Map(entities.map(e => [e.uuid, e]));
 
-        document.getElementById('refresh-btn').addEventListener('click', fetchAndRender);
-        window.addEventListener('DOMContentLoaded', fetchAndRender);
+            // Which entities take part in at least one (valid) relationship
+            const linked = new Set();
+            const validRels = relationships.filter(r =>
+                byUuid.has(r.left_entity_uuid) && byUuid.has(r.right_entity_uuid));
+            validRels.forEach(r => { linked.add(r.left_entity_uuid); linked.add(r.right_entity_uuid); });
+
+            // Nodes
+            nodesDS.clear();
+            nodesDS.add(entities.map(e => {
+                const et = normType(e.type);
+                const c = TYPE_COLORS[et];
+                const code = e.code ? `[${e.code}] ` : '';
+                const tip = `${e.name || '(unnamed)'}\nType: ${c.label}` +
+                    (e.code ? `\nCode: ${e.code}` : '') +
+                    (e.description ? `\n\n${e.description}` : '');
+                return {
+                    id: e.uuid,
+                    label: `${code}${e.name || '(unnamed)'}`,
+                    title: tip,
+                    etype: et,
+                    linked: linked.has(e.uuid),
+                    color: { background: c.bg, border: c.border,
+                             highlight: { background: c.bg, border: '#0f172a' } },
+                };
+            }));
+
+            // Edges (left = parent/source, right = child/target). Label carries the relationship name.
+            edgesDS.clear();
+            edgesDS.add(validRels.map(r => ({
+                id: r.id,
+                from: r.left_entity_uuid,
+                to: r.right_entity_uuid,
+                label: r.type || '',
+                reltype: r.type || '(untyped)',
+                fromType: normType(byUuid.get(r.left_entity_uuid).type),
+                toType: normType(byUuid.get(r.right_entity_uuid).type),
+            })));
+
+            // Relationship-type filter list, from the types actually present
+            const relTypesPresent = [...new Set(validRels.map(r => r.type || '(untyped)'))].sort();
+            state.relTypes = {};
+            relTypesPresent.forEach(t => state.relTypes[t] = true);
+            renderEntityFilters();
+            renderRelFilters(relTypesPresent, validRels);
+
+            createNetwork();
+
+            const linkedCount = linked.size;
+            const unlinkedCount = entities.length - linkedCount;
+            setStatus(
+                `Loaded ${entities.length} entities · ${validRels.length} relationships · ` +
+                `${relTypesPresent.length} relationship types · ${linkedCount} linked, ${unlinkedCount} unlinked.`
+            );
+        }
+
+        // Filter functions read live `state`; refresh() re-applies them.
+        const nodeView = new vis.DataView(nodesDS, {
+            filter: n => state.entityTypes[n.etype] && (state.showUnlinked || n.linked)
+        });
+        const edgeView = new vis.DataView(edgesDS, {
+            filter: e => state.relTypes[e.reltype] &&
+                         state.entityTypes[e.fromType] && state.entityTypes[e.toType]
+        });
+
+        function createNetwork() {
+            const container = document.getElementById('network');
+            const options = {
+                nodes: {
+                    shape: 'box',
+                    shapeProperties: { borderRadius: 8 },
+                    margin: 9,
+                    borderWidth: 2,
+                    widthConstraint: { maximum: 220 },
+                    font: { color: '#ffffff', size: 13, face: 'Inter, sans-serif' },
+                    shadow: { enabled: true, size: 6, x: 0, y: 2, color: 'rgba(0,0,0,0.12)' },
+                },
+                edges: {
+                    arrows: { to: { enabled: true, scaleFactor: 0.6 } },
+                    color: { color: '#94a3b8', highlight: '#475569', hover: '#64748b' },
+                    smooth: { enabled: true, type: 'dynamic' },
+                    font: { size: 11, color: '#334155', strokeWidth: 4, strokeColor: '#ffffff',
+                            face: 'Inter, sans-serif', align: 'horizontal' },
+                },
+                physics: {
+                    enabled: state.physics,
+                    barnesHut: { gravitationalConstant: -9000, springLength: 170,
+                                 springConstant: 0.045, avoidOverlap: 0.3, damping: 0.3 },
+                    stabilization: { iterations: 250 },
+                },
+                interaction: { hover: true, tooltipDelay: 120, multiselect: true,
+                               navigationButtons: false, keyboard: false },
+                layout: { improvedLayout: true },
+            };
+
+            if (network) { network.destroy(); network = null; }
+            network = new vis.Network(container, { nodes: nodeView, edges: edgeView }, options);
+            network.once('stabilizationIterationsDone', () => network.fit({ animation: false }));
+        }
+
+        // ── Filter UI ──────────────────────────────────
+        function renderEntityFilters() {
+            const host = document.getElementById('entity-filters');
+            host.innerHTML = '';
+            Object.entries(TYPE_COLORS).forEach(([key, c]) => {
+                const row = document.createElement('label');
+                row.className = 'filter-row';
+                row.innerHTML =
+                    `<input type="checkbox" data-entity="${key}" ${state.entityTypes[key] ? 'checked' : ''}>
+                     <span class="swatch" style="background:${c.bg}"></span>${c.label}`;
+                row.querySelector('input').addEventListener('change', (ev) => {
+                    state.entityTypes[key] = ev.target.checked;
+                    refreshViews();
+                });
+                host.appendChild(row);
+            });
+        }
+
+        function renderRelFilters(relTypes, validRels) {
+            const host = document.getElementById('rel-filters');
+            host.innerHTML = '';
+            const counts = {};
+            validRels.forEach(r => { const t = r.type || '(untyped)'; counts[t] = (counts[t] || 0) + 1; });
+            if (relTypes.length === 0) {
+                host.innerHTML = '<p class="text-xs text-gray-400 italic">No relationships in data.</p>';
+                return;
+            }
+            relTypes.forEach(t => {
+                const row = document.createElement('label');
+                row.className = 'filter-row';
+                row.innerHTML =
+                    `<input type="checkbox" data-rel="${encodeURIComponent(t)}" ${state.relTypes[t] ? 'checked' : ''}>
+                     <span class="flex-1">${t}</span>
+                     <span class="text-xs text-gray-400">${counts[t]}</span>`;
+                row.querySelector('input').addEventListener('change', (ev) => {
+                    state.relTypes[t] = ev.target.checked;
+                    refreshViews();
+                });
+                host.appendChild(row);
+            });
+        }
+
+        function refreshViews() {
+            nodeView.refresh();
+            edgeView.refresh();
+        }
+
+        // ── Controls ───────────────────────────────────
+        document.getElementById('refresh-btn').addEventListener('click', fetchAndBuild);
+        document.getElementById('fit-btn').addEventListener('click', () => network && network.fit({ animation: true }));
+        document.getElementById('show-unlinked').addEventListener('change', (e) => {
+            state.showUnlinked = e.target.checked;
+            refreshViews();
+            if (network) network.fit({ animation: true });
+        });
+        document.getElementById('toggle-physics').addEventListener('change', (e) => {
+            state.physics = e.target.checked;
+            if (network) network.setOptions({ physics: { enabled: state.physics } });
+        });
+
+        // All / None bulk toggles
+        document.querySelectorAll('[data-all], [data-none]').forEach(a => {
+            a.addEventListener('click', (ev) => {
+                ev.preventDefault();
+                const group = a.dataset.all || a.dataset.none;
+                const value = a.hasAttribute('data-all');
+                if (group === 'entity') {
+                    Object.keys(state.entityTypes).forEach(k => state.entityTypes[k] = value);
+                    document.querySelectorAll('[data-entity]').forEach(i => i.checked = value);
+                } else {
+                    Object.keys(state.relTypes).forEach(k => state.relTypes[k] = value);
+                    document.querySelectorAll('[data-rel]').forEach(i => i.checked = value);
+                }
+                refreshViews();
+            });
+        });
+
+        window.addEventListener('DOMContentLoaded', fetchAndBuild);
     </script>
 </body>
 </html>
